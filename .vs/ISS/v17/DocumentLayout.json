@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\_Clients\\ISS\\XAF\\ISS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|e:\\_clients\\iss\\xaf\\iss\\masterprovider.module\\module.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|solutionrelative:masterprovider.module\\module.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|E:\\_Clients\\ISS\\XAF\\ISS\\masterprovider.module\\provider\\masterdatastoresecureobjectspaceprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|solutionrelative:masterprovider.module\\provider\\masterdatastoresecureobjectspaceprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|E:\\_Clients\\ISS\\XAF\\ISS\\masterprovider.module\\provider\\masterdatastoreobjectspaceprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{DA8D3BCF-39F9-4643-8885-468B49F8A9F1}|MasterProvider.Module\\MasterProvider.Module.vbproj|solutionrelative:masterprovider.module\\provider\\masterdatastoreobjectspaceprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2F8FA34-C660-40FC-9244-CBB85152C944}|ISS.AcumaticaLibrary\\ISS.AcumaticaLibrary.vbproj|E:\\_Clients\\ISS\\XAF\\ISS\\iss.acumaticalibrary\\services\\customerservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D2F8FA34-C660-40FC-9244-CBB85152C944}|ISS.AcumaticaLibrary\\ISS.AcumaticaLibrary.vbproj|solutionrelative:iss.acumaticalibrary\\services\\customerservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f82cb249-4a74-4f2a-8ae6-539c370d5659}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MasterDataStoreSecureObjectSpaceProvider.vb",
+              "DocumentMoniker": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Provider\\MasterDataStoreSecureObjectSpaceProvider.vb",
+              "RelativeDocumentMoniker": "MasterProvider.Module\\Provider\\MasterDataStoreSecureObjectSpaceProvider.vb",
+              "ToolTip": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Provider\\MasterDataStoreSecureObjectSpaceProvider.vb",
+              "RelativeToolTip": "MasterProvider.Module\\Provider\\MasterDataStoreSecureObjectSpaceProvider.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-18T10:24:01.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Module.vb",
+              "DocumentMoniker": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Module.vb",
+              "RelativeDocumentMoniker": "MasterProvider.Module\\Module.vb",
+              "ToolTip": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Module.vb",
+              "RelativeToolTip": "MasterProvider.Module\\Module.vb",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwC8AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-18T10:23:33.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MasterDataStoreObjectSpaceProvider.vb",
+              "DocumentMoniker": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Provider\\MasterDataStoreObjectSpaceProvider.vb",
+              "RelativeDocumentMoniker": "MasterProvider.Module\\Provider\\MasterDataStoreObjectSpaceProvider.vb",
+              "ToolTip": "E:\\_Clients\\ISS\\XAF\\ISS\\MasterProvider.Module\\Provider\\MasterDataStoreObjectSpaceProvider.vb",
+              "RelativeToolTip": "MasterProvider.Module\\Provider\\MasterDataStoreObjectSpaceProvider.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-18T10:17:12.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerService.vb",
+              "DocumentMoniker": "E:\\_Clients\\ISS\\XAF\\ISS\\ISS.AcumaticaLibrary\\Services\\CustomerService.vb",
+              "RelativeDocumentMoniker": "ISS.AcumaticaLibrary\\Services\\CustomerService.vb",
+              "ToolTip": "E:\\_Clients\\ISS\\XAF\\ISS\\ISS.AcumaticaLibrary\\Services\\CustomerService.vb",
+              "RelativeToolTip": "ISS.AcumaticaLibrary\\Services\\CustomerService.vb",
+              "ViewState": "AgIAALIAAAAAAAAAAAAgwJAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-18T10:04:06.758Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

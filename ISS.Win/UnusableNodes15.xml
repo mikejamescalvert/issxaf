@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ISSApplicationOptions Id="ISSApplicationOptions" UseStandardSplashScreenAfterLoad="True" UseStandardSplashScreenDuringLoad="True" />
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <ListView Id="Customer_Jobs_ListView" MasterDetailMode="ListViewOnly" />
+    <DetailView Id="CustomerInformation_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="CustomerInformation" RelativeSize="100" Caption="CustomerInformation" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView" DataAccessMode="Server" />
+    <ListView Id="MaterialOrder_MaterialOrderLines_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+    <DetailView Id="CustomerInformation_DetailView_Vendor" ClassName="ISS.Module.CustomerInformation">
+      <Items Id="Items">
+        <PropertyEditor Id="CompanyName" PropertyName="CompanyName" />
+        <PropertyEditor Id="CompanyRate" PropertyName="CompanyRate" />
+        <PropertyEditor Id="ContactName" PropertyName="ContactName" />
+        <PropertyEditor Id="ContactRate" PropertyName="ContactRate" />
+        <PropertyEditor Id="CustomerType" PropertyName="CustomerType" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100">
+            <LayoutGroup Id="CustomerInformation" Index="0" ShowCaption="False" RelativeSize="100">
+              <LayoutItem Id="CustomerType" ViewItem="CustomerType" Index="0" RelativeSize="5.2459016393442619" />
+              <LayoutItem Id="CompanyName" ViewItem="CompanyName" ShowCaption="" Index="1" RelativeSize="3.9344262295081966" />
+              <LayoutItem Id="ContactName" ViewItem="ContactName" ShowCaption="" Index="2" RelativeSize="3.9344262295081966" />
+              <LayoutItem Id="CompanyRate" ViewItem="CompanyRate" ShowCaption="" Index="3" RelativeSize="86.885245901639351" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomerInformation_DetailView_Super" ClassName="ISS.Module.CustomerInformation">
+      <Items Id="Items">
+        <PropertyEditor Id="CompanyName" PropertyName="CompanyName" />
+        <PropertyEditor Id="CompanyRate" PropertyName="CompanyRate" />
+        <PropertyEditor Id="ContactName" PropertyName="ContactName" />
+        <PropertyEditor Id="ContactRate" PropertyName="ContactRate" />
+        <PropertyEditor Id="CustomerType" PropertyName="CustomerType" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100">
+            <LayoutGroup Id="CustomerInformation" Index="0" ShowCaption="False" RelativeSize="100">
+              <LayoutItem Id="CustomerType" ViewItem="CustomerType" Index="0" RelativeSize="5.2287581699346406" />
+              <LayoutItem Id="ContactName" ViewItem="ContactName" ShowCaption="" Index="1" RelativeSize="3.9215686274509802" />
+              <LayoutItem Id="ContactRate" ViewItem="ContactRate" ShowCaption="" Index="2" RelativeSize="90.849673202614383" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="CustomerInformation" PropertyEditorType="DevExpress.ExpressApp.Editors.DetailPropertyEditor" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" RelativeSize="63.398692810457518" Index="1">
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" Caption="Customer Information" RelativeSize="100" TextAlignMode="AlignWithChildren">
+              <LayoutItem Id="CustomerInformation" ViewItem="CustomerInformation" Index="0" RelativeSize="100" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutGroup Id="Jobs" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1">
+              <LayoutItem Id="Jobs" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Salespeople" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="2">
+              <LayoutItem Id="Salespeople" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100" Caption="Notes">
+              <LayoutItem Id="Notes" ViewItem="Notes" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="4" RelativeSize="100" Caption="Job Notification Filter">
+              <LayoutItem Id="JobNotificationFilter" ViewItem="JobNotificationFilter" Index="0" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="43.954248366013069" Caption="SizeableEditors" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="JobNotificationFilter" RelativeSize="100" Removed="True" />
+            <LayoutItem Id="Notes" RelativeSize="50" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Customer">
+              <LayoutGroup Id="Customer_col1" RelativeSize="50.088183421516753">
+                <LayoutItem Id="Name" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="CustomerType" ViewItem="CustomerType" Index="1" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="PrimaryEmailAddress" RelativeSize="13.043478260869565" Index="2" />
+                <LayoutItem Id="Code" RelativeSize="13.043478260869565" Index="3" />
+                <LayoutItem Id="Phone" RelativeSize="13.043478260869565" Index="4" />
+                <LayoutItem Id="Address1" RelativeSize="13.043478260869565" Index="5" />
+                <LayoutItem Id="CustomerInformation" RelativeSize="13.043478260869565" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Customer_col2" RelativeSize="49.911816578483247">
+                <LayoutItem Id="City" RelativeSize="17.391304347826086" />
+                <LayoutItem Id="State" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Zip" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="Active" RelativeSize="30.434782608695652" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Job_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="EstimatedHours" DisableSpinButton="False" />
+      </Items>
+    </DetailView>
+    <ListView Id="Job_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EstimatedHours" DisableSpinButton="False" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="ISS.Module.SystemSettings" ImageName="BO_Security_Permission_Model" />
+    <Class Name="ISS.Module.TimeEntry" ImageName="BO_Scheduler" />
+    <Class Name="ISS.Module.Customer">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Notes" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Win.HtmlPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="Admin_ListView" Removed="True" />
+          <Item Id="Employee_ListView" Removed="True" />
+          <Item Id="StandardUser_ListView" Removed="True" />
+          <Item Id="SystemSettings_ListView" Removed="True" />
+          <Item Id="TimeEntry_ListView" Caption="Time Entries" />
+        </Items>
+      </Item>
+      <Item Id="Administration">
+        <Items Id="Items">
+          <Item Id="SystemSettings_ListView" ViewId="SystemSettings_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <ActionDesign Id="ActionDesign">
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="View">
+        <ActionLink ActionId="Test_PopulateCustomers" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

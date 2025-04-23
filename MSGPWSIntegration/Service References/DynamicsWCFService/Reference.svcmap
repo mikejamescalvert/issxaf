@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cb620d25-a69b-4b37-be2a-4faef6327c4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://geller-v:48620/DynamicsGPWebServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DynamicsGPWebServices1.wsdl" MetadataType="Wsdl" ID="f8f69aa5-c92f-4623-b6e3-6e71b0283446" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices.wsdl" />
+    <MetadataFile FileName="DynamicsGPWebServices01.xsd" MetadataType="Schema" ID="48b60861-85c8-4a54-85b4-9640127a8e1b" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices0.xsd" />
+    <MetadataFile FileName="DynamicsGPWebServices21.xsd" MetadataType="Schema" ID="991d80ed-897a-4295-a506-88da5d4d0823" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices2.xsd" />
+    <MetadataFile FileName="DynamicsGPWebServices11.xsd" MetadataType="Schema" ID="c98174e7-c1ed-43bc-ad2f-5cb3da0215f7" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices1.xsd" />
+    <MetadataFile FileName="DynamicsGP1.wsdl" MetadataType="Wsdl" ID="787ba2f0-68ef-4401-874d-7682d8277ec1" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGP.wsdl" />
+    <MetadataFile FileName="DynamicsGPWebServices1.disco" MetadataType="Disco" ID="8d529c2c-1ea1-4580-8d8f-393fd4167b4c" SourceId="1" SourceUrl="http://geller-v:48620/DynamicsGPWebServices?disco" />
+    <MetadataFile FileName="DynamicsGPWebServices3.xsd" MetadataType="Schema" ID="ed25b136-6be8-425e-8fc7-ff85a6b7d921" SourceId="1" SourceUrl="http://geller-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

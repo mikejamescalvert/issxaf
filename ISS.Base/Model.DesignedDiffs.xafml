@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Subtitle="Powered by eXpressApp Framework" Company="Developer Express Inc" HelpURL="https://issusa.atlassian.net/wiki/display/DEVS/ISS+Development">
+  <BOModel>
+    <Class Name="ISS.Base.ISSReportData" HelpURL="https://issusa.atlassian.net/wiki/display/DEVS/ISS+Development" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.9.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="ISSBaseMailServerSettings_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ISSBaseMailServerSettings">
+              <LayoutGroup Id="ISSBaseMailServerSettings_col1">
+                <LayoutItem Id="EmailFromAddress" ViewItem="EmailFromAddress" Removed="True" />
+                <LayoutItem Id="EmailFromName" ViewItem="EmailFromName" Removed="True" />
+                <LayoutItem Id="MailServerPassword" ViewItem="MailServerPassword" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ISSBaseMailServerSettings_col2">
+                <LayoutItem Id="MailServerUsername" ViewItem="MailServerUsername" Removed="True" />
+                <LayoutItem Id="ServerAddress" ViewItem="ServerAddress" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="MailServerPassword" Index="0" CaptionLocation="Default" ViewItem="MailServerPassword" IsNewNode="True" />
+            <LayoutGroup Id="MailServerSettings_col1" Index="0" Direction="Vertical" ShowCaption="False" Caption="MailServerSettings_col1" TextSizingMode="Align" IsNewNode="True">
+              <LayoutItem Id="EmailFromAddress" Index="2" CaptionLocation="Default" ViewItem="EmailFromAddress" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="EmailFromName" Index="1" CaptionLocation="Default" ViewItem="EmailFromName" IsNewNode="True" />
+            <LayoutGroup Id="MailServerSettings_col2" Index="1" Direction="Horizontal" ShowCaption="False" Caption="MailServerSettings_col2" TextSizingMode="Align" IsNewNode="True">
+              <LayoutItem Id="ServerAddress" Index="0" CaptionLocation="Default" ViewItem="ServerAddress" IsNewNode="True" />
+              <LayoutItem Id="MailServerUsername" Index="1" CaptionLocation="Default" ViewItem="MailServerUsername" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ISSExceptionMessage_DetailView">
+      <Layout Width="570" Height="566">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ISSExceptionMessage" RelativeSize="100">
+              <LayoutItem Id="ExceptionMessage" RelativeSize="4" ViewItem="ExceptionMessage" />
+              <LayoutGroup Id="67a89b5c-e6a8-43cb-83b9-307d36bb0529" ShowCaption="False" Caption="" TextAlignMode="" Direction="Horizontal" Index="2" IsNewNode="True">
+                <LayoutItem Id="Item1" ShowCaption="False" Index="0" RelativeSize="97" ViewItem="Item1" IsNewNode="True" />
+                <LayoutItem Id="ExceptionSendToSupport" ShowCaption="False" Index="1" RelativeSize="1" ViewItem="ExceptionSendToSupport" IsNewNode="True" />
+                <LayoutItem Id="ExceptionClearLog" ShowCaption="False" Index="2" RelativeSize="1" ViewItem="ExceptionClearLog" IsNewNode="True" />
+                <LayoutItem Id="ExceptionOk" ShowCaption="False" Index="3" RelativeSize="1" ViewItem="ExceptionOk" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Title" ViewItem="Title" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TransactionalDouble_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="5" ImageName="">
+            <LayoutGroup Id="TransactionalDouble" RelativeSize="100" ImageName="">
+              <LayoutItem Id="CurrentValue" ShowCaption="False" RelativeSize="100" ViewItem="CurrentValue" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="HistoricalEntries_Group" Direction="Vertical" Index="1" RelativeSize="94" ImageName="" Caption="History">
+            <LayoutItem Id="HistoricalEntries" RelativeSize="95" ViewItem="HistoricalEntries" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

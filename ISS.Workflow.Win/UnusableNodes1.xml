@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ISSBaseBusinessRules_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Settings">
+              <LayoutGroup Id="SimpleEditors" TextSizingMode="Align">
+                <LayoutGroup Id="BusinessRules" TextSizingMode="Align">
+                  <LayoutGroup Id="BusinessRules_col1" TextSizingMode="Align" />
+                  <LayoutGroup Id="BusinessRules_col2" TextSizingMode="Align" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <TabbedGroup Id="SettingsCollections">
+                <LayoutGroup Id="WorkflowSteps" TextSizingMode="Align" />
+                <LayoutGroup Id="SaveValidationCriteriaTemplates" TextSizingMode="Align" />
+                <LayoutGroup Id="WorkflowStepGroups" TextSizingMode="Align" />
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Templates">
+              <TabbedGroup Id="TemplateSettings">
+                <LayoutGroup Id="ObjectTemplates" TextSizingMode="Align" />
+                <LayoutGroup Id="CriteriaTemplates" TextSizingMode="Align" />
+              </TabbedGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ISSBaseCriteriaTemplate_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="MainTab">
+            <LayoutGroup Id="CriteriaSettings">
+              <LayoutGroup Id="SimpleEditors" TextSizingMode="Align">
+                <LayoutGroup Id="CriteriaTemplate" TextSizingMode="Align" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

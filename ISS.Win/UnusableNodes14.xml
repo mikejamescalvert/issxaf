@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ISSApplicationOptions Id="ISSApplicationOptions" UseStandardSplashScreenAfterLoad="True" UseStandardSplashScreenDuringLoad="True" />
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="Customer_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Customer">
+              <LayoutGroup Id="Customer_col1">
+                <LayoutItem Id="Address2" RelativeSize="17.391304347826086" Index="6" />
+                <LayoutItem Id="CustomerType" ViewItem="CustomerType" />
+              </LayoutGroup>
+              <LayoutGroup Id="Customer_col2">
+                <LayoutItem Id="PeristentJobTotal" RelativeSize="13.043478260869565" />
+                <LayoutItem Id="JobTotal" RelativeSize="13.043478260869565" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Job_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CustomersJobTotal" PropertyName="Customer.PeristentJobTotal" Caption="Customer's Job Total" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

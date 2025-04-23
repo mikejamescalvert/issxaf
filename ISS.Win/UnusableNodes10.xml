@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <ActionDesign Id="ActionDesign">
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="Search">
+        <ActionLink ActionId="1dde362a-8b64-4f57-9aa4-1ad0373c381a" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC7E183E-BF12-4189-8B71-FBF98E297C48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ISS.Base.Win</RootNamespace>
+    <AssemblyName>ISS.Base.Win</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/ISSBaseWin/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ISS.Base.Win.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ISS.Base.Win.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.Win.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Drawing, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.SkiaRenderer, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Reports.Win.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Docs.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2.Design, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Reporting.Extensions, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Objects\MAPI.vb" />
+    <Compile Include="Editors\Controls\DocumentManagerControl.Designer.vb">
+      <DependentUpon>DocumentManagerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Controls\DocumentManagerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Controls\HtmlEdit.vb" />
+    <Compile Include="Editors\Controls\ISSFlowControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Controls\ISSFlowLayoutPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Controls\RichEditUserControl.Designer.vb">
+      <DependentUpon>RichEditUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Controls\RichEditUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Controls\RichTextUserControl.Designer.vb">
+      <DependentUpon>RichTextUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Controls\RichTextUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Property Editors\CameraEditor.vb" />
+    <Compile Include="Editors\Property Editors\CustomFieldPicker.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Property Editors\FilterableEnumEditor\FilterablePropertyEditor.vb" />
+    <Compile Include="Editors\Property Editors\PdfViewOnlyEditor.vb" />
+    <Compile Include="Editors\Property Editors\DevExRichTextEditor.vb" />
+    <Compile Include="Editors\Property Editors\FlatDatePropertyEditor.vb" />
+    <Compile Include="Editors\Property Editors\FlatDecimalPropertyEditor.vb" />
+    <Compile Include="Editors\Property Editors\LabelEditor.vb" />
+    <Compile Include="Editors\Property Editors\HyperlinkEditor.vb" />
+    <Compile Include="Editors\Property Editors\LookupLabelEditor.vb" />
+    <Compile Include="Editors\Property Editors\StringValueWithObjectSourceEditor.vb" />
+    <Compile Include="Editors\Property Editors\ValueWithDataSourceEditor.vb" />
+    <Compile Include="Editors\Property Editors\StringTokenizedLookupEditor.vb" />
+    <Compile Include="Editors\Property Editors\CustomHotTrackButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Property Editors\PhoneNumberEditor.vb" />
+    <Compile Include="Editors\Property Editors\PhoneNumberEditorWithExt.vb" />
+    <Compile Include="Editors\Property Editors\TransactionalDoubleEditor.vb" />
+    <Compile Include="Editors\Property Editors\ViewOnlyHtmlEditor.vb" />
+    <Compile Include="Editors\Property Editors\TextEditor.vb" />
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPicker.Designer.vb">
+      <DependentUpon>frmPicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Enum\EnumCriteriaParser.vb" />
+    <Compile Include="Helpers\Form\BackgroundProcessForm.designer.vb">
+      <DependentUpon>BackgroundProcessForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Form\BackgroundProcessForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\GridHelper.vb" />
+    <Compile Include="Helpers\LayoutHelper.vb" />
+    <Compile Include="Helpers\WinEmailHelper.vb" />
+    <Compile Include="Helpers\WinFormGlobal.vb" />
+    <Compile Include="Helpers\WinLayoutHelper.vb" />
+    <Compile Include="Model\IModelISSApplicationOptions.vb" />
+    <Compile Include="Model\IModelISSEditorOptions.vb" />
+    <Compile Include="Model\ModelDetailViewItemsNodesGenerator.vb" />
+    <Compile Include="Model\IModelColumnExtension.vb" />
+    <Compile Include="Model\IModelDetailViewItem.vb" />
+    <Compile Include="Model\IModelExtension.vb" />
+    <Compile Include="Model\IISSListView.vb" />
+    <Compile Include="Model\ModelDetailViewItemLogic.vb" />
+    <Compile Include="Model\ModelDetailViewItemsNodesGeneratorUpdater.vb" />
+    <Compile Include="ISSBaseWinModule.Designer.vb">
+      <DependentUpon>ISSBaseWinModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ISSBaseWinModule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Splash\CustomSplashScreen.vb" />
+    <Compile Include="Splash\SplashScreenForm.Designer.vb">
+      <DependentUpon>SplashScreenForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash\SplashScreenForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updater.vb" />
+    <Compile Include="ViewControllers\DevExRichTextEditorController.Designer.vb">
+      <DependentUpon>DevExRichTextEditorController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\DevExRichTextEditorController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\DragAndDropSortableColumnViewController.Designer.vb">
+      <DependentUpon>DragAndDropSortableColumnViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\DragAndDropSortableColumnViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\EditorOptionsDetailViewController.Designer.vb">
+      <DependentUpon>EditorOptionsDetailViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\EditorOptionsDetailViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\EditorOptionsListViewController.Designer.vb">
+      <DependentUpon>EditorOptionsListViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\EditorOptionsListViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\ExceptionController.Designer.vb">
+      <DependentUpon>ExceptionController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ExceptionController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\FlatDecimalEditorViewController.Designer.vb">
+      <DependentUpon>FlatDecimalEditorViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\FlatDecimalEditorViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\InplaceReportViewController.Designer.vb">
+      <DependentUpon>InplaceReportViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\InplaceReportViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\IReportDataViewController.Designer.vb">
+      <DependentUpon>IReportDataViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\IReportDataViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\ListViewController.Designer.vb">
+      <DependentUpon>ListViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ListViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\NavigationModificationsController.Designer.vb">
+      <DependentUpon>NavigationModificationsController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\NavigationModificationsController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\NestedActionBarController.Designer.vb">
+      <DependentUpon>NestedActionBarController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\NestedActionBarController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\FiltersSearchController.Designer.vb">
+      <DependentUpon>FiltersSearchController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\FiltersSearchController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\OpenLinkOnSingleClick.Designer.vb">
+      <DependentUpon>OpenLinkOnSingleClick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\OpenLinkOnSingleClick.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\OpenObjectController.Designer.vb">
+      <DependentUpon>OpenObjectController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\OpenObjectController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\ReportWizardViewController.Designer.vb">
+      <DependentUpon>ReportWizardViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ReportWizardViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\ResetUserXAFMLController.Designer.vb">
+      <DependentUpon>ResetUserXAFMLController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ResetUserXAFMLController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\RibbonPrettifierController.Designer.vb">
+      <DependentUpon>RibbonPrettifierController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RibbonPrettifierController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\StringValueWithObjectSpaceViewController.Designer.vb">
+      <DependentUpon>StringValueWithObjectSpaceViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\StringValueWithObjectSpaceViewController.vb" />
+    <Compile Include="ViewControllers\TabStopViewController.Designer.vb">
+      <DependentUpon>TabStopViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\TabStopViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\TextEditController.Designer.vb">
+      <DependentUpon>TextEditController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\TextEditController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\TransactionalDoubleEditorViewController.Designer.vb">
+      <DependentUpon>TransactionalDoubleEditorViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\TransactionalDoubleEditorViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\ValueWithDataSourceListViewController - Copy.Designer.vb">
+      <DependentUpon>ValueWithDataSourceListViewController - Copy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\ValueWithDataSourceListViewController - Copy.vb" />
+    <Compile Include="ViewControllers\VisibleInReportsOnlyController.Designer.vb">
+      <DependentUpon>VisibleInReportsOnlyController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\VisibleInReportsOnlyController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewControllers\WinListViewController.Designer.vb">
+      <DependentUpon>WinListViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\WinListViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinGlobal.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Editors\Controls\DocumentManagerControl.resx">
+      <DependentUpon>DocumentManagerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Controls\RichEditUserControl.resx">
+      <DependentUpon>RichEditUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Controls\RichTextUserControl.resx">
+      <DependentUpon>RichTextUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPicker.resx">
+      <DependentUpon>frmPicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\DragAndDropSortableColumnViewController.resx">
+      <DependentUpon>DragAndDropSortableColumnViewController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\EditorOptionsDetailViewController.resx">
+      <DependentUpon>EditorOptionsDetailViewController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\ExceptionController.resx">
+      <DependentUpon>ExceptionController.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\IReportDataViewController.resx">
+      <DependentUpon>IReportDataViewController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\TabStopViewController.resx">
+      <DependentUpon>TabStopViewController.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\Form\BackgroundProcessForm.resx">
+      <DependentUpon>BackgroundProcessForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISSBaseWinModule.resx">
+      <DependentUpon>ISSBaseWinModule.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\FiltersSearchController.resx">
+      <DependentUpon>FiltersSearchController.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewControllers\ResetUserXAFMLController.resx">
+      <DependentUpon>ResetUserXAFMLController.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullLogoTransparent400x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_update_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_stop.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISS.Base\ISS.Base.vbproj">
+      <Project>{ee45ec9a-c450-4621-bcc0-9e104478737c}</Project>
+      <Name>ISS.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

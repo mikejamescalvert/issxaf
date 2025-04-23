@@ -1,0 +1,129 @@
+
+
+Imports Microsoft.VisualBasic
+Imports System
+Imports System.ComponentModel
+Imports System.Collections.Generic
+Imports System.Diagnostics
+Imports System.Text
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+
+Imports DevExpress.Xpo
+Imports DevExpress.ExpressApp
+Imports DevExpress.ExpressApp.Web.Editors.ASPx
+Imports DevExpress.Web
+Imports DevExpress.ExpressApp.Web
+
+Public Class ListViewHyperlinkController
+    Inherits ViewController
+
+    Private _mLinkCount As Integer = 0
+
+    Public Sub New()
+        InitializeComponent()
+        RegisterActions(components)
+    End Sub
+
+    Private Sub UpdateHyperlinkTemplate(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewTableRowEventArgs)
+        Dim listEditor As ASPxGridListEditor = TryCast((CType(View, ListView)).Editor, ASPxGridListEditor)
+        Dim strTest As String = String.Empty
+        Dim oColumnWithInfo As DevExpress.ExpressApp.Web.Editors.ASPx.GridViewDataColumnWithInfo
+        Dim gridControl As DevExpress.Web.ASPxGridView = CType(listEditor.Control, DevExpress.Web.ASPxGridView)
+        Dim oHyperlinkTemplate As HyperlinkTemplate
+        If e.VisibleIndex <> -1 Then
+            For Each oColumn As GridViewColumn In gridControl.Columns
+                'Check for column type in editor
+                If Not (TypeOf oColumn Is DevExpress.ExpressApp.Web.Editors.ASPx.GridViewDataColumnWithInfo) Then
+                    Continue For
+                End If
+                oColumnWithInfo = oColumn
+                If Not oColumnWithInfo.Model.PropertyEditorType Is GetType(ISS.Base.Web.HyperlinkEditor) Then
+                    Continue For
+                End If
+
+                oHyperlinkTemplate = oColumnWithInfo.DataItemTemplate
+                oHyperlinkTemplate.HyperlinkEditor.NavigateUrl = gridControl.GetRowValues(e.VisibleIndex, oColumnWithInfo.FieldName)
+                oHyperlinkTemplate.HyperlinkEditor.Text = gridControl.GetRowValues(e.VisibleIndex, oColumnWithInfo.FieldName)
+            Next
+        End If
+    End Sub
+
+    Private Sub ListViewHyperlinkController_ViewControlsCreated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ViewControlsCreated
+        Dim listEditor As ASPxGridListEditor
+        Dim strTest As String = String.Empty
+        Dim oColumnWithInfo As DevExpress.ExpressApp.Web.Editors.ASPx.GridViewDataColumnWithInfo
+        If TypeOf View Is ListView Then
+            listEditor = TryCast((CType(View, ListView)).Editor, ASPxGridListEditor)
+            If listEditor IsNot Nothing Then
+                Dim gridControl As DevExpress.Web.ASPxGridView = CType(listEditor.Control, DevExpress.Web.ASPxGridView)
+                For Each oColumn As GridViewColumn In gridControl.Columns
+                    'Check for column type in editor
+                    If Not (TypeOf oColumn Is DevExpress.ExpressApp.Web.Editors.ASPx.GridViewDataColumnWithInfo) Then
+                        Continue For
+                    End If
+
+                    oColumnWithInfo = oColumn
+                    If Not oColumnWithInfo.Model.PropertyEditorType Is GetType(ISS.Base.Web.HyperlinkEditor) Then
+                        Continue For
+                    End If
+
+                    _mLinkCount = _mLinkCount + 1
+                    oColumnWithInfo.DataItemTemplate = New HyperlinkTemplate(_mLinkCount)
+                    RemoveHandler gridControl.HtmlRowCreated, AddressOf UpdateHyperlinkTemplate
+                    AddHandler gridControl.HtmlRowCreated, AddressOf UpdateHyperlinkTemplate
+                Next
+            End If
+        End If
+    End Sub
+End Class
+
+Public Class HyperlinkTemplate
+    Implements ITemplate
+    Private keys As Dictionary(Of Integer, Object)
+    Private grid As ASPxGridView
+    Private rowCount As Integer
+    Private _mTableNumber As Integer
+
+    Private _mHyperlinkEditor As ASPxHyperLink
+    Public Property HyperlinkEditor() As ASPxHyperLink
+        Get
+            Return _mHyperlinkEditor
+        End Get
+        Set(ByVal value As ASPxHyperLink)
+            If _mHyperlinkEditor Is value Then
+                Return
+            End If
+            _mHyperlinkEditor = Value
+        End Set
+    End Property
+
+    Public Sub New(ByVal TableNumber As Integer)
+        keys = New Dictionary(Of Integer, Object)()
+        _mTableNumber = TableNumber
+    End Sub
+    Private Sub InstantiateIn(ByVal container As Control) Implements ITemplate.InstantiateIn
+
+        Dim gridViewDataItemTemplateContainer As GridViewDataItemTemplateContainer = TryCast(container, GridViewDataItemTemplateContainer)
+        If GridViewDataItemTemplateContainer Is Nothing Then
+            Return
+        End If
+
+        Dim dataSource As ProxyCollection
+        Dim table As Table = New Table()
+
+        Me.HyperlinkEditor = RenderHelper.CreateASPxHyperLink
+        grid = gridViewDataItemTemplateContainer.Grid
+        Me.HyperlinkEditor.Text = "View"
+        Me.HyperlinkEditor.NavigateUrl = ""
+        table.ID = String.Format("HyperlinkTable{0}", _mTableNumber)
+        table.Rows.Add(New TableRow())
+        table.Rows(0).Cells.Add(New TableCell())
+        table.Rows(0).Cells(0).Controls.Add(Me.HyperlinkEditor)
+        container.Controls.Add(table)
+        keys.Add(table.Rows(0).GetHashCode(), gridViewDataItemTemplateContainer.KeyValue)
+        dataSource = grid.DataSource
+        rowCount = dataSource.Count
+    End Sub
+
+End Class

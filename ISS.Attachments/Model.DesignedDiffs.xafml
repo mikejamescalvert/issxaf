@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Attachments_CopyInformation" ImageName="Copy" SelectionDependencyType="RequireSingleObject" />
+      <Action Id="Attachments_OpenAttachment" ImageName="Preview" />
+      <Action Id="Attachments_PasteInformation" ImageName="Paste" />
+      <Action Id="Attachments_SaveAttachment" ImageName="SaveAs" />
+      <Action Id="Attachments_UploadAttachment" ImageName="AddFile" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="ISS.Attachments.Attachment" DefaultListViewAllowEdit="True" />
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="20.2.7.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

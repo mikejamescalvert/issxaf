@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="MasterProvider.CompanySelector.Module.companySelectorLogonParameters">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Company" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

@@ -1,0 +1,1378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79159AD1-9FAA-45EE-B29C-AA6B774DC322}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSGPWSIntegration</RootNamespace>
+    <AssemblyName>MSGPWSIntegration</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/MSGPWSIntegration/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MSGPWSIntegration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MSGPWSIntegration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ISSGlobals, Version=2.0.2902.13155, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalReferences\ISSGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals.vb" />
+    <Compile Include="GPSystemConfiguration.vb" />
+    <Compile Include="GPBusinessAddress.vb" />
+    <Compile Include="Helper.vb" />
+    <Compile Include="IV\IVAdjustmentTransaction.vb" />
+    <Compile Include="IV\IVFactory.vb" />
+    <Compile Include="IV\IVInventoryAdjustment.vb" />
+    <Compile Include="IV\IVItemPrice.vb" />
+    <Compile Include="IV\IVItemPriceDetail.vb" />
+    <Compile Include="IV\IVItemPriceDetails.vb" />
+    <Compile Include="IV\IVItemPrices.vb" />
+    <Compile Include="IV\IVItemSite.vb" />
+    <Compile Include="IV\IVItemVendor.vb" />
+    <Compile Include="IV\IVSalesItem.vb" />
+    <Compile Include="POP\POPReceiptTransaction.vb" />
+    <Compile Include="POP\POPTransaction.vb" />
+    <Compile Include="POP\POPDetail.vb" />
+    <Compile Include="POP\POPDetails.vb" />
+    <Compile Include="POP\POPEnums.vb" />
+    <Compile Include="POP\POPFactory.vb" />
+    <Compile Include="POP\POPHeader.vb" />
+    <Compile Include="POP\POPReceipt.vb" />
+    <Compile Include="POP\POPReceiptLine.vb" />
+    <Compile Include="POP\POPReceiptLines.vb" />
+    <Compile Include="POP\POPSerialLotLine.vb" />
+    <Compile Include="POP\POPSerialLotLines.vb" />
+    <Compile Include="RM\InternetAddresses.vb" />
+    <Compile Include="RM\RMCashReceipt.vb" />
+    <Compile Include="RM\RMCustomer.vb" />
+    <Compile Include="RM\RMCustomerAddress.vb" />
+    <Compile Include="RM\RMCustomerAddresses.vb" />
+    <Compile Include="RM\RMFactory.vb" />
+    <Compile Include="Service References\DynamicsWCFService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SOP\SalesDocument.vb" />
+    <Compile Include="SOP\SalesDocumentDetail.vb" />
+    <Compile Include="SOP\SalesDocumentHeader.vb" />
+    <Compile Include="SOP\SalesFulfillmentOrder.vb" />
+    <Compile Include="SOP\SalesInvoice.vb" />
+    <Compile Include="SOP\SalesOrder.vb" />
+    <Compile Include="MSGPWSIntegrationException.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SOP\SalesReturn.vb" />
+    <Compile Include="SOP\SOPSalesPayment.vb" />
+    <Compile Include="SOP\SOPSalesPayments.vb" />
+    <Compile Include="SOP\SOPSalesUserDefined.vb" />
+    <Compile Include="SOP\SOPFactory.vb" />
+    <Compile Include="SOP\SalesQuote.vb" />
+    <Compile Include="Web References\GP10Service\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\GP10Service\BackOfficeRole.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\BackOfficeRoleAssignment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Bank.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Batch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\BusinessObjectSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\BusinessObjectUserAssignment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CashReceipt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CashReceiptSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedCurrencyKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedCustomerAddressKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedCustomerKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedInternetAddressKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedItemKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedPriceLevelKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedPricingKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedSalesInvoiceKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedSalesOrderKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedSalespersonKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedShippingMethodKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedTaxDetailKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedTaxScheduleDetailKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ChangedUofMScheduleKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Company.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CompanyAddress.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CorporateAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CountryRegionCode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Currency.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CurrencyAccess.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CurrencyPostingAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Customer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CustomerAddress.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CustomerReceivablesSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\CustomerSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\dynamicsgpservice.wsdl" />
+    <None Include="Web References\GP10Service\DynamicsOnlineConfiguration.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Employee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\EmployeeSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Fee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\FeeSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLAccountCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLAccountFormat.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLAccountSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLFixedAllocationAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLFixedAllocationAccountSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLPostingAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLPostingAccountSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLTransaction.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLTransactionSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLUnitAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLUnitAccountSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLVariableAllocationAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\GLVariableAllocationAccountSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoriedItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoriedItemSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryAdjustment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryAdjustmentSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryTransfer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryTransferSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryVariance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\InventoryVarianceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Item.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemClass.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemCurrency.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemVendor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemVendorSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemWarehouse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ItemWarehouseSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\LoggedExceptionData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\LoggedExceptionDataSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\MulticurrencySetup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesCreditMemo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesCreditMemoSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesDocumentSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesFinanceCharge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesFinanceChargeSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesInvoice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesInvoiceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesMiscellaneousCharge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesMiscellaneousChargeSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PayablesReturnSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PaymentCardType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PaymentTerms.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Policy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PolicySummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PriceLevel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Pricing.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PricingSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Project.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectBudget.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectBudgetSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectChangeOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectChangeOrderSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectContract.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectContractSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectEmployeeExpense.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectEmployeeExpenseSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectMiscellaneousLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectMiscellaneousLogSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectTimesheet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ProjectTimesheetSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseInvoice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseInvoiceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseOrderSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseReceipt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\PurchaseReceiptSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesCreditMemo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesCreditMemoSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesDebitMemo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesDebitMemoSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesDocumentSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesFinanceCharge.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesFinanceChargeSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesInvoice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesInvoiceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesReturnSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesServiceRepair.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesServiceRepairSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesWarranty.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReceivablesWarrantySummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\GP10Service\ReturnMaterialAuthorization.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ReturnMaterialAuthorizationSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\RoleKey.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesBackorder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesBackorderSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesDocumentSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesFulfillmentOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesFulfillmentOrderSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesInvoice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesInvoiceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesOrderSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Salesperson.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalespersonCommissions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalespersonCommissionsSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalespersonSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesProcessHoldSetup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesQuote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesQuoteSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesReturn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesReturnSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesTerritory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\SalesTerritorySummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Service.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceCall.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceCallSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceEquipment.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceEquipmentSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceQuote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceQuoteSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ServiceSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ShippingMethod.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\TaxDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\TaxSchedule.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\TaxScheduleDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\UofMSchedule.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\UofMScheduleSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\UserAssignableBusinessObject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\ValidationResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Vendor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\VendorAddress.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\VendorSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\Warehouse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GP10Service\WarehouseSummary.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalReferences\ISSGlobals.dll" />
+    <None Include="Web References\GP10Service\dynamicsgpservice.disco" />
+    <None Include="Service References\DynamicsWCFService\configuration91.svcinfo" />
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices1.disco" />
+    <None Include="Service References\DynamicsWCFService\DynamicsGP1.wsdl" />
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices1.wsdl" />
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DynamicsWCFService\DynamicsGPWebServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Applicant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantApplication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantApplicationSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantEducation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantInterview.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantInterviewSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantReferenceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantSkill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ApplicantWorkHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.BackOfficeRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.BackOfficeRoleAssignment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Bank.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Batch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.BusinessObjectSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.BusinessObjectUserAssignment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CashReceipt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CashReceiptSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedCurrencyKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedCustomerAddressKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedCustomerKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedInternetAddressKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedItemKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedPriceLevelKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedPricingKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedSalesInvoiceKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedSalesOrderKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedSalespersonKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedShippingMethodKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedTaxDetailKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedTaxScheduleDetailKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ChangedUofMScheduleKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CompanyAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CorporateAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CountryRegionCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Currency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CurrencyAccess.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CurrencyPostingAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CustomerAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CustomerAddressSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CustomerReceivablesSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.CustomerSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.DynamicsOnlineConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.EmployeeAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.EmployeeAddressSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.EmployeePayCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.EmployeePayCodeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.EmployeeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Fee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.FeeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLAccountCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLAccountFormat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLAccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLFixedAllocationAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLFixedAllocationAccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLPostingAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLPostingAccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLTransactionSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLUnitAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLUnitAccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLVariableAllocationAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.GLVariableAllocationAccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.HRRequisition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.HRRequisitionSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoriedItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoriedItemSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryAdjustment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryAdjustmentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryTransfer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryTransferSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryVariance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.InventoryVarianceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Item.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemCurrency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemVendor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemVendorSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemWarehouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ItemWarehouseSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.LoggedExceptionData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.LoggedExceptionDataSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ManufacturingOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ManufacturingOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.MulticurrencySetup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesCreditMemo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesCreditMemoSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesDocumentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesFinanceCharge.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesFinanceChargeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesInvoiceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesMiscellaneousCharge.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesMiscellaneousChargeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PayablesReturnSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PaymentCardType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PaymentTerms.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PlannedOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PlannedOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PolicySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PostedPayablesVendorPayment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PostedPayablesVendorPaymentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PriceLevel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Pricing.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PricingSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Project.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectBudget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectBudgetSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectChangeOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectChangeOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectContract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectContractSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectEmployeeExpense.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectEmployeeExpenseSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectMiscellaneousLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectMiscellaneousLogSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectTimesheet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ProjectTimesheetSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseInvoiceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseReceipt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.PurchaseReceiptSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesCreditMemo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesCreditMemoSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesDebitMemo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesDebitMemoSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesDocumentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesFinanceCharge.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesFinanceChargeSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesInvoiceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesReturnSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesServiceRepair.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesServiceRepairSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesWarranty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReceivablesWarrantySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReturnMaterialAuthorization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ReturnMaterialAuthorizationSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.RoleKey.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesBackorder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesBackorderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesDocumentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesFulfillmentOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesFulfillmentOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesInvoiceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Salesperson.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalespersonCommissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalespersonCommissionsSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalespersonSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesProcessHoldSetup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesQuote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesQuoteSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesReturn.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesReturnSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesTerritory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SalesTerritorySummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Service.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceCall.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceCallSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceEquipment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceEquipmentSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceQuote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceQuoteSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ServiceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ShippingMethod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Skill.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SkillSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.SkillSetSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.TaxDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.TaxSchedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.TaxScheduleDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.UofMSchedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.UofMScheduleSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.UserAssignableBusinessObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.ValidationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Vendor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorAddress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorAddressSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorManufacturingOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorManufacturingOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorPlannedOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorPlannedOrderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.VendorSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.Warehouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\MSGPWSIntegration.DynamicsWCFService.WarehouseSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DynamicsWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\DynamicsWCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DynamicsWCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GP10Service\</RelPath>
+      <UpdateFromURL>http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MSGPWSIntegration_GP10Service_Dynamics_x0020_GP</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

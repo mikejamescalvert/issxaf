@@ -1,0 +1,3 @@
+Public Class ISSBaseDetailViewParameters
+
+End Class

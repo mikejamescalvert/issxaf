@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules Id="SchemaModules">
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.AutoFilterRowListViewController" Version="9.3.4.0" />
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.HideActionsViewController" Version="9.3.4.0" />
+    <SchemaModule Name="ValidationModule" Version="12.2.6.0" />
+  </SchemaModules>
+</Application>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="ISS">
+  <BOModel>
+    <Class Name="ISS.Module.Employee" Caption="Employees" ImageName="BO_Employee" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Home" />
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

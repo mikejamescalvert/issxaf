@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="RecurrenceDefinition_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RecurrenceDefinition" RelativeSize="49.309392265193367" Direction="Vertical">
+              <LayoutGroup Id="RecurrenceDefinition_col1" RelativeSize="100">
+                <LayoutItem Id="RecurrencePattern" RelativeSize="6.31163708086785" Index="0" />
+                <LayoutItem Id="MinutesRecurrence" RelativeSize="4.7337278106508878" Index="1" />
+                <LayoutItem Id="HourlyRecurrence" RelativeSize="4.7337278106508878" Index="2" />
+                <LayoutItem Id="DailyRecurrence" RelativeSize="4.7337278106508878" Index="3" />
+                <LayoutItem Id="WeeklyRecurrence" RelativeSize="4.7337278106508878" Index="4" />
+                <LayoutItem Id="MonthlyRecurrence" ViewItem="MonthlyRecurrence" Index="5" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="YearlyRecurrence" ViewItem="YearlyRecurrence" Index="6" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="MonthlyDayOfMonth" ViewItem="MonthlyDayOfMonth" Index="7" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="WeeklyOnFriday" Index="7" RelativeSize="62.7906976744186" Removed="True" />
+                <LayoutItem Id="WeeklyOnThursday" Index="7" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="WeeklyOnTuesday" Index="7" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="WeeklyOnWednesday" Index="7" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="YearlyMonth" ViewItem="YearlyMonth" Index="8" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="YearlyDay" ViewItem="YearlyDay" Index="9" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="StartTime" ViewItem="StartTime" Index="10" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="EndTime" ViewItem="EndTime" Index="11" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="LastExecutionDateTime" ViewItem="LastExecutionDateTime" Index="12" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="TimeToExecute" ViewItem="TimeToExecute" Index="13" RelativeSize="4.7337278106508878" />
+                <LayoutItem Id="ExecutionTime_Info" ViewItem="ExecutionTime_Info" Index="14" RelativeSize="32.149901380670613" />
+                <LayoutItem Id="NextExecutionDateTime" ViewItem="NextExecutionDateTime" Index="14" RelativeSize="43.606557377049178" Removed="True" />
+                <LayoutItem Id="SummaryInfo" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="WeeklyOnMonday" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="RecurrenceDefinition_col2" RelativeSize="49.909584086799278" Caption="RecurrenceDefinition_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Due" ViewItem="Due" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="WeeklyOnSaturday" Index="5" RelativeSize="3.9344262295081966" Removed="True" />
+                <LayoutItem Id="WeeklyOnSunday" Index="6" RelativeSize="3.9344262295081966" Removed="True" />
+                <LayoutItem Id="MonthlyDayOfMonth" Index="7" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="MonthlyRecurrence" Index="8" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="YearlyDay" Index="8" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="YearlyMonth" Index="8" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="YearlyRecurrence" Index="8" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="EndTime" Index="10" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="StartTime" Index="10" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="TimeToExecute" Index="10" RelativeSize="5.07399577167019" Removed="True" />
+                <LayoutItem Id="LastExecutionDateTime" ViewItem="LastExecutionDateTime" Index="11" RelativeSize="4.2780748663101607" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationException_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="StackTrace" ViewItem="StackTrace" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="ISSCustomer_DetailView">
+      <Layout Id="Layout" Width="548" Height="607">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Projects_Group">
+            <LayoutGroup Id="79ec40a0-81df-4d4a-8b57-8604ab6c49f4" TextAlignMode="">
+              <LayoutItem Id="Item1" ViewItem="Item1" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

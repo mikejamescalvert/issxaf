@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="UserFilter_DetailView_ViewMode" ClassName="ISS.UserFilters.UserFilter" IsNewNode="True">
+      <Items IsNewNode="True">
+        <PropertyEditor Id="@d5e902f4-a91b-462b-9cfc-9543f6636728" PropertyName="SpecificToView" Caption="Specific To View?" IsNewNode="True" />
+        <PropertyEditor Id="CreatedByUser" PropertyName="CreatedByUser" IsNewNode="True" />
+        <PropertyEditor Id="Criterion" PropertyName="Criterion" IsNewNode="True" />
+        <PropertyEditor Id="Description" PropertyName="Description" IsNewNode="True" />
+        <PropertyEditor Id="IsPublic" PropertyName="IsPublic" Caption="Public" IsNewNode="True" />
+        <PropertyEditor Id="Layout" PropertyName="Layout" IsNewNode="True" />
+        <PropertyEditor Id="Name" PropertyName="Name" IsNewNode="True" />
+        <PropertyEditor Id="ObjectType" PropertyName="ObjectType" IsNewNode="True" />
+        <PropertyEditor Id="SavedObjectTypeName" PropertyName="SavedObjectTypeName" IsNewNode="True" />
+        <PropertyEditor Id="ShowGroupPanel" PropertyName="ShowGroupPanel" IsNewNode="True" />
+        <PropertyEditor Id="ShowMasterDetailView" PropertyName="ShowMasterDetailView" IsNewNode="True" />
+        <PropertyEditor Id="SummaryInfo" PropertyName="SummaryInfo" IsNewNode="True" />
+        <PropertyEditor Id="UserFilterColumnInfos" PropertyName="UserFilterColumnInfos" View="ISS.UserFilters.UserFilter_UserFilterColumnInfos_ListView" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+          <LayoutGroup Id="SimpleEditors" Index="0" ShowCaption="False" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="UserFilter" Index="0" ShowCaption="False" RelativeSize="100" Direction="Vertical" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Item1" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="4c34b221-68f7-4ae3-ac5a-891271c14bb0" ShowCaption="False" Caption="4c34b221-68f7-4ae3-ac5a-891271c14bb0(5)" Index="0" RelativeSize="60.331825037707389" IsNewNode="True">
+                  <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="4.71976401179941" SizeConstraintsType="Default" IsNewNode="True" />
+                  <LayoutItem Id="Description" ViewItem="Description" Index="1" RelativeSize="95.280235988200587" SizeConstraintsType="Default" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto5fa050ff-2aaa-48a2-bc38-eb1a2b6265f3" ShowCaption="False" Caption="Auto5fa050ff-2aaa-48a2-bc38-eb1a2b6265f3(8)" Index="1" RelativeSize="39.668174962292611" IsNewNode="True">
+                  <LayoutItem Id="IsPublic" ViewItem="IsPublic" SizeConstraintsType="Default" Index="0" RelativeSize="4.71976401179941" IsNewNode="True" />
+                  <LayoutItem Id="@d5e902f4-a91b-462b-9cfc-9543f6636728" ViewItem="@d5e902f4-a91b-462b-9cfc-9543f6636728" SizeConstraintsType="Default" Index="1" RelativeSize="3.5398230088495577" IsNewNode="True" />
+                  <LayoutItem Id="@cb5bc99c-7b5b-4f8e-99ac-c59640b304d7" SizeConstraintsType="Default" Index="2" RelativeSize="91.740412979351035" ShowCaption="False" ViewItem="" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

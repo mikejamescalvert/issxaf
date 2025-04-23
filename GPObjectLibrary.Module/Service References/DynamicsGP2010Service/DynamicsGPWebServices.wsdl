@@ -1,0 +1,3301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.microsoft.com/dynamics/gp/2006/01" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="DynamicsGP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.microsoft.com/dynamics/gp/2006/01" location="http://ISSDEMO-V:48620/Metadata/Legacy/Full/DynamicsGP.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="DynamicsGP" type="i0:DynamicsGP">
+    <wsp:PolicyReference URI="#DynamicsGP_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBackOfficeRoleList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBackOfficeRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBackOfficeRoleByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBackOfficeRoleByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBusinessObjectUserAssignment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateBusinessObjectUserAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBackOfficeRoleAssignment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateBackOfficeRoleAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBusinessObjectUserAssignment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteBusinessObjectUserAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBatchByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatchList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBatchList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBankByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBankList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryRegionCodeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCountryRegionCodeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryRegionCodeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCountryRegionCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLAccountFormatList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLAccountFormatList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentCardTypeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPaymentCardTypeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentCardTypeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPaymentCardTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTermsByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPaymentTermsByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTermsList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPaymentTermsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalespersonByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalespersonByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalespersonList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalespersonList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesTerritoryByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesTerritoryByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesTerritoryList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesTerritoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingMethodByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetShippingMethodByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingMethodList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetShippingMethodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxScheduleByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxScheduleByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxScheduleList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxScheduleDetailList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxScheduleDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxScheduleDetailByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxScheduleDetailByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxDetailByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxDetailByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxDetailList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetTaxDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicsOnlineConfigurationByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetDynamicsOnlineConfigurationByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDynamicsOnlineConfigurationList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetDynamicsOnlineConfigurationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCompanyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAddressByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCompanyAddressByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWSEnabledCompanyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetWSEnabledCompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWSEnabledCompanyForUserList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetWSEnabledCompanyForUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyAddressList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCompanyAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyPostingAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyPostingAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyAccessByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyAccessByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMulticurrencySetupByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetMulticurrencySetupByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyAccessList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyPostingAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCurrencyPostingAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMulticurrencySetupList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetMulticurrencySetupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoggedExceptionDataList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetLoggedExceptionDataList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoggedExceptionDataByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetLoggedExceptionDataByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoggedValidationResultByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetLoggedValidationResultByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoggedExceptionDataByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteLoggedExceptionDataByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllLoggedExceptionData">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteAllLoggedExceptionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPolicyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyListByRoleKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPolicyListByRoleKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyRoles">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPolicyRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByOperation">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPolicyByOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPolicyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletePolicyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCompletePolicyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePolicy">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolicy">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeletePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessObjectUserAssignmentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBusinessObjectUserAssignmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAssignableBusinessObjectList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetUserAssignableBusinessObjectList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessObjectSummaryList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBusinessObjectSummaryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBackOfficeRoleAssignmentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetBackOfficeRoleAssignmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedCurrencyKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedCurrencyKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedInternetAddressKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedInternetAddressKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedTaxScheduleDetailKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedTaxScheduleDetailKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedTaxDetailKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedTaxDetailKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedShippingMethodKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedShippingMethodKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServiceEquipment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateServiceEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceEquipment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateServiceEquipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceEquipmentByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceEquipmentByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceEquipmentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceEquipmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServiceQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateServiceQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateServiceQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceQuoteByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceQuoteByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceQuoteList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceQuoteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateServiceCall">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateServiceCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServiceCall">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateServiceCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCallByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceCallByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCallList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceCallList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReturnMaterialAuthorization">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReturnMaterialAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturnMaterialAuthorization">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateReturnMaterialAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnMaterialAuthorizationByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReturnMaterialAuthorizationByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnMaterialAuthorizationList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReturnMaterialAuthorizationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGLTransaction">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateGLTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGLFixedAllocationAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateGLFixedAllocationAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGLPostingAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateGLPostingAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGLUnitAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateGLUnitAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGLVariableAllocationAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateGLVariableAllocationAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLTransactionList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLTransactionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLAccountCategoryList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLAccountCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLPostingAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLPostingAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLUnitAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLUnitAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLFixedAllocationAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLFixedAllocationAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLVariableAllocationAccountList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLVariableAllocationAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLTransactionByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLTransactionByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLPostedTransactionByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLPostedTransactionByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLPostingAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLPostingAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLUnitAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLUnitAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLFixedAllocationAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLFixedAllocationAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGLVariableAllocationAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetGLVariableAllocationAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSkillSet">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSkillSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantWorkHistory">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantSkillByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantSkillByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantSkillList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantSkillList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployee">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAddressByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeeAddressByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeAddressList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeeAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployeeAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateEmployeeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateEmployeeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteEmployeeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeePayCodeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeePayCodeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeePayCodeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetEmployeePayCodeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmployeePayCode">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateEmployeePayCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeePayCode">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateEmployeePayCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRRequisitionByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetHRRequisitionByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRRequisitionList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetHRRequisitionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateHRRequisition">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateHRRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHRRequisition">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateHRRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSkillByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSkillList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSkill">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSkill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillSetByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSkillSetByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSkillSetList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSkillSetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSkillSet">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSkillSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSkillSet">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSkillSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicant">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicant">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicant">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantApplicationByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantApplicationByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantApplicationList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantApplicationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantApplication">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantEducationByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantEducationByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantEducationList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantEducationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantEducation">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantEducation">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantEducation">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantEducation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantReferenceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantReferenceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantReferenceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantReferenceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantReference">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantReference">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantReference">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantInterviewByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantInterviewByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantInterviewList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantInterviewList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantInterview">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantInterview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantInterview">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantInterview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantInterview">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantInterview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTestByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantTestByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantTestList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantTestList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantTest">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantTest">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicantTest">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteApplicantTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantWorkHistoryByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantWorkHistoryByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicantWorkHistoryList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetApplicantWorkHistoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicantWorkHistory">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicantWorkHistory">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateApplicantWorkHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateKit">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateKit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFee">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateService">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePricing">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePricing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateItemVendor">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateItemVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateItemWarehouse">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateItemWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateItemCurrency">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateItemCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInventoryAdjustment">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateInventoryAdjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInventoryVariance">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateInventoryVariance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInventoryTransfer">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateInventoryTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemVendor">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateItemVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetWarehouseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoriedItemList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoriedItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetFeeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPricingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUofMScheduleList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetUofMScheduleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemVendorList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemVendorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemWarehouseList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemWarehouseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCurrencyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemCurrencyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceLevelList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPriceLevelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceLevelByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPriceLevelByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemClassList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemClassList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryAdjustmentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryAdjustmentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryVarianceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryVarianceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTransferList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryTransferList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetWarehouseByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoriedItemByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoriedItemByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetFeeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetServiceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPricingByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUofMScheduleByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetUofMScheduleByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemVendorByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemVendorByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemWarehouseByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemWarehouseByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCurrencyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetItemCurrencyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryAdjustmentByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryAdjustmentByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryVarianceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryVarianceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryTransferByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetInventoryTransferByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiscontinueSalesItem">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DiscontinueSalesItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWarehouse">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesItem">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedUofMScheduleKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedUofMScheduleKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedPriceLevelKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedPriceLevelKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedPricingKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedPricingKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedItemKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedItemKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlannedOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPlannedOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlannedOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPlannedOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorPlannedOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorPlannedOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorPlannedOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorPlannedOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturingOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetManufacturingOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManufacturingOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetManufacturingOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorManufacturingOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorManufacturingOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorManufacturingOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorManufacturingOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectMiscellaneousLogList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectMiscellaneousLogList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectBudgetList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectBudgetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectChangeOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectChangeOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectContractList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectContractList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectTimesheetList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectTimesheetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectEmployeeExpenseList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectEmployeeExpenseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectMiscellaneousLogByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectMiscellaneousLogByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectBudgetByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectBudgetByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectChangeOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectChangeOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectContractByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectContractByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectTimesheetByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectTimesheetByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectEmployeeExpenseByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetProjectEmployeeExpenseByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseReceiptByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseReceiptByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInvoiceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseInvoiceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseReceiptList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseReceiptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseInvoiceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseInvoiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVendor">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVendorAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateVendorAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateVendorAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteVendorAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorAddressByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorAddressByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorAddressList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetVendorAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayablesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePayablesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayablesFinanceCharge">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePayablesFinanceCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayablesMiscellaneousCharge">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePayablesMiscellaneousCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayablesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePayablesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayablesCreditMemo">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePayablesCreditMemo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesInvoiceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesInvoiceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesFinanceChargeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesFinanceChargeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesMiscellaneousChargeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesMiscellaneousChargeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesReturnByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesReturnByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesCreditMemoByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesCreditMemoByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesDocumentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesDocumentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesInvoiceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesInvoiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesFinanceChargeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesFinanceChargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesMiscellaneousChargeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesMiscellaneousChargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesReturnList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesReturnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayablesCreditMemoList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPayablesCreditMemoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePurchaseOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePurchaseReceipt">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePurchaseReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePurchaseInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreatePurchaseInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePurchaseOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdatePurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePurchaseOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeletePurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPurchaseOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidPurchaseOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurchaseOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPurchaseOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedSalespersonKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedSalespersonKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedCustomerAddressKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedCustomerAddressKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedCustomerKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedCustomerKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidSalesOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidSalesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidSalesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidSalesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidSalesBackorder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidSalesBackorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidSalesQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidSalesQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesInvoiceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesInvoiceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesReturnByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesReturnByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesBackorderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesBackorderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesFulfillmentOrderByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesFulfillmentOrderByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesQuoteByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesQuoteByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesProcessHoldSetupByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesProcessHoldSetupByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalespersonCommissionsByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalespersonCommissionsByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesDocumentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesDocumentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesInvoiceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesInvoiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesReturnList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesReturnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesBackorderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesBackorderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesFulfillmentOrderList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesFulfillmentOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesQuoteList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesQuoteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesProcessHoldSetupList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalesProcessHoldSetupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalespersonCommissionsList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetSalespersonCommissionsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesInvoiceList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesInvoiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesDebitMemoList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesDebitMemoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesServiceRepairList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesServiceRepairList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesFinanceChargeList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesFinanceChargeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesWarrantyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesWarrantyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesCreditMemoList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesCreditMemoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesReturnList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesReturnList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashReceiptList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCashReceiptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerReceivablesSummaryList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerReceivablesSummaryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedPayablesVendorPaymentsList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPostedPayablesVendorPaymentsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidReceivablesCreditMemo">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidReceivablesCreditMemo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidReceivablesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidReceivablesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidCashReceipt">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/VoidCashReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesBackorder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesBackorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesFulfillmentOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesFulfillmentOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesProcessHoldSetup">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateSalesProcessHoldSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesBackorder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesBackorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesFulfillmentOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesFulfillmentOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesQuote">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesProcessHoldSetup">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateSalesProcessHoldSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesBackorder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesBackorder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSalesFulfillmentOrder">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteSalesFulfillmentOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCorporateAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateCorporateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCorporateAccount">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateCorporateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/UpdateCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerAddress">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/DeleteCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCorporateAccountByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCorporateAccountByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerAddressByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerAddressByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerAddressList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerAddressList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesInvoice">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesDebitMemo">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesDebitMemo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesServiceRepair">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesServiceRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesFinanceCharge">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesFinanceCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesWarranty">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesWarranty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesCreditMemo">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesCreditMemo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceivablesReturn">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateReceivablesReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCashReceipt">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/CreateCashReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesInvoiceByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesInvoiceByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesDebitMemoByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesDebitMemoByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesServiceRepairByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesServiceRepairByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesFinanceChargeByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesFinanceChargeByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesWarrantyByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesWarrantyByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesCreditMemoByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesCreditMemoByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesReturnByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesReturnByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCashReceiptByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCashReceiptByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerReceivablesSummaryByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetCustomerReceivablesSummaryByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedPayablesVendorPaymentsByKey">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetPostedPayablesVendorPaymentsByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivablesDocumentList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetReceivablesDocumentList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedSalesOrderKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedSalesOrderKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangedSalesInvoiceKeyList">
+      <soap:operation soapAction="http://schemas.microsoft.com/dynamics/gp/2006/01/GetChangedSalesInvoiceKeyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

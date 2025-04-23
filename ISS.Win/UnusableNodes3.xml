@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Administration">
+        <Items Id="Items">
+          <Item Id="ISSSecurityUser_ListView" ViewId="ISSSecurityUser_ListView" />
+          <Item Id="ISSSecurityRole_ListView" ViewId="ISSSecurityRole_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

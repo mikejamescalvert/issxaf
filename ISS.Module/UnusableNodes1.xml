@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="ISSCustomer_DetailView">
+      <Layout Id="Layout" Width="548" Height="607">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Projects_Group" Direction="Vertical" Caption="Projects" RelativeSize="93">
+            <LayoutGroup Id="79ec40a0-81df-4d4a-8b57-8604ab6c49f4" TextAlignMode="" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="5">
+              <LayoutItem Id="Item1" ShowCaption="False" Index="0" RelativeSize="50" ViewItem="Item1" />
+            </LayoutGroup>
+            <LayoutItem Id="Projects" Index="0" RelativeSize="88" ViewItem="Projects" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="6">
+            <LayoutGroup Id="ISSCustomer" RelativeSize="100">
+              <LayoutItem Id="CustomerName" RelativeSize="100" ViewItem="CustomerName" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Project_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Employee1" AllowEdit="False" />
+        <PropertyEditor Id="Employee2" AllowEdit="False" />
+        <PropertyEditor Id="ProjectDate" AllowEdit="False" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Wage_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Rate.CurrentValue" PropertyName="Rate.CurrentValue" Caption="Current Rate" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="6" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="">
+            <LayoutGroup Id="Wage" RelativeSize="100" Caption="Wage" ImageName="">
+              <LayoutItem Id="Name" RelativeSize="100" ViewItem="Name" />
+              <LayoutItem Id="Rate" ViewItem="Rate" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutItem Id="Rate.CurrentValue" ViewItem="Rate.CurrentValue" Index="1" RelativeSize="93" />
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

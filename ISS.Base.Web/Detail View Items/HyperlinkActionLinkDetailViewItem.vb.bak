@@ -1,0 +1,23 @@
+'INSTANT VB NOTE: This code snippet uses implicit typing. You will need to set 'Option Infer On' in the VB file or set 'Option Infer' at the project level:
+
+Imports System
+Imports DevExpress.ExpressApp
+Imports DevExpress.Web.ASPxEditors
+Imports System.Web.UI.WebControls
+Imports DevExpress.ExpressApp.Model
+
+
+Public Class HyperlinkActionLinkDetailViewItem
+    Inherits ISS.Base.ActionLinkDetailViewItem
+    Public Sub New(ByVal model As IModelViewItem, ByVal objectType As Type)
+        MyBase.New(model, objectType)
+        CreateControl()
+    End Sub
+
+    Protected Overrides Function CreateControlCore() As Object
+        Dim button = New LinkButton With {.Text = Caption}
+        AddHandler button.Click, AddressOf InvokeExecuted
+        button.Visible = ControlVisible
+        Return button
+    End Function
+End Class

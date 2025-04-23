@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="UserFilter_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Name" Tooltip="Awesome tooltip!" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

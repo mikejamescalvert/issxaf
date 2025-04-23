@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <ListView Id="ISS.Module.Contract_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StartDate" SkipTabStop="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ISS.Module.Customer_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Salesperson" SkipTabStop="True" />
+      </Items>
+    </DetailView>
+    <ListView Id="ISS.Module.Employee_ListView" DataAccessMode="Server" />
+    <DetailView Id="ISS.Module.Project_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Customer" PropertyEditorType="ISS.Base.Win.LabelEditor" />
+        <PropertyEditor Id="Name" PropertyEditorType="ISS.Base.Win.LabelEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Job_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="77" Caption="Contract Notes" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+            <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100">
+              <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Description" TextAlignMode="AlignLocal">
+                <LayoutItem Id="Description" ViewItem="Description" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" TextAlignMode="AutoSize" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="100" Caption="Contract Notes" TextAlignMode="AlignLocal">
+                <LayoutItem Id="ContractNotes" ViewItem="ContractNotes" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" TextAlignMode="AutoSize" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" RelativeSize="100" Caption="Collection Notes" TextAlignMode="AlignLocal">
+                <LayoutItem Id="CollectionNotes" ViewItem="CollectionNotes" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" TextAlignMode="AutoSize" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="3" RelativeSize="100" Caption="Case Notes" TextAlignMode="AlignLocal">
+                <LayoutItem Id="CaseNotes" ViewItem="CaseNotes" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" TextAlignMode="AutoSize" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="4" RelativeSize="100" Caption="Attachments">
+                <LayoutItem Id="ContractAttachments" ViewItem="ContractAttachments" SizeConstraintsType="Default" Index="0" RelativeSize="100" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="ContractNotes" ViewItem="ContractNotes" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="ContractAttachments_Group" Direction="Horizontal" RelativeSize="71" ImageName="BO_Unknown" Removed="True">
+            <LayoutItem Id="ContractAttachments" ViewItem="ContractAttachments" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Contract" RelativeSize="100" ImageName="" Direction="Vertical" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+              <LayoutGroup Id="Contract_col2" RelativeSize="75" ImageName="" Index="0" Caption="Contract_col2" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+                <LayoutItem Id="ContactEmail" ViewItem="ContactEmail" SizeConstraintsType="Default" Index="0" RelativeSize="28" />
+                <LayoutItem Id="DollarAmount" SizeConstraintsType="Default" RelativeSize="21" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="1" ViewItem="DollarAmount" />
+                <LayoutItem Id="StartDate" SizeConstraintsType="Default" RelativeSize="21" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="2" ViewItem="StartDate" />
+                <LayoutItem Id="WorkflowStatus" SizeConstraintsType="Default" RelativeSize="28" TextAlignMode="UseParentOptions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="3" ViewItem="WorkflowStatus" />
+              </LayoutGroup>
+              <LayoutGroup Id="Contract_col1" RelativeSize="47" ImageName="" Caption="Contract_col1" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="CaseNotes" ViewItem="CaseNotes" Removed="True" />
+                <LayoutItem Id="CollectionNotes" ViewItem="CollectionNotes" Removed="True" />
+                <LayoutItem Id="Description" ViewItem="Description" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

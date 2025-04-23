@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="ISS.BusinessObjectCustomizations.Module.BusinessObjectCustomization" ImageName="CustomizeMergeField" />
+    <Class Name="ISS.BusinessObjectCustomizations.Module.ViewCustomizationRule" ImageName="ManageRules" />
+    <Class Name="ISS.BusinessObjectCustomizations.Module.ViewCustomizationRuleAction" ImageName="Action_StateMachine" />
+    <Class Name="ISS.BusinessObjectCustomizations.Module.ViewCustomizationRuleField" ImageName="GroupByField" />
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="20.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

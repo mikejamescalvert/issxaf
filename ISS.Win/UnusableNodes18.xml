@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ISSApplicationOptions Id="ISSApplicationOptions" UseStandardSplashScreenAfterLoad="True" UseStandardSplashScreenDuringLoad="True" />
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <DashboardView Id="CustomerWorkDashboard">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="JobsView" ViewItem="JobsView" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Administration">
+        <Items Id="Items">
+          <Item Id="SystemSettings_ListView" ViewId="SystemSettings_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

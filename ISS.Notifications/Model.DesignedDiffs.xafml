@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Notifications_SendNotification" ImageName="BO_Note" />
+      <Action Id="Notifications_SendNotificationBatch" ImageName="InsertEndnote" />
+      <Action Id="QueueItem_ProcessNotifications" ImageName="Action_Debug_Start" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="ISS.Notifications.MailSettings" ImageName="BO_Transition" />
+    <Class Name="ISS.Notifications.NotificationException" ImageName="BO_Attention">
+      <OwnMembers>
+        <Member Name="EntryDate" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationModuleBaseObject">
+      <OwnMembers>
+        <Member Name="CreatedDate" DisplayFormat="{0:g}" EditMask="g" />
+        <Member Name="LastModifiedDate" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationOnDemandFromOption">
+      <OwnMembers>
+        <Member Name="NotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationOnDemandToOption">
+      <OwnMembers>
+        <Member Name="NotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationQueueItem" ImageName="BO_List">
+      <OwnMembers>
+        <Member Name="RelatedNotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationRule" ImageName="BO_Appearance">
+      <AppearanceRules>
+        <AppearanceRule Id="Hide_Frequency" Criteria="[EvaluationType] In (##Enum#ISS.Notifications.NotificationRule+EvaluationTypes,OnDemand#)" TargetItems="Frequency" Visibility="Hide" IsNewNode="True" />
+        <AppearanceRule Id="Hide_OnDemandTab" TargetItems="Item8;Item9" AppearanceItemType="LayoutItem" Context="DetailView" Criteria="[EvaluationType] &lt;&gt; ##Enum#ISS.Notifications.NotificationRule+EvaluationTypes,OnDemand#" Visibility="Hide" IsNewNode="True" />
+        <AppearanceRule Id="Hide_Reccurrence" Criteria="Not [EvaluationType] In (##Enum#ISS.Notifications.NotificationRule+EvaluationTypes,ElapsedTime#, ##Enum#ISS.Notifications.NotificationRule+EvaluationTypes,Scheduled#)" TargetItems="Recurrence" Visibility="Hide" IsNewNode="True" />
+        <AppearanceRule Id="Hide_ReportV1" Criteria="[ReportType] &lt;&gt; ##Enum#ISS.Notifications.NotificationRule+ReportTypes,ReportV1#" Visibility="Hide" TargetItems="BodyReport" IsNewNode="True" />
+        <AppearanceRule Id="Hide_ReportV2" Priority="0" Criteria="[ReportType] &lt;&gt; ##Enum#ISS.Notifications.NotificationRule+ReportTypes,ReportV2#" Visibility="Hide" TargetItems="BodyReportV2" IsNewNode="True" />
+        <AppearanceRule Id="Hide_SeparateEmails" Visibility="Hide" TargetItems="CombineAllOccurencesIntoSingleEmail" Criteria="[EvaluationType] = ##Enum#ISS.Notifications.NotificationRule+EvaluationTypes,UponSave#" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="MailSettings_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Notifications" Caption="Notifications" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="NotificationRule_ListView" ViewId="NotificationRule_ListView" ObjectKey="" Caption="Notification Rules" Index="0" IsNewNode="True" />
+          <Item Id="Generated Notifications" ViewId="NotificationQueueItem_ListView" Index="1" Caption="Generated Notifications" IsNewNode="True" />
+          <Item Id="MailSettings_ListView" ViewId="MailSettings_DetailView" ObjectKey="" Index="2" IsNewNode="True" />
+          <Item Id="NotificationException_ListView" ViewId="NotificationException_ListView" Caption="Notification Exceptions" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AdditionalNotificationRecipient_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="AdditionalNotificationRecipient" RelativeSize="8.2666666666666675">
+              <LayoutItem Id="ToName" SizeConstraintsType="Default" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="ToAddress" SizeConstraintsType="Default" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+            <LayoutGroup Id="NotificationModuleBaseObject" RelativeSize="91.733333333333334" Caption="NotificationModuleBaseObject" Direction="Horizontal">
+              <LayoutItem Id="CreatedByUsername" Removed="True" />
+              <LayoutItem Id="CreatedDate" Removed="True" />
+              <LayoutItem Id="LastModifiedByUsername" Removed="True" />
+              <LayoutItem Id="LastModifiedDate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MailSettings_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="MailSettings" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="MailSettings_col1" RelativeSize="100">
+                <LayoutGroup Id="Autoe86de645-155e-48e8-98a2-0389e305b07a" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="5.45144804088586" IsNewNode="True">
+                  <LayoutItem Id="ServerType" ViewItem="ServerType" SizeConstraintsType="Default" Index="0" RelativeSize="73.181818181818187" IsNewNode="True" />
+                  <LayoutItem Id="UseSSL" ViewItem="UseSSL" SizeConstraintsType="Default" Index="1" RelativeSize="26.818181818181817" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="SmtpServer" SizeConstraintsType="Default" RelativeSize="4.0885860306643949" />
+                <LayoutItem Id="SmtpPort" SizeConstraintsType="Default" RelativeSize="4.0885860306643949" />
+                <LayoutItem Id="SmtpUserName" SizeConstraintsType="Default" Index="3" RelativeSize="4.0885860306643949" ViewItem="SmtpUserName" IsNewNode="True" />
+                <LayoutItem Id="SmtpPassword" ViewItem="SmtpPassword" SizeConstraintsType="Default" Index="4" RelativeSize="4.0885860306643949" IsNewNode="True" />
+                <LayoutItem Id="DefaultFromAddress" ViewItem="DefaultFromAddress" SizeConstraintsType="Default" Index="5" RelativeSize="78.194207836456556" IsNewNode="True" />
+                <LayoutItem Id="ServerType" SizeConstraintsType="Default" RelativeSize="5.45144804088586" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="MailSettings_col2" RelativeSize="48.20261437908497" Caption="MailSettings_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="SmtpPassword" Removed="True" />
+                <LayoutItem Id="SmtpUserName" Removed="True" />
+                <LayoutItem Id="UseSSL" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationAttachment_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.68277571251549">
+            <LayoutGroup Id="NotificationAttachment" RelativeSize="100">
+              <LayoutItem Id="Name" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="RecordDate" RelativeSize="48.387096774193552" />
+            </LayoutGroup>
+            <LayoutGroup Id="NotificationModuleBaseObject" RelativeSize="94.933333333333337" Caption="NotificationModuleBaseObject" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="CreatedByUsername" Removed="True" />
+              <LayoutItem Id="CreatedDate" Removed="True" />
+              <LayoutItem Id="LastModifiedByUsername" Removed="True" />
+              <LayoutItem Id="LastModifiedDate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Content_Group" Direction="Vertical" RelativeSize="92.3172242874845">
+            <LayoutItem Id="Content" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationException_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.08955223880597">
+            <LayoutGroup Id="NotificationException" RelativeSize="100">
+              <LayoutItem Id="SourceNotificationRule" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="92.910447761194035">
+            <LayoutItem Id="ExceptionMessage" SizeConstraintsType="Default" Index="0" RelativeSize="3.792134831460674" Removed="True" />
+            <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Exception Message" IsNewNode="True">
+                <LayoutItem Id="ExceptionMessage" ViewItem="ExceptionMessage" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Stack Trace" IsNewNode="True">
+                <LayoutItem Id="StackTrace" ViewItem="StackTrace" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="SerializedTargetObjectKey" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="NotificationQueueItem_AdditionalBCCNotificationRecipients_ListView">
+      <Columns>
+        <ColumnInfo Id="AdditionalCCNotificationQueueItem" Index="-1" />
+        <ColumnInfo Id="AdditionalToNotificationQueueItem" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="NotificationQueueItem_AdditionalCCNotificationRecipients_ListView">
+      <Columns>
+        <ColumnInfo Id="AdditionalBCCNotificationQueueItem" Index="-1" />
+        <ColumnInfo Id="AdditionalToNotificationQueueItem" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="NotificationQueueItem_AdditionalToNotificationRecipients_ListView">
+      <Columns>
+        <ColumnInfo Id="AdditionalBCCNotificationQueueItem" Index="-1" />
+        <ColumnInfo Id="AdditionalCCNotificationQueueItem" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="NotificationQueueItem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="28.436911487758945">
+            <LayoutGroup Id="NotificationQueueItem" Caption="Details" RelativeSize="100">
+              <LayoutGroup Id="NotificationQueueItem_col1" RelativeSize="49.855072463768117">
+                <LayoutItem Id="Status" SizeConstraintsType="Default" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="RelatedNotificationRule" ViewItem="RelatedNotificationRule" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="FromName" SizeConstraintsType="Default" RelativeSize="58.8235294117647" Index="2" Removed="True" />
+                <LayoutItem Id="Subject" SizeConstraintsType="Default" Index="2" RelativeSize="21.428571428571427" ViewItem="Subject" IsNewNode="True" />
+                <LayoutItem Id="PrimaryToAddress" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="FromAddress" SizeConstraintsType="Default" RelativeSize="21.428571428571427" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="NotificationQueueItem_col2" RelativeSize="50.144927536231883">
+                <LayoutItem Id="FromAddress" ViewItem="FromAddress" SizeConstraintsType="Default" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutItem Id="FromName" ViewItem="FromName" SizeConstraintsType="Default" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
+                <LayoutItem Id="AttemptCount" Index="2" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="RelatedNotificationRule" SizeConstraintsType="Default" RelativeSize="23.529411764705884" Index="4" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="NotificationModuleBaseObject" RelativeSize="42.687747035573125" Caption="NotificationModuleBaseObject" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="CreatedByUsername" Removed="True" />
+              <LayoutItem Id="CreatedDate" Removed="True" />
+              <LayoutItem Id="LastModifiedByUsername" Removed="True" />
+              <LayoutItem Id="LastModifiedDate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="71.563088512241052" Index="1">
+            <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Body" IsNewNode="True">
+              <LayoutItem Id="Body" ViewItem="Body" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="NotificationAttachments" RelativeSize="100" Caption="Attachments" Index="1">
+              <LayoutItem Id="NotificationAttachments" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="AdditionalToNotificationRecipients" RelativeSize="100" Caption="Additional To Recipients" Index="2">
+              <LayoutItem Id="AdditionalToNotificationRecipients" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="AdditionalCCNotificationRecipients" RelativeSize="100" Caption="CC Recipients" Index="3">
+              <LayoutItem Id="AdditionalCCNotificationRecipients" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="AdditionalBCCNotificationRecipients" RelativeSize="100" Caption="BCC Recipients" Index="4">
+              <LayoutItem Id="AdditionalBCCNotificationRecipients" SizeConstraintsType="Default" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="58.208955223880594" Caption="SizeableEditors" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="Body" Removed="True" />
+            <LayoutItem Id="ErrorMessage" Removed="True" />
+            <LayoutItem Id="SerializedObjectKey" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="NotificationQueueItem_ListView">
+      <Columns>
+        <ColumnInfo Id="FromAddress" Index="-1" />
+        <ColumnInfo Id="FromName" Index="-1" />
+        <ColumnInfo Id="PrimaryToAddress" Index="-1" />
+        <ColumnInfo Id="PrimaryToName" Index="-1" />
+        <ColumnInfo Id="Status" Index="0" />
+        <ColumnInfo Id="Subject" Index="1" />
+        <ColumnInfo Id="CreatedDate" Index="2" />
+        <ColumnInfo Id="LastModifiedDate" Index="3" />
+        <ColumnInfo Id="RelatedNotificationRule" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="NotificationQueueItem_NotificationAttachments_ListView" AllowDelete="False" AllowLink="False" AllowNew="False">
+      <HiddenActions>
+        <ActionLink ActionId="Attachments_PasteInformation" IsNewNode="True" />
+        <ActionLink ActionId="Attachments_SaveAttachment" IsNewNode="True" />
+        <ActionLink ActionId="Attachments_UploadAttachment" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <DetailView Id="NotificationRule_DetailView">
+      <Items>
+        <PropertyEditor Id="IsActive" Caption="Active" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="50.612959719789842">
+            <LayoutGroup Id="NotificationRule" Caption="Details" RelativeSize="67.474048442906579">
+              <LayoutGroup Id="NotificationRule_col1" RelativeSize="66.630196936542674">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="20" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="TargetObjectType" ViewItem="TargetObjectType" SizeConstraintsType="Default" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="EvaluationType" ViewItem="EvaluationType" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="Recurrence" ViewItem="Recurrence" Index="3" RelativeSize="15" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="Frequency" ViewItem="Frequency" Index="4" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="EmailStyle" SizeConstraintsType="Default" RelativeSize="20" Index="5" Removed="True" />
+                <LayoutItem Id="TestCountLimit" ViewItem="TestCountLimit" Index="5" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="ReportType" Index="6" RelativeSize="17.391304347826086" Removed="True" />
+                <LayoutItem Id="BodyReport" ViewItem="BodyReport" SizeConstraintsType="Default" Index="7" RelativeSize="10.344827586206897" Removed="True" />
+                <LayoutItem Id="FromAddressOverride" Index="7" RelativeSize="10.344827586206897" Removed="True" />
+                <LayoutItem Id="BodyReportV2" Index="8" RelativeSize="13.793103448275861" Removed="True" />
+                <LayoutItem Id="AttachmentFormat" RelativeSize="12.5" Index="9" Removed="True" />
+                <LayoutItem Id="SplitAttachmentReport" Index="9" RelativeSize="8.5714285714285712" Removed="True" />
+                <LayoutItem Id="CombineAllOccurencesIntoSingleEmail" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="NotificationRule_col2" RelativeSize="33.369803063457333">
+                <LayoutItem Id="IsActive" ViewItem="IsActive" CaptionLocation="Left" Index="0" RelativeSize="20" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="UseAngledBracketsForTokens" RelativeSize="15" Index="1" />
+                <LayoutItem Id="CombineAllOccurencesIntoSingleEmail" ViewItem="CombineAllOccurencesIntoSingleEmail" Index="2" RelativeSize="65" IsNewNode="True" />
+                <LayoutItem Id="EvaluationType" ViewItem="EvaluationType" SizeConstraintsType="Default" Index="3" RelativeSize="10.344827586206897" Removed="True" />
+                <LayoutItem Id="Frequency" SizeConstraintsType="Default" RelativeSize="10.344827586206897" Index="3" Removed="True" />
+                <LayoutItem Id="TestCountLimit" Index="4" RelativeSize="11.538461538461538" Removed="True" />
+                <LayoutItem Id="ChangeFromValue" Removed="True" />
+                <LayoutItem Id="ChangeToValue" RelativeSize="13.793103448275861" Removed="True" />
+                <LayoutItem Id="TargetObjectType" SizeConstraintsType="Default" RelativeSize="15" Removed="True" />
+                <LayoutItem Id="TargetObjectTypeName" SizeConstraintsType="Default" RelativeSize="17.391304347826086" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item11" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="32.525951557093428" Caption="Email Settings" IsNewNode="True">
+              <LayoutItem Id="EmailStyle" ViewItem="EmailStyle" Index="0" RelativeSize="50" IsNewNode="True" />
+              <LayoutItem Id="FromAddressOverride" ViewItem="FromAddressOverride" Index="1" RelativeSize="50" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="49.387040280210158">
+            <LayoutGroup Id="Item10" ShowCaption="True" Caption="Report Settings" CaptionLocation="Top" Index="0" RelativeSize="58.865248226950357" IsNewNode="True">
+              <LayoutItem Id="AttachmentFormat" ViewItem="AttachmentFormat" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
+              <LayoutItem Id="ReportType" ViewItem="ReportType" Index="1" RelativeSize="17.647058823529413" IsNewNode="True" />
+              <LayoutItem Id="BodyReport" ViewItem="BodyReport" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" />
+              <LayoutItem Id="BodyReportV2" ViewItem="BodyReportV2" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
+              <LayoutItem Id="SplitAttachmentReport" ViewItem="SplitAttachmentReport" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="EmailAddressesToBCC" SizeConstraintsType="Default" RelativeSize="5.3811659192825116" Index="1" Removed="True" />
+            <LayoutItem Id="EmailAddressesToCC" SizeConstraintsType="Default" RelativeSize="5.3811659192825116" Index="1" Removed="True" />
+            <TabbedGroup Id="Item2" CaptionLocation="Top" Index="1" RelativeSize="41.134751773049643" IsNewNode="True">
+              <LayoutGroup Id="Item7" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="Criteria" IsNewNode="True">
+                <LayoutItem Id="RuleCriteria" ViewItem="RuleCriteria" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Recipients" IsNewNode="True">
+                <LayoutItem Id="RecipientEmailAddresses" ViewItem="RecipientEmailAddresses" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="2" RelativeSize="100" Caption="Subject" IsNewNode="True">
+                <LayoutItem Id="NotificationSubject" ViewItem="NotificationSubject" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="3" RelativeSize="100" Caption="Body" IsNewNode="True">
+                <LayoutItem Id="BodyContent" ViewItem="BodyContent" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item6" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="4" RelativeSize="100" Caption="CC Email Addresses" IsNewNode="True">
+                <LayoutItem Id="EmailAddressesToCC" ViewItem="EmailAddressesToCC" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="5" RelativeSize="100" Caption="BCC Email Addresses" IsNewNode="True">
+                <LayoutItem Id="EmailAddressesToBCC" ViewItem="EmailAddressesToBCC" SizeConstraintsType="Default" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item8" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="6" RelativeSize="100" Caption="From Address Templates" IsNewNode="True">
+                <LayoutItem Id="NotificationOnDemandFromOptions" ViewItem="NotificationOnDemandFromOptions" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item9" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="7" RelativeSize="100" Caption="To Address Templates" IsNewNode="True">
+                <LayoutItem Id="NotificationOnDemandToOptions" ShowCaption="False" ViewItem="NotificationOnDemandToOptions" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="RecipientEmailAddresses" SizeConstraintsType="Default" RelativeSize="5.3811659192825116" Index="1" Removed="True" />
+            <LayoutItem Id="RuleCriteria" SizeConstraintsType="Default" RelativeSize="85.874439461883412" Index="1" Removed="True" />
+            <LayoutItem Id="BodyContent" SizeConstraintsType="Default" RelativeSize="6.0538116591928253" Removed="True" />
+            <LayoutItem Id="NotificationSubject" SizeConstraintsType="Default" RelativeSize="5.3811659192825116" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="60" Removed="True">
+            <LayoutGroup Id="NotificationOnDemandFromOptions" RelativeSize="100">
+              <LayoutItem Id="NotificationOnDemandFromOptions" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="NotificationOnDemandToOptions" RelativeSize="0" Caption="Notification On Demand To Options" Direction="Horizontal">
+              <LayoutItem Id="NotificationOnDemandToOptions" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="NotificationRule_ListView">
+      <Columns>
+        <ColumnInfo Id="BodyReport" Index="-1" />
+        <ColumnInfo Id="EmailStyle" Index="-1" />
+        <ColumnInfo Id="EvaluationType" Index="-1" />
+        <ColumnInfo Id="Frequency" Index="-1" />
+        <ColumnInfo Id="Recurrence" Index="-1" />
+        <ColumnInfo Id="TargetObjectType" Index="-1" />
+        <ColumnInfo Id="TargetObjectTypeName" Index="-1" />
+        <ColumnInfo Id="TestCountLimit" Index="-1" />
+        <ColumnInfo Id="IsActive" Index="1" Caption="Active" />
+      </Columns>
+    </ListView>
+    <DetailView Id="OnDemandNotificationParameters_DetailView">
+      <Items>
+        <PropertyEditor Id="EmailAddress" Caption="To Address" />
+        <PropertyEditor Id="FromAddress" AllowEdit="False" />
+        <PropertyEditor Id="NotificationAttachments" AllowEdit="False" />
+        <PropertyEditor Id="OnDemandNotificationFromOption" Caption="From Address Override" />
+        <PropertyEditor Id="OnDemandNotificationToOption" Caption="To Address Override" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="29.8636926889715">
+            <LayoutGroup Id="OnDemandNotificationParameters" RelativeSize="100" Direction="Vertical">
+              <LayoutItem Id="FromAddress" ViewItem="FromAddress" Index="0" RelativeSize="16.3265306122449" IsNewNode="True" />
+              <LayoutItem Id="OnDemandNotificationFromOption" ViewItem="OnDemandNotificationFromOption" Index="1" RelativeSize="12.244897959183673" IsNewNode="True" />
+              <LayoutItem Id="EmailAddress" Index="2" RelativeSize="12.244897959183673" ViewItem="EmailAddress" IsNewNode="True" />
+              <LayoutGroup Id="OnDemandNotificationParameters_col1" Index="3" RelativeSize="41.326530612244895">
+                <LayoutItem Id="OnDemandNotificationToOption" ViewItem="OnDemandNotificationToOption" Index="0" RelativeSize="37.037037037037038" IsNewNode="True" />
+                <LayoutItem Id="BCCEmailAddress" RelativeSize="29.62962962962963" Index="1" />
+                <LayoutItem Id="EmailAddress" RelativeSize="22.857142857142858" Index="1" Removed="True" />
+                <LayoutItem Id="CCEmailAddress" RelativeSize="33.333333333333336" Index="2" />
+              </LayoutGroup>
+              <LayoutGroup Id="OnDemandNotificationParameters_col2" Index="4" RelativeSize="17.857142857142858" Caption="OnDemandNotificationParameters_col2">
+                <LayoutItem Id="Subject" RelativeSize="100" />
+                <LayoutItem Id="OnDemandNotificationFromOption" RelativeSize="52.631578947368418" Removed="True" />
+                <LayoutItem Id="OnDemandNotificationToOption" RelativeSize="37.037037037037038" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="70.1363073110285" IsNewNode="True">
+            <LayoutGroup Id="Body" Index="0" ShowCaption="True" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Body" ViewItem="Body" RelativeSize="100" ShowCaption="" CaptionLocation="Top" Index="0" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Attachments" Index="1" ShowCaption="True" RelativeSize="100" Caption="Attachments" IsNewNode="True">
+              <LayoutItem Id="NotificationAttachments" ViewItem="NotificationAttachments" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="70.508054522924411" Removed="True">
+            <LayoutItem Id="Body" RelativeSize="100" CaptionLocation="Top" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="OnDemandNotificationParameters_NotificationAttachments_ListView" AllowDelete="False" AllowLink="False" AllowNew="False">
+      <Columns>
+        <ColumnInfo Id="NotificationQueueItem" Index="-1" />
+        <ColumnInfo Id="Name" Width="451" />
+        <ColumnInfo Id="RecordDate" Index="1" Width="234" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RecurrenceDefinition_DetailView">
+      <Items>
+        <PropertyEditor Id="LastExecutionDateTime" Caption="Last Rule Run Time" />
+        <PropertyEditor Id="TimeToExecute" Caption="Next Rule Evaluation Time" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autoecc20177-0110-4cd1-897c-2ea3f306b485">
+              <LayoutGroup Id="RecurrenceDefinition" RelativeSize="52.472858866103742">
+                <LayoutGroup Id="RecurrenceDefinition_col1">
+                  <LayoutItem Id="RecurrencePattern" RelativeSize="5.3067993366500827" />
+                  <LayoutItem Id="MinutesRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="HourlyRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="DailyRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="WeeklyRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="MonthlyRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="YearlyRecurrence" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="MonthlyDayOfMonth" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="YearlyMonth" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="YearlyDay" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="StartTime" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="EndTime" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="LastExecutionDateTime" RelativeSize="3.9800995024875623" />
+                  <LayoutItem Id="TimeToExecute" RelativeSize="46.932006633499171" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" RelativeSize="47.527141133896258">
+                <LayoutItem Id="WeeklyOnMonday" RelativeSize="5.3067993366500827" />
+                <LayoutItem Id="WeeklyOnTuesday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="WeeklyOnWednesday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="WeeklyOnThursday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="WeeklyOnFriday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="WeeklyOnSaturday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="WeeklyOnSunday" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="Due" RelativeSize="3.9800995024875623" />
+                <LayoutItem Id="Day Checkbox Info" RelativeSize="66.83250414593698" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,19 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="GPIntegration_DynamicsGPWebServices_Dynamics_x0020_GP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.153.240/DynamicsGPWebServices/DynamicsGPService.asmx</Value>
+    </Setting>
+    <Setting Name="GPConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=MCIDS\HORIZON05; initial catalog=HT;User Id=sa;password=$a;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=MCIDS\HORIZON05; initial catalog=HT;User Id=sa;password=$a;</Value>
+    </Setting>
+    <Setting Name="MSGPWSIntegration_GP10Service_Dynamics_x0020_GP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

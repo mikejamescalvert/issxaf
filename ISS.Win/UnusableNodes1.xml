@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="CouponCreator_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="@a20bdda4-70e5-4c3e-a7d0-9897b800ad1f" ActionContainer="RecordsNavigation" Caption="@a20bdda4-70e5-4c3e-a7d0-9897b800ad1f(7)" MinimumHeight="150" MinimumWidth="150" Bold="True" BackgroundColor="192, 0, 0" FontSize="24" />
+        <PropertyEditor Id="Company" PropertyEditorType="ISS.Base.Win.ButtonStateEditor" BackgroundColor="192, 192, 255" CheckedBackgroundColor="Navy" CheckedForegroundColor="White" ForegroundColor="White" Bold="True" FontSize="24" MinimumHeight="150" MinimumWidth="200" LabelFontSize="20" LabelFontColor="Purple" />
+        <PropertyEditor Id="NumberOfCouponsToGenerate" BackgroundColor="Yellow" Bold="True" FontSize="48" ForegroundColor="Black" />
+        <PropertyEditor Id="PaymentType" PropertyEditorType="ISS.Base.Win.ButtonStateEditor" BackgroundColor="192, 255, 192" CheckedBackgroundColor="Green" ForegroundColor="White" CheckedForegroundColor="White" Bold="True" FontSize="24" MinimumHeight="150" MinimumWidth="200" LabelFontSize="20" LabelFontColor="Red" />
+        <PropertyEditor Id="Projects" PropertyEditorType="ISS.Base.Win.ListButtonStateEditor" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="" Caption="Main" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="" Caption="SimpleEditors" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+            <LayoutGroup Id="CouponCreator" RelativeSize="100" ImageName="" Direction="Horizontal" Caption="CouponCreator" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+              <LayoutItem Id="Company" ViewItem="Company" CaptionLocation="Top" Index="0" RelativeSize="17" />
+              <LayoutItem Id="PaymentType" ViewItem="PaymentType" CaptionLocation="Top" Index="1" RelativeSize="22" />
+              <LayoutItem Id="@a20bdda4-70e5-4c3e-a7d0-9897b800ad1f" ViewItem="@a20bdda4-70e5-4c3e-a7d0-9897b800ad1f" Index="2" RelativeSize="59" />
+              <LayoutItem Id="NumberOfCouponsToGenerate" RelativeSize="27" ViewItem="NumberOfCouponsToGenerate" Index="3" />
+              <LayoutItem Id="Status" Index="3" RelativeSize="56" ViewItem="Status" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="87">
+            <LayoutGroup Id="Projects" TextAlignMode="UseParentOptions" RelativeSize="0" ImageName="BO_Unknown" Direction="Horizontal">
+              <LayoutItem Id="Projects" ViewItem="Projects" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Project_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="AvailableEmployees" PropertyEditorType="ISS.Base.Win.ListButtonStateEditor" MinimumHeight="100" MinimumWidth="100" />
+        <PropertyEditor Id="Employee1" PropertyEditorType="ISS.Base.Win.ButtonStateEditor" MinimumHeight="150" MinimumWidth="150" BackgroundColor="192, 192, 255" ForegroundColor="White" FontSize="34" Bold="True" CheckedBackgroundColor="Navy" CheckedForegroundColor="White" />
+      </Items>
+    </DetailView>
+    <ListView Id="Project_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OpenItems" DisplayFormat="{0:c}" EditMask="{0:c}" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="NonPersistentReporter_ListView" ViewId="NonPersistentReporter_DetailView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

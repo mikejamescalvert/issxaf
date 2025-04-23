@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE45EC9A-C450-4621-BCC0-9E104478737C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ISS.Base</RootNamespace>
+    <AssemblyName>ISS.Base</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/ISSBase/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ISS.Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ISS.Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ClickOnce|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ClickOnce\</OutputPath>
+    <DocumentationFile>ISS.Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Reports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v23.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\Editors\ObjectEditor\EditorSearchMode.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\OpenObjectAction\DisableObjectCreationIfNothingAttribute.vb" />
+    <Compile Include="Attributes\Editors\Property Editors\AllowOpenObjectAttribute.vb" />
+    <Compile Include="Attributes\Editors\DecimalPropertyEditor\DecimalProgressPropertyEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ToolTipTextAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ToolTipDisplayPropertyAttribute.vb" />
+    <Compile Include="Attributes\Editors\Property Editors\ViewIdEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\Property Editors\MemberNamePropertySourceAttribute.vb" />
+    <Compile Include="Attributes\Editors\Property Editors\MemberNameEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\PropertyDataObjectTypeEditor\PropertyDataObjectTypeMemberAttribute.vb" />
+    <Compile Include="Attributes\Editors\TextEditor\AllowPropertyOfTypeInsertAttribute.vb" />
+    <Compile Include="Attributes\Editors\TextEditor\StringValueWithPropertySourceEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\TextEditor\ValueWithDataSourceEditorAttribute - Copy.vb" />
+    <Compile Include="Attributes\Editors\TextEditor\StringValueWithObjectSourceEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\TextEditor\StringTokenizedLookupEditorAttribute.vb" />
+    <Compile Include="Attributes\Editors\View Only Html Editor\ViewOnlyHtmlEditorAttribute.vb" />
+    <Compile Include="Attributes\RadioEditor\ColumnOverrideAttribute.vb" />
+    <Compile Include="Attributes\DragAndDropSortableColumnAttribute.vb" />
+    <Compile Include="Attributes\View\ShowActionBarAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\CustomPropertyLinkButtonAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\CustomPropertyLinkButtonDetailViewSettingsAttribute.vb" />
+    <Compile Include="Attributes\View\ListView\DeleteKeyActionAttribute.vb" />
+    <Compile Include="Attributes\View\ListView\ShowLinkUnlinkAttribute.vb" />
+    <Compile Include="Attributes\View\ListView\ObjectClickActionAttribute.vb" />
+    <Compile Include="Attributes\View\ListView\EditableInListViewAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ButtonAlignmentAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\CustomEditorButtonAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ObjectEditorButtonsAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ObjectEditorDisplayValueAttribute.vb" />
+    <Compile Include="Attributes\EmailAddressAttribute.vb" />
+    <Compile Include="Attributes\Editors\ObjectEditor\ExpandObjectEditorAttribute.vb" />
+    <Compile Include="Attributes\View\ViewSettingsAttribute.vb">
+    </Compile>
+    <Compile Include="Attributes\View\Properties\IsEnabledPropertyAttribute.vb" />
+    <Compile Include="Attributes\View\Properties\IsRequiredPropertyAttribute.vb" />
+    <Compile Include="Attributes\View\Properties\IsRequiredMethodAttribute.vb" />
+    <Compile Include="Attributes\View\Properties\IsEnabledMethodAttribute.vb" />
+    <Compile Include="Attributes\VisibleInReportsOnlyAttribute.vb" />
+    <Compile Include="Business Objects\Non Persistent\Email\ISSBaseEmailMessage.vb" />
+    <Compile Include="Business Objects\Non Persistent\ISSXafReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Business Objects\Persistent\ISSReportData.vb" />
+    <Compile Include="Business Objects\Persistent\DiskImage.vb" />
+    <Compile Include="Business Objects\Persistent\Grid Image Viewer\ObjectStateInstance.vb" />
+    <Compile Include="Business Objects\Persistent\Grid Image Viewer\ObjectState.vb" />
+    <Compile Include="Business Objects\Non Persistent\Messages\ISSExceptionMessage.vb" />
+    <Compile Include="Business Objects\Non Persistent\View Parameters\ISSBaseDetailViewParameters.vb" />
+    <Compile Include="Business Objects\Non Persistent\View Parameters\ISSBaseListViewParameters.vb" />
+    <Compile Include="Business Objects\Persistent\Base Objects\ISSBaseAddress.vb" />
+    <Compile Include="Business Objects\Persistent\TransactionalDouble.vb" />
+    <Compile Include="Business Objects\Persistent\TransactionalDoubleHistory.vb" />
+    <Compile Include="Controllers\AboutInfoController.Designer.vb">
+      <DependentUpon>AboutInfoController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AboutInfoController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DeleteObjectController.Designer.vb">
+      <DependentUpon>DeleteObjectController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DeleteObjectController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Functions\CustomTransactionalDecimalFunction.vb" />
+    <Compile Include="Helpers\EmailHelper.vb" />
+    <Compile Include="Helpers\ReflectionHelper.vb" />
+    <Compile Include="Interfaces\IEmail.vb" />
+    <Compile Include="Controllers\ISSBaseViewController.Designer.vb">
+      <DependentUpon>ISSBaseViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ISSBaseViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model Extensions\IApplicationExtension.vb" />
+    <Compile Include="Model Extensions\IDetailViewItem.vb" />
+    <Compile Include="Model Extensions\IBOModel.vb" />
+    <Compile Include="Model Extensions\IModelBOModelItem.vb" />
+    <Compile Include="Model Extensions\IModelListViewExtension.vb" />
+    <Compile Include="Module.Designer.vb">
+      <DependentUpon>Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services\ReportService.vb" />
+    <Compile Include="Trace Objects\TraceDescendant.vb" />
+    <Compile Include="Updater.vb" />
+    <Compile Include="Business Objects\Non Persistent\View Parameters\ISSBaseViewParameters.vb" />
+    <Compile Include="Value Converters\IntegerAESValueConverter.vb" />
+    <Compile Include="Value Converters\Helpers\SimpleAES.vb" />
+    <Compile Include="Value Converters\DecimalAESValueConverter.vb" />
+    <Compile Include="Value Converters\StringAESValueConverter.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_update_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business Objects\Persistent\Security\" />
+    <Folder Include="DetailViewItem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISS.Attachments\ISS.Attachments.vbproj">
+      <Project>{AA345CDD-616F-4DDA-A901-FCE7378EFE2F}</Project>
+      <Name>ISS.Attachments</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

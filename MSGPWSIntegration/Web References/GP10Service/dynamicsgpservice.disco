@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx?wsdl" docRef="http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx" xmlns:q1="http://schemas.microsoft.com/dynamics/gp/2006/01" binding="q1:Dynamics_x005F_x0020_GPSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://gp10a-v/dynamicsgpwebservices/dynamicsgpservice.asmx" xmlns:q2="http://schemas.microsoft.com/dynamics/gp/2006/01" binding="q2:Dynamics_x005F_x0020_GPSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

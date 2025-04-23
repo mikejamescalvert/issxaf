@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Unspecified" Index="-1" IsNewNode="True" />
+      <ActionContainer Id="View" Index="110">
+        <ActionLink ActionId="Link" Index="80" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" Index="90" IsNewNode="True" />
+        <ActionLink ActionId="Save" Index="110" IsNewNode="True" />
+        <ActionLink ActionId="SaveAndClose" Index="120" IsNewNode="True" />
+        <ActionLink ActionId="SaveAndNew" Index="130" IsNewNode="True" />
+        <ActionLink ActionId="Delete" Index="140" IsNewNode="True" />
+        <ActionLink ActionId="Delete Item" Index="150" IsNewNode="True" />
+        <ActionLink ActionId="Cancel" Index="160" IsNewNode="True" />
+        <ActionLink ActionId="NextObject" Index="500" IsNewNode="True" />
+        <ActionLink ActionId="PreviousObject" Index="510" IsNewNode="True" />
+        <ActionLink ActionId="HideItemsFromDashboard" Index="520" IsNewNode="True" />
+        <ActionLink ActionId="NavigateBack" Index="540" IsNewNode="True" />
+        <ActionLink ActionId="NavigateForward" Index="550" IsNewNode="True" />
+        <ActionLink ActionId="OrganizeDashboard" Index="560" IsNewNode="True" />
+        <ActionLink ActionId="ShowAllContexts" Index="565" IsNewNode="True" />
+        <ActionLink ActionId="Refresh" Index="570" IsNewNode="True" Removed="True" />
+        <ActionLink ActionId="ShowInReportV2" Index="580" IsNewNode="True" />
+        <ActionLink ActionId="ShowItemsOnDashboard" Index="590" IsNewNode="True" />
+        <ActionLink ActionId="Close" Index="600" IsNewNode="True" />
+        <ActionLink ActionId="ResetPassword" Index="700" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="Edit" Index="120">
+        <ActionLink ActionId="Delete" Removed="True" />
+        <ActionLink ActionId="Delete Item" Removed="True" />
+        <ActionLink ActionId="HideItemsFromDashboard" Removed="True" />
+        <ActionLink ActionId="OrganizeDashboard" Removed="True" />
+        <ActionLink ActionId="ResetPassword" Removed="True" />
+        <ActionLink ActionId="ShowAllContexts" Removed="True" />
+        <ActionLink ActionId="ShowItemsOnDashboard" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Filters" Index="130" />
+      <ActionContainer Id="FullTextSearch" Index="140">
+        <ActionLink ActionId="FullTextSearch" Index="700" IsNewNode="True" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Link" Index="150">
+        <ActionLink ActionId="Link" Removed="True" />
+        <ActionLink ActionId="Unlink" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="ListView" Index="160">
+        <ActionLink ActionId="ListViewShowObject" Index="-1" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="ObjectsCreation" Index="170">
+        <ActionLink ActionId="New" Index="100" IsNewNode="True" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="RecordsNavigation" Index="180">
+        <ActionLink ActionId="NextObject" Removed="True" />
+        <ActionLink ActionId="PreviousObject" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Reports" Index="190">
+        <ActionLink ActionId="ShowInReportV2" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Save" Index="200">
+        <ActionLink ActionId="Save" Removed="True" />
+        <ActionLink ActionId="SaveAndClose" Removed="True" />
+        <ActionLink ActionId="SaveAndNew" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Security" Index="210" />
+      <ActionContainer Id="UndoRedo" Index="230">
+        <ActionLink ActionId="Cancel" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="ViewsHistoryNavigation" Index="240">
+        <ActionLink ActionId="NavigateBack" Removed="True" />
+        <ActionLink ActionId="NavigateForward" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="PopupActions" Index="800" />
+      <ActionContainer Id="Diagnostic" Index="900" />
+      <ActionContainer Id="Close">
+        <ActionLink ActionId="Close" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Reset Password" IsNewNode="True" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="15.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

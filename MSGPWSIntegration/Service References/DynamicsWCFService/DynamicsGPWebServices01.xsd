@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/dynamics/2006/01" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/dynamics/2006/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://GELLER-V:48620/Metadata/Legacy/Full/DynamicsGPWebServices2.xsd" namespace="http://schemas.microsoft.com/dynamics/security/2006/01" />
+  <xs:complexType name="Context">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="WorkOnBehalfOf" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrganizationKey" type="tns:OrganizationKey" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CultureName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CurrencyType" type="tns:CurrencyType" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/dynamics/security/2006/01" minOccurs="0" maxOccurs="1" name="RoleKey" type="q1:RoleKey" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrganizationKey" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Key" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Key" abstract="true" />
+  <xs:complexType name="CompanyKey">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OrganizationKey">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="NAVCompanyKey">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OrganizationKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AXCompanyKey">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OrganizationKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Id" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="CurrencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Transactional" />
+      <xs:enumeration value="Local" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Extension">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="DocExtension">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ExtensionId" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

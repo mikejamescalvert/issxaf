@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="UserFilter_DetailView_ViewMode">
+      <Items Id="Items">
+        <PropertyEditor Id="UserFilterColumnInfos" View="ISS.UserFilters.UserFilter_UserFilterColumnInfos_ListView" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

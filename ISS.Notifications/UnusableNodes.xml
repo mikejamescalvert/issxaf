@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="NotificationQueueItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NotificationQueueItem">
+              <LayoutGroup Id="NotificationQueueItem_col1">
+                <LayoutItem Id="NotificationDistributionChannel" SizeConstraintsType="Default" RelativeSize="58.8235294117647" Index="2" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="NotificationQueueItem_col2">
+                <LayoutItem Id="PrimaryToAddress" SizeConstraintsType="Default" RelativeSize="21.428571428571427" Index="2" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationRule_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NotificationRule">
+              <LayoutGroup Id="NotificationRule_col1">
+                <LayoutItem Id="NotificationDistributionChannel" SizeConstraintsType="Default" RelativeSize="15" Index="4" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

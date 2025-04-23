@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="MultifactorAuthenticationStandardParameters_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="AuthenticationStandardLogonParameters" RelativeSize="100" Index="0">
+              <LayoutItem Id="UserName" RelativeSize="5.1364365971107544" />
+              <LayoutItem Id="Password" RelativeSize="3.852327447833066" />
+              <LayoutItem Id="AuthenticationCode" ViewItem="AuthenticationCode" Index="2" RelativeSize="91.011235955056179" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="MultifactorAuthenticationStandardParameters" RelativeSize="86.195826645264845" Caption="Authentication Code" Removed="True">
+              <LayoutItem Id="AuthenticationCode" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

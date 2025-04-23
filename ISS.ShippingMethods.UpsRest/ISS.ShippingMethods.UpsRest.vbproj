@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11B7A155-353B-435B-866D-58FC76FA39E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ISS.ShippingMethods.UpsRest</RootNamespace>
+    <AssemblyName>ISS.ShippingMethods.UpsRest</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ISS.ShippingMethods.UpsRest.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ISS.ShippingMethods.UpsRest.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.15.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.15.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Json\Address.vb" />
+    <Compile Include="Models\Json\AddressKeyFormat.vb" />
+    <Compile Include="Models\Json\AddressValidationResponse.vb" />
+    <Compile Include="Models\Json\BillShipper.vb" />
+    <Compile Include="Models\Json\BillThirdParty.vb" />
+    <Compile Include="Models\Json\Candidate.vb" />
+    <Compile Include="Models\Json\CodeDescription.vb" />
+    <Compile Include="Models\Json\CodeValue.vb" />
+    <Compile Include="Models\Json\DestinationPickList.vb" />
+    <Compile Include="Models\Json\Dimensions.vb" />
+    <Compile Include="Models\Json\EmsResponse.vb" />
+    <Compile Include="Models\Json\OriginPickList.vb" />
+    <Compile Include="Models\Json\Package.vb" />
+    <Compile Include="Models\Json\PackageWeight.vb" />
+    <Compile Include="Models\Json\PackageServiceOptions.vb" />
+    <Compile Include="Models\Json\MonetaryValue.vb" />
+    <Compile Include="Models\Json\ResponseError.vb" />
+    <Compile Include="Models\Json\ResponseErrorValue.vb" />
+    <Compile Include="Models\Json\EmsService.vb" />
+    <Compile Include="Models\Json\ShipmentTotalWeight.vb" />
+    <Compile Include="Models\Json\PackagingType.vb" />
+    <Compile Include="Models\Json\PaymentDetails.vb" />
+    <Compile Include="Models\Json\DeliveryTimeInformation.vb" />
+    <Compile Include="Models\Json\RateRequest.vb" />
+    <Compile Include="Models\Json\Request.vb" />
+    <Compile Include="Models\Json\ShipmentService.vb" />
+    <Compile Include="Models\Json\PickupType.vb" />
+    <Compile Include="Models\Json\ShipFrom.vb" />
+    <Compile Include="Models\Json\Shipment.vb" />
+    <Compile Include="Models\Json\ShipmentCharge.vb" />
+    <Compile Include="Models\Json\ShipmentRatingOptions.vb" />
+    <Compile Include="Models\Json\Shipper.vb" />
+    <Compile Include="Models\Json\ShipTo.vb" />
+    <Compile Include="Models\Json\TransactionReference.vb" />
+    <Compile Include="Models\Json\UnitOfMeasurement.vb" />
+    <Compile Include="Models\Json\UpsAddressValidationRequest.vb" />
+    <Compile Include="Models\Json\UpsAddressValidationResponse.vb" />
+    <Compile Include="Models\Json\UpsRateResponse.vb" />
+    <Compile Include="Models\Json\UpsRatingRequest.vb" />
+    <Compile Include="Models\Json\ValidationList.vb" />
+    <Compile Include="Models\Json\UpsTransitTimeRequest.vb" />
+    <Compile Include="Models\Json\UpsTransitTimeResponse.vb" />
+    <Compile Include="Models\Json\XAVRequest.vb" />
+    <Compile Include="Models\Json\XAVResponse.vb" />
+    <Compile Include="Models\UPSAddress.vb" />
+    <Compile Include="Models\Json\UpsAuthResult.vb" />
+    <Compile Include="Models\UPSAddressValidationOutput.vb" />
+    <Compile Include="Models\UPSConfiguration.vb" />
+    <Compile Include="Models\UPSOutput.vb" />
+    <Compile Include="Models\UPSPackage.vb" />
+    <Compile Include="Models\UPSRequest.vb" />
+    <Compile Include="Models\UPSShippingRate.vb" />
+    <Compile Include="Models\UPSTimeInTransitEntry.vb" />
+    <Compile Include="Models\UPSTimeInTransitOutput.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services\AuthenticationService.vb" />
+    <Compile Include="Services\RatingService.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

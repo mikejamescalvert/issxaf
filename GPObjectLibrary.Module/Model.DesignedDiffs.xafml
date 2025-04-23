@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="GPObjectLibrary.Module.Objects.PM.PMVendor" DefaultLookupEditorMode="AllItemsWithSearch" />
+    <Class Name="GPObjectLibrary.Module.Objects.RM.RMCustomer" DefaultLookupEditorMode="AllItemsWithSearch" ImageName="BO_Customer" Caption="Customer Information" />
+    <Class Name="GPObjectLibrary.Module.Objects.RM.RMCustomerClass" ImageName="BO_Department" />
+    <Class Name="GPObjectLibrary.Module.Objects.RM.RMReceivableDocument" ImageName="BO_Invoice" />
+  </BOModel>
+  <SchemaModules IsNewNode="True">
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.AutoFilterRowListViewController" Version="9.3.4.0" IsNewNode="True" />
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.HideActionsViewController" Version="9.3.4.0" IsNewNode="True" />
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.ShowNavigationItemController" Version="9.3.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="14.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="PMVendor_LookupListView" DataAccessMode="Server">
+      <Columns>
+        <ColumnInfo Id="ACNMVNDR" Index="-1" />
+        <ColumnInfo Id="ACPURIDX" Index="-1" />
+        <ColumnInfo Id="ADDRESS1" Index="-1" />
+        <ColumnInfo Id="ADDRESS2" Index="-1" />
+        <ColumnInfo Id="ADDRESS3" Index="-1" />
+        <ColumnInfo Id="BRTHDATE" Index="-1" />
+        <ColumnInfo Id="CBVAT" Index="-1" />
+        <ColumnInfo Id="CCode" Index="-1" />
+        <ColumnInfo Id="CHEKBKID" Index="-1" />
+        <ColumnInfo Id="CITY" Index="-1" />
+        <ColumnInfo Id="COMMENT1" Index="-1" />
+        <ColumnInfo Id="COMMENT2" Index="-1" />
+        <ColumnInfo Id="COUNTRY" Index="-1" />
+        <ColumnInfo Id="CREATDDT" Index="-1" />
+        <ColumnInfo Id="CREDTLMT" Index="-1" />
+        <ColumnInfo Id="CRLMTDLR" Index="-1" />
+        <ColumnInfo Id="CRTCOMDT" Index="-1" />
+        <ColumnInfo Id="CRTEXPDT" Index="-1" />
+        <ColumnInfo Id="CURNCYID" Index="-1" />
+        <ColumnInfo Id="DECLID" Index="-1" />
+        <ColumnInfo Id="DEX_ROW_ID" Index="-1" />
+        <ColumnInfo Id="DEX_ROW_TS" Index="-1" />
+        <ColumnInfo Id="DISGRPER" Index="-1" />
+        <ColumnInfo Id="DOCFMTID" Index="-1" />
+        <ColumnInfo Id="DUEGRPER" Index="-1" />
+        <ColumnInfo Id="DXVARNUM" Index="-1" />
+        <ColumnInfo Id="FAXNUMBR" Index="-1" />
+        <ColumnInfo Id="FREEONBOARD" Index="-1" />
+        <ColumnInfo Id="GOVCRPID" Index="-1" />
+        <ColumnInfo Id="GOVINDID" Index="-1" />
+        <ColumnInfo Id="HOLD" Index="-1" />
+        <ColumnInfo Id="KGLDSTHS" Index="-1" />
+        <ColumnInfo Id="KPCALHST" Index="-1" />
+        <ColumnInfo Id="KPERHIST" Index="-1" />
+        <ColumnInfo Id="KPTRXHST" Index="-1" />
+        <ColumnInfo Id="LaborPmtType" Index="-1" />
+        <ColumnInfo Id="MAXINDLR" Index="-1" />
+        <ColumnInfo Id="MINORDER" Index="-1" />
+        <ColumnInfo Id="MINPYDLR" Index="-1" />
+        <ColumnInfo Id="MINPYPCT" Index="-1" />
+        <ColumnInfo Id="MINPYTYP" Index="-1" />
+        <ColumnInfo Id="MODIFDT" Index="-1" />
+        <ColumnInfo Id="MXIAFVND" Index="-1" />
+        <ColumnInfo Id="MXWOFAMT" Index="-1" />
+        <ColumnInfo Id="NOTEINDX" Index="-1" />
+        <ColumnInfo Id="PARVENID" Index="-1" />
+        <ColumnInfo Id="PaymentTerms" Index="-1" />
+        <ColumnInfo Id="PHNUMBR1" Index="-1" />
+        <ColumnInfo Id="PHNUMBR2" Index="-1" />
+        <ColumnInfo Id="PHONE3" Index="-1" />
+        <ColumnInfo Id="PMAPINDX" Index="-1" />
+        <ColumnInfo Id="PMCSHIDX" Index="-1" />
+        <ColumnInfo Id="PMDAVIDX" Index="-1" />
+        <ColumnInfo Id="PMDTKIDX" Index="-1" />
+        <ColumnInfo Id="PMFINIDX" Index="-1" />
+        <ColumnInfo Id="PMFRTIDX" Index="-1" />
+        <ColumnInfo Id="PMMSCHIX" Index="-1" />
+        <ColumnInfo Id="PMPRCHIX" Index="-1" />
+        <ColumnInfo Id="PMRTNGIX" Index="-1" />
+        <ColumnInfo Id="PMTAXIDX" Index="-1" />
+        <ColumnInfo Id="PMTDSCIX" Index="-1" />
+        <ColumnInfo Id="PMWRTIDX" Index="-1" />
+        <ColumnInfo Id="Post_Results_To" Index="-1" />
+        <ColumnInfo Id="PPSTAXRT" Index="-1" />
+        <ColumnInfo Id="PRSPAYEE" Index="-1" />
+        <ColumnInfo Id="PTCSHACF" Index="-1" />
+        <ColumnInfo Id="PurchaseAddress" Index="-1" />
+        <ColumnInfo Id="PURPVIDX" Index="-1" />
+        <ColumnInfo Id="PYMNTPRI" Index="-1" />
+        <ColumnInfo Id="PYMTRMID" Index="-1" />
+        <ColumnInfo Id="RATETPID" Index="-1" />
+        <ColumnInfo Id="RemitToAddress" Index="-1" />
+        <ColumnInfo Id="Revalue_Vendor" Index="-1" />
+        <ColumnInfo Id="RTOBUTKN" Index="-1" />
+        <ColumnInfo Id="SBPPSDED" Index="-1" />
+        <ColumnInfo Id="ShipFromAddress" Index="-1" />
+        <ColumnInfo Id="SHIPMTHD" Index="-1" />
+        <ColumnInfo Id="ShippingMethod" Index="-1" />
+        <ColumnInfo Id="STATE" Index="-1" />
+        <ColumnInfo Id="TaxFileNumMode" Index="-1" />
+        <ColumnInfo Id="TaxInvRecvd" Index="-1" />
+        <ColumnInfo Id="TaxSchedule" Index="-1" />
+        <ColumnInfo Id="TAXSCHID" Index="-1" />
+        <ColumnInfo Id="TEN99BOXNUMBER" Index="-1" />
+        <ColumnInfo Id="TEN99TYPE" Index="-1" />
+        <ColumnInfo Id="TRDDISCT" Index="-1" />
+        <ColumnInfo Id="TXIDNMBR" Index="-1" />
+        <ColumnInfo Id="TXRGNNUM" Index="-1" />
+        <ColumnInfo Id="UPSZONE" Index="-1" />
+        <ColumnInfo Id="USERDEF1" Index="-1" />
+        <ColumnInfo Id="USERDEF2" Index="-1" />
+        <ColumnInfo Id="USERLANG" Index="-1" />
+        <ColumnInfo Id="VADCDPAD" Index="-1" />
+        <ColumnInfo Id="VADCDSFR" Index="-1" />
+        <ColumnInfo Id="VADCDTRO" Index="-1" />
+        <ColumnInfo Id="VADDCDPR" Index="-1" />
+        <ColumnInfo Id="VENDSHNM" Index="-1" />
+        <ColumnInfo Id="VENDSTTS" Index="-1" />
+        <ColumnInfo Id="VNDCHKNM" Index="-1" />
+        <ColumnInfo Id="VNDCLSID" Index="-1" />
+        <ColumnInfo Id="VNDCNTCT" Index="-1" />
+        <ColumnInfo Id="WithholdingEntityType" Index="-1" />
+        <ColumnInfo Id="WithholdingFormType" Index="-1" />
+        <ColumnInfo Id="WithholdingType" Index="-1" />
+        <ColumnInfo Id="Workflow_Approval_Status" Index="-1" />
+        <ColumnInfo Id="Workflow_Priority" Index="-1" />
+        <ColumnInfo Id="WRITEOFF" Index="-1" />
+        <ColumnInfo Id="XPDTOBLG" Index="-1" />
+        <ColumnInfo Id="ZIPCODE" Index="-1" />
+        <ColumnInfo Id="VENDORID" Index="0" Caption="Vendor Id" />
+        <ColumnInfo Id="VENDNAME" Index="1" Caption="Vendor Name" />
+      </Columns>
+    </ListView>
+    <ListView Id="RMCustomer_ListView">
+      <Columns>
+        <ColumnInfo Id="ADDRESS1" Index="-1" />
+        <ColumnInfo Id="ADDRESS2" Index="-1" />
+        <ColumnInfo Id="ADDRESS3" Index="-1" />
+        <ColumnInfo Id="ADRSCODE" Index="-1" />
+        <ColumnInfo Id="BALNCTYP" Index="-1" />
+        <ColumnInfo Id="BANKNAME" Index="-1" />
+        <ColumnInfo Id="BNKBRNCH" Index="-1" />
+        <ColumnInfo Id="CBVAT" Index="-1" />
+        <ColumnInfo Id="CCode" Index="-1" />
+        <ColumnInfo Id="CCRDXPDT" Index="-1" />
+        <ColumnInfo Id="CHEKBKID" Index="-1" />
+        <ColumnInfo Id="CITY" Index="-1" />
+        <ColumnInfo Id="CNTCPRSN" Index="-1" />
+        <ColumnInfo Id="COMMENT1" Index="-1" />
+        <ColumnInfo Id="COMMENT2" Index="-1" />
+        <ColumnInfo Id="COUNTRY" Index="-1" />
+        <ColumnInfo Id="CPRCSTNM" Index="-1" />
+        <ColumnInfo Id="CRCARDID" Index="-1" />
+        <ColumnInfo Id="CRCRDNUM" Index="-1" />
+        <ColumnInfo Id="CREATDDT" Index="-1" />
+        <ColumnInfo Id="CRLMTAMT" Index="-1" />
+        <ColumnInfo Id="CRLMTPAM" Index="-1" />
+        <ColumnInfo Id="CRLMTPER" Index="-1" />
+        <ColumnInfo Id="CRLMTTYP" Index="-1" />
+        <ColumnInfo Id="CURNCYID" Index="-1" />
+        <ColumnInfo Id="CUSTCLAS" Index="-1" />
+        <ColumnInfo Id="CUSTDISC" Index="-1" />
+        <ColumnInfo Id="CUSTPRIORITY" Index="-1" />
+        <ColumnInfo Id="DECLID" Index="-1" />
+        <ColumnInfo Id="DEFCACTY" Index="-1" />
+        <ColumnInfo Id="DISGRPER" Index="-1" />
+        <ColumnInfo Id="DOCFMTID" Index="-1" />
+        <ColumnInfo Id="DUEGRPER" Index="-1" />
+        <ColumnInfo Id="FAX" Index="-1" />
+        <ColumnInfo Id="FINCHDLR" Index="-1" />
+        <ColumnInfo Id="FINCHID" Index="-1" />
+        <ColumnInfo Id="FNCHATYP" Index="-1" />
+        <ColumnInfo Id="FNCHPCNT" Index="-1" />
+        <ColumnInfo Id="FRSTINDT" Index="-1" />
+        <ColumnInfo Id="GOVCRPID" Index="-1" />
+        <ColumnInfo Id="GOVINDID" Index="-1" />
+        <ColumnInfo Id="GPSFOINTEGRATIONID" Index="-1" />
+        <ColumnInfo Id="HOLD" Index="-1" />
+        <ColumnInfo Id="INACTIVE" Index="-1" />
+        <ColumnInfo Id="INCLUDEINDP" Index="-1" />
+        <ColumnInfo Id="INTEGRATIONID" Index="-1" />
+        <ColumnInfo Id="INTEGRATIONSOURCE" Index="-1" />
+        <ColumnInfo Id="KPCALHST" Index="-1" />
+        <ColumnInfo Id="KPDSTHST" Index="-1" />
+        <ColumnInfo Id="KPERHIST" Index="-1" />
+        <ColumnInfo Id="KPTRXHST" Index="-1" />
+        <ColumnInfo Id="MINPYDLR" Index="-1" />
+        <ColumnInfo Id="MINPYPCT" Index="-1" />
+        <ColumnInfo Id="MINPYTYP" Index="-1" />
+        <ColumnInfo Id="MODIFDT" Index="-1" />
+        <ColumnInfo Id="MXWOFTYP" Index="-1" />
+        <ColumnInfo Id="MXWROFAM" Index="-1" />
+        <ColumnInfo Id="NOTEINDX" Index="-1" />
+        <ColumnInfo Id="ORDERFULFILLDEFAULT" Index="-1" />
+        <ColumnInfo Id="PHONE1" Index="-1" />
+        <ColumnInfo Id="PHONE2" Index="-1" />
+        <ColumnInfo Id="PHONE3" Index="-1" />
+        <ColumnInfo Id="Post_Results_To" Index="-1" />
+        <ColumnInfo Id="PRBTADCD" Index="-1" />
+        <ColumnInfo Id="PRCLEVEL" Index="-1" />
+        <ColumnInfo Id="PRSTADCD" Index="-1" />
+        <ColumnInfo Id="PYMTRMID" Index="-1" />
+        <ColumnInfo Id="RATETPID" Index="-1" />
+        <ColumnInfo Id="Revalue_Customer" Index="-1" />
+        <ColumnInfo Id="RMARACC" Index="-1" />
+        <ColumnInfo Id="RMAVACC" Index="-1" />
+        <ColumnInfo Id="RMCOSACC" Index="-1" />
+        <ColumnInfo Id="RMCSHACC" Index="-1" />
+        <ColumnInfo Id="RMFCGACC" Index="-1" />
+        <ColumnInfo Id="RMIVACC" Index="-1" />
+        <ColumnInfo Id="RMOvrpymtWrtoffAcctIdx" Index="-1" />
+        <ColumnInfo Id="RMSLSACC" Index="-1" />
+        <ColumnInfo Id="RMSORACC" Index="-1" />
+        <ColumnInfo Id="RMTAKACC" Index="-1" />
+        <ColumnInfo Id="RMWRACC" Index="-1" />
+        <ColumnInfo Id="SALSTERR" Index="-1" />
+        <ColumnInfo Id="Send_Email_Statements" Index="-1" />
+        <ColumnInfo Id="SHIPCOMPLETE" Index="-1" />
+        <ColumnInfo Id="SHIPMTHD" Index="-1" />
+        <ColumnInfo Id="STADDRCD" Index="-1" />
+        <ColumnInfo Id="STATE" Index="-1" />
+        <ColumnInfo Id="STMTCYCL" Index="-1" />
+        <ColumnInfo Id="TAXEXMT1" Index="-1" />
+        <ColumnInfo Id="TAXEXMT2" Index="-1" />
+        <ColumnInfo Id="TaxSchedule" Index="-1" />
+        <ColumnInfo Id="TAXSCHID" Index="-1" />
+        <ColumnInfo Id="TXRGNNUM" Index="-1" />
+        <ColumnInfo Id="UPSZONE" Index="-1" />
+        <ColumnInfo Id="USERDEF1" Index="-1" />
+        <ColumnInfo Id="USERDEF2" Index="-1" />
+        <ColumnInfo Id="USERLANG" Index="-1" />
+        <ColumnInfo Id="ZIP" Index="-1" />
+        <ColumnInfo Id="CUSTNMBR" Caption="Customer Number" />
+        <ColumnInfo Id="CUSTNAME" Caption="Customer Name" />
+        <ColumnInfo Id="STMTNAME" Caption="Statement Name" />
+        <ColumnInfo Id="SHRTNAME" Caption="Short Name" />
+        <ColumnInfo Id="SLPRSNID" Caption="Salesperson ID" />
+      </Columns>
+    </ListView>
+    <ListView Id="RMCustomer_LookupListView" DataAccessMode="Server" />
+    <ListView Id="RMReceivableDocument_ListView">
+      <Columns>
+        <ColumnInfo Id="ADRSCODE" Index="-1" />
+        <ColumnInfo Id="AGNGBUKT" Index="-1" />
+        <ColumnInfo Id="APLYWITH" Index="-1" />
+        <ColumnInfo Id="BACHNUMB" Index="-1" />
+        <ColumnInfo Id="BackoutTradeDisc" Index="-1" />
+        <ColumnInfo Id="BCHSOURC" Index="-1" />
+        <ColumnInfo Id="BKTFRTAM" Index="-1" />
+        <ColumnInfo Id="BKTMSCAM" Index="-1" />
+        <ColumnInfo Id="BKTSLSAM" Index="-1" />
+        <ColumnInfo Id="CASHAMNT" Index="-1" />
+        <ColumnInfo Id="CBKIDCHK" Index="-1" />
+        <ColumnInfo Id="CBKIDCRD" Index="-1" />
+        <ColumnInfo Id="CBKIDCSH" Index="-1" />
+        <ColumnInfo Id="CHEKNMBR" Index="-1" />
+        <ColumnInfo Id="COMDLRAM" Index="-1" />
+        <ColumnInfo Id="CORRCTN" Index="-1" />
+        <ColumnInfo Id="COSTAMNT" Index="-1" />
+        <ColumnInfo Id="CPRCSTNM" Index="-1" />
+        <ColumnInfo Id="CSHRCTYP" Index="-1" />
+        <ColumnInfo Id="CSPORNBR" Index="-1" />
+        <ColumnInfo Id="CURNCYID" Index="-1" />
+        <ColumnInfo Id="DELETE1" Index="-1" />
+        <ColumnInfo Id="DINVPDOF" Index="-1" />
+        <ColumnInfo Id="DIRECTDEBIT" Index="-1" />
+        <ColumnInfo Id="DISAVAMT" Index="-1" />
+        <ColumnInfo Id="DISAVTKN" Index="-1" />
+        <ColumnInfo Id="DISCDATE" Index="-1" />
+        <ColumnInfo Id="DISCRTND" Index="-1" />
+        <ColumnInfo Id="DISTKNAM" Index="-1" />
+        <ColumnInfo Id="DOCDATE" Index="-1" />
+        <ColumnInfo Id="DSCDLRAM" Index="-1" />
+        <ColumnInfo Id="DSCPCTAM" Index="-1" />
+        <ColumnInfo Id="DUEDATE" Index="-1" />
+        <ColumnInfo Id="ECTRX" Index="-1" />
+        <ColumnInfo Id="EFTFLAG" Index="-1" />
+        <ColumnInfo Id="Electronic" Index="-1" />
+        <ColumnInfo Id="Factoring" Index="-1" />
+        <ColumnInfo Id="FRTAMNT" Index="-1" />
+        <ColumnInfo Id="FRTSCHID" Index="-1" />
+        <ColumnInfo Id="GLPOSTDT" Index="-1" />
+        <ColumnInfo Id="GSTDSAMT" Index="-1" />
+        <ColumnInfo Id="LSTEDTDT" Index="-1" />
+        <ColumnInfo Id="LSTUSRED" Index="-1" />
+        <ColumnInfo Id="MISCAMNT" Index="-1" />
+        <ColumnInfo Id="MSCSCHID" Index="-1" />
+        <ColumnInfo Id="NOTEINDX" Index="-1" />
+        <ColumnInfo Id="Oid" Index="-1" />
+        <ColumnInfo Id="POSTDATE" Index="-1" />
+        <ColumnInfo Id="PPSAMDED" Index="-1" />
+        <ColumnInfo Id="PSTUSRID" Index="-1" />
+        <ColumnInfo Id="PYMTRMID" Index="-1" />
+        <ColumnInfo Id="SALEDATE" Index="-1" />
+        <ColumnInfo Id="SHIPMTHD" Index="-1" />
+        <ColumnInfo Id="SIMPLIFD" Index="-1" />
+        <ColumnInfo Id="SLPRSNID" Index="-1" />
+        <ColumnInfo Id="SLSAMNT" Index="-1" />
+        <ColumnInfo Id="SLSCHDID" Index="-1" />
+        <ColumnInfo Id="SLSTERCD" Index="-1" />
+        <ColumnInfo Id="Tax_Date" Index="-1" />
+        <ColumnInfo Id="TAXAMNT" Index="-1" />
+        <ColumnInfo Id="TAXSCHID" Index="-1" />
+        <ColumnInfo Id="TRDISAMT" Index="-1" />
+        <ColumnInfo Id="TRXDSCRN" Index="-1" />
+        <ColumnInfo Id="TRXSORCE" Index="-1" />
+        <ColumnInfo Id="VOIDDATE" Index="-1" />
+        <ColumnInfo Id="VOIDSTTS" Index="-1" />
+        <ColumnInfo Id="WROFAMNT" Index="-1" />
+        <ColumnInfo Id="Oid.CUSTNMBR" Index="0" Caption="Customer Number" />
+        <ColumnInfo Id="Oid.DOCNUMBR" Index="1" Caption="Doc Number" />
+        <ColumnInfo Id="Oid.RMDTYPAL" Index="2" Caption="Type" />
+        <ColumnInfo Id="ORTRXAMT" Index="10" Caption="Original Amt" />
+        <ColumnInfo Id="CURTRXAM" Index="11" Caption="Current Amt" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

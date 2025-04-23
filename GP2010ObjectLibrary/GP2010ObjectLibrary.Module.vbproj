@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59BA3479-3DF0-4876-A6D3-3013A941474D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GP2010ObjectLibrary.Module</RootNamespace>
+    <AssemblyName>GP2010ObjectLibrary.Module</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$solutionname$.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$solutionname$.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DocumentationFile>$solutionname$.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>EASYTEST</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Drawing.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v24.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GPObjectLibrarySQLRepository">
+      <HintPath>..\GPObjectLibrarySQLRepository\bin\Release\GPObjectLibrarySQLRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseUpdate\Updater.vb" />
+    <Compile Include="GP Objects\BM\BMBillOfMaterialDetail.vb" />
+    <Compile Include="GP Objects\BM\BMBillOfMaterialHeader.vb" />
+    <Compile Include="GP Objects\BM\Helpers\BMHelper.vb" />
+    <Compile Include="GP Objects\CLM\CLMCertificationMaster.Designer.vb">
+      <DependentUpon>CLMCertificationMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CLM\CLMCertificationMaster.vb" />
+    <Compile Include="GP Objects\CLM\CLMLicenseMaster.Designer.vb">
+      <DependentUpon>CLMLicenseMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CLM\CLMLicenseMaster.vb" />
+    <Compile Include="GP Objects\CM\BankDepositCashReceiptTransaction.vb" />
+    <Compile Include="GP Objects\CM\CheckbookMaster.vb" />
+    <Compile Include="GP Objects\CN\CNActionDefinition.Designer.vb">
+      <DependentUpon>CNActionDefinition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNActionDefinition.vb" />
+    <Compile Include="GP Objects\CN\CNCustomerCollectionInfo.vb" />
+    <Compile Include="GP Objects\CN\CNNoteContent.Designer.vb">
+      <DependentUpon>CNNoteContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNNoteContent.vb" />
+    <Compile Include="GP Objects\CN\CNNoteDoc.Designer.vb">
+      <DependentUpon>CNNoteDoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNNoteDoc.vb" />
+    <Compile Include="GP Objects\CN\CNNoteDocHistory.Designer.vb">
+      <DependentUpon>CNNoteDocHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNNoteDocHistory.vb" />
+    <Compile Include="GP Objects\CN\CNNoteHeader.Designer.vb">
+      <DependentUpon>CNNoteHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNNoteHeader.vb" />
+    <Compile Include="GP Objects\CN\CNNoteHistory.Designer.vb">
+      <DependentUpon>CNNoteHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNNoteHistory.vb" />
+    <Compile Include="GP Objects\CN\CNQuery.Designer.vb">
+      <DependentUpon>CNQuery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\CN\CNQuery.vb" />
+    <Compile Include="GP Objects\CN\CNQueryStats.vb" />
+    <Compile Include="GP Objects\DD\DDEmployeeDirectDepositHeader.Designer.vb">
+      <DependentUpon>DDEmployeeDirectDepositHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\DD\DDEmployeeDirectDepositHeader.vb" />
+    <Compile Include="GP Objects\DD\DDEmployeeDirectDepositMaster.Designer.vb">
+      <DependentUpon>DDEmployeeDirectDepositMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\DD\DDEmployeeDirectDepositMaster.vb" />
+    <Compile Include="GP Objects\DTA\DTACodeAssignmentDetails.vb" />
+    <Compile Include="GP Objects\DTA\DTACodeAssignmentHeader.vb" />
+    <Compile Include="GP Objects\EX\EXEmployeeExtraFields.Designer.vb">
+      <DependentUpon>EXEmployeeExtraFields.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\EX\EXEmployeeExtraFields.vb" />
+    <Compile Include="GP Objects\GL\GLAccountIndexMaster.vb" />
+    <Compile Include="GP Objects\GL\GLAccountMaster.vb" />
+    <Compile Include="GP Objects\GL\GLAccountSegment.vb" />
+    <Compile Include="GP Objects\GL\GLAccountTransactionHistory.vb" />
+    <Compile Include="GP Objects\GL\GLBudgetDetail.vb" />
+    <Compile Include="GP Objects\GL\GLBudgetHeader.vb" />
+    <Compile Include="GP Objects\GL\GLHistoricalYearAccountSummary.Designer.vb">
+      <DependentUpon>GLHistoricalYearAccountSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\GL\GLHistoricalYearAccountSummary.vb" />
+    <Compile Include="GP Objects\GL\GLLedgerDetail.vb" />
+    <Compile Include="GP Objects\GL\GLLedgerHeader.vb" />
+    <Compile Include="GP Objects\GL\Globals.vb" />
+    <Compile Include="GP Objects\GL\GLOpenYearAccountSummary.Designer.vb">
+      <DependentUpon>GLOpenYearAccountSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\GL\GLOpenYearAccountSummary.vb" />
+    <Compile Include="GP Objects\GL\Helpers\GLHelper.vb" />
+    <Compile Include="GP Objects\IS\Helpers\ISHelper.vb" />
+    <Compile Include="GP Objects\IS\ISHistoricalSalesOrderManufacturingOrderLink.vb" />
+    <Compile Include="GP Objects\IS\ISSalesOrderManufacturingOrderLink.vb" />
+    <Compile Include="GP Objects\IV\Helpers\ItemStockCount.vb" />
+    <Compile Include="GP Objects\IV\Helpers\ItemStockCounts.vb" />
+    <Compile Include="GP Objects\IV\Helpers\ItemStockCountSerialNumber.vb" />
+    <Compile Include="GP Objects\IV\Helpers\IVHelper.vb" />
+    <Compile Include="GP Objects\IV\IVCategoryValue.vb" />
+    <Compile Include="GP Objects\IV\IVCountry.vb" />
+    <Compile Include="GP Objects\IV\IVInventoryAdjustmentDetail.vb" />
+    <Compile Include="GP Objects\IV\IVInventoryAdjustmentDetailLotAssignment.vb" />
+    <Compile Include="GP Objects\IV\IVInventoryAdjustmentHeader.vb" />
+    <Compile Include="GP Objects\IV\IVItem.vb" />
+    <Compile Include="GP Objects\IV\IVItemClass.vb" />
+    <Compile Include="GP Objects\IV\IVItemCurrency.vb" />
+    <Compile Include="GP Objects\IV\IVItemPriceGroupItemAssignment.vb" />
+    <Compile Include="GP Objects\IV\IVItemPriceList.vb" />
+    <Compile Include="GP Objects\IV\IVItemQuantity.vb" />
+    <Compile Include="GP Objects\IV\IVItemQuantityLot.vb" />
+    <Compile Include="GP Objects\IV\IVItemSerialNumber.vb" />
+    <Compile Include="GP Objects\IV\IVItemStockCount.vb" />
+    <Compile Include="GP Objects\IV\IVItemStockCountLine.vb" />
+    <Compile Include="GP Objects\IV\IVItemStockCountSeriaLot.vb" />
+    <Compile Include="GP Objects\IV\IVItemStockCountUOM.vb" />
+    <Compile Include="GP Objects\IV\IVItemVendor.vb" />
+    <Compile Include="GP Objects\IV\IVKitItem.vb" />
+    <Compile Include="GP Objects\IV\IVPriceLevel.vb" />
+    <Compile Include="GP Objects\IV\IVPricesheetLineItemDetail.vb" />
+    <Compile Include="GP Objects\IV\IVPricesheetLineItemDetailPrice.vb" />
+    <Compile Include="GP Objects\IV\IVReceiptHeader.vb" />
+    <Compile Include="GP Objects\IV\IVReceiptHeaderHistory.vb" />
+    <Compile Include="GP Objects\IV\IVSetup.vb" />
+    <Compile Include="GP Objects\IV\IVSite.vb" />
+    <Compile Include="GP Objects\IV\IVUOMSchedule.vb" />
+    <Compile Include="GP Objects\IV\IVUOMScheduleDetail.vb" />
+    <Compile Include="GP Objects\IV\Non Persistent\IVExtendedPricingItemPrice.vb" />
+    <Compile Include="GP Objects\IV\Non Persistent\IVExtendedPricingLevel.vb" />
+    <Compile Include="GP Objects\MOPS\Helpers\ManufacturerSystemHelper.vb" />
+    <Compile Include="GP Objects\MOPS\ManufactureOrderNumberCounter.vb" />
+    <Compile Include="GP Objects\MOP\MOP1200.Designer.vb">
+      <DependentUpon>MOP1200.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\MOP\MOP1200.vb" />
+    <Compile Include="GP Objects\MOP\MOPPostedSerialNumber.vb" />
+    <Compile Include="GP Objects\MOP\MOPUnpostedSerialNumber.vb" />
+    <Compile Include="GP Objects\MS\MSNodusCreditCardMaster.vb" />
+    <Compile Include="GP Objects\PC\PCPositionClassSetup.vb" />
+    <Compile Include="GP Objects\PK\Helpers\PKHelper.vb" />
+    <Compile Include="GP Objects\PK\PKPickListItem.vb" />
+    <Compile Include="GP Objects\PK\PKPickListSequence.vb" />
+    <Compile Include="GP Objects\PM\Helpers\CheckHelper.vb" />
+    <Compile Include="GP Objects\PM\PMClosedPMTransaction.vb" />
+    <Compile Include="GP Objects\PM\PMClosedPMTransactionDistribution.vb" />
+    <Compile Include="GP Objects\PM\PMClosedPMTransactionLine.vb" />
+    <Compile Include="GP Objects\PM\PMControlTable.vb" />
+    <Compile Include="GP Objects\PM\PMOpenPMTransaction.vb" />
+    <Compile Include="GP Objects\PM\PMPayment.vb" />
+    <Compile Include="GP Objects\PM\PMVendor.vb" />
+    <Compile Include="GP Objects\PM\PMVendorAddress.vb" />
+    <Compile Include="GP Objects\PM\PMWorkingPMTransaction.vb" />
+    <Compile Include="GP Objects\PM\PMWorkingPMTransactionDistribution.vb" />
+    <Compile Include="GP Objects\PM\PMWorkingPMTransactionLine.vb" />
+    <Compile Include="GP Objects\POP\Globals\POPGlobals.vb" />
+    <Compile Include="GP Objects\POP\Helpers\POPHelper.vb" />
+    <Compile Include="GP Objects\POP\ItemPurchaseSummaries.vb" />
+    <Compile Include="GP Objects\POP\ItemPurchaseSummary.vb" />
+    <Compile Include="GP Objects\POP\POPHeader.vb" />
+    <Compile Include="GP Objects\POP\POPLine.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptDistribution.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptHeaderWork.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptHistory.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptLineHistory.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptLineQuantity.vb" />
+    <Compile Include="GP Objects\POP\POPReceiptLineWork.vb" />
+    <Compile Include="GP Objects\RM\Helpers\CustomerHelper.vb" />
+    <Compile Include="GP Objects\RM\Helpers\RMHelper.vb" />
+    <Compile Include="GP Objects\RM\RMCashReceipt.vb" />
+    <Compile Include="GP Objects\RM\RMCustomer.vb" />
+    <Compile Include="GP Objects\RM\RMCustomerActivitySummary.vb" />
+    <Compile Include="GP Objects\RM\RMCustomerAddress.vb" />
+    <Compile Include="GP Objects\RM\RMCustomerClass.vb" />
+    <Compile Include="GP Objects\RM\RMHistoryTransactionApply.vb" />
+    <Compile Include="GP Objects\RM\RMNationalAccount.vb" />
+    <Compile Include="GP Objects\RM\RMOpenTransactionApply.vb" />
+    <Compile Include="GP Objects\RM\RMPricebookPricesheetLink.vb" />
+    <Compile Include="GP Objects\RM\RMReceivableDocument.vb" />
+    <Compile Include="GP Objects\RM\RMReceivableDocumentHistory.vb" />
+    <Compile Include="GP Objects\RM\RMSalesperson.vb" />
+    <Compile Include="GP Objects\RM\RMTerritory.vb" />
+    <Compile Include="GP Objects\SOP\Helpers\SOPHelper.vb" />
+    <Compile Include="GP Objects\SOP\SalesOrderLineNote.vb" />
+    <Compile Include="GP Objects\SOP\SOPCustomerPricebookAssignment.vb" />
+    <Compile Include="GP Objects\SOP\SOPGlobals.vb" />
+    <Compile Include="GP Objects\SOP\SOPHistoricalSalesOrderHeader.vb" />
+    <Compile Include="GP Objects\SOP\SOPHistoricalSalesOrderLineItem.vb" />
+    <Compile Include="GP Objects\SOP\SOPLotLineAssignment.vb" />
+    <Compile Include="GP Objects\SOP\SOPPackList.vb" />
+    <Compile Include="GP Objects\SOP\SOPPricebookHeader.vb" />
+    <Compile Include="GP Objects\SOP\SOPPricesheetHeader.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesDocumentType.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesOrderHeader.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesOrderHeaderUserDefinedField.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesOrderLineDistribution.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesOrderLineItem.Designer.vb">
+      <DependentUpon>SOPSalesOrderLineItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\SOP\SOPSalesOrderLineItem.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesOrderProcessHold.vb" />
+    <Compile Include="GP Objects\SOP\SOPSalesPayment.vb" />
+    <Compile Include="GP Objects\SOP\SOPTrackingNumber.vb" />
+    <Compile Include="GP Objects\SOP\SOPWorkflow.vb" />
+    <Compile Include="GP Objects\SY\Helpers\SYHelper.vb" />
+    <Compile Include="GP Objects\SY\SYAccountSegmentDescription.vb" />
+    <Compile Include="GP Objects\SY\SYBatchHeader.vb" />
+    <Compile Include="GP Objects\SY\SYCompanyLocation.Designer.vb">
+      <DependentUpon>SYCompanyLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\SY\SYCompanyLocation.vb" />
+    <Compile Include="GP Objects\SY\SYCreditCardType.vb" />
+    <Compile Include="GP Objects\SY\SYCustomerEFTInformation.vb" />
+    <Compile Include="GP Objects\SY\SYFiscalYear.vb" />
+    <Compile Include="GP Objects\SY\SYFiscalYearDetail.Designer.vb">
+      <DependentUpon>SYFiscalYearDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\SY\SYFiscalYearDetail.vb" />
+    <Compile Include="GP Objects\SY\SYInternetAddressDetail.vb" />
+    <Compile Include="GP Objects\SY\SYNoteIndex.vb" />
+    <Compile Include="GP Objects\SY\SYPaymentTerms.vb" />
+    <Compile Include="GP Objects\SY\SYShippingMethod.vb" />
+    <Compile Include="GP Objects\TX\TXTaxDetail.vb" />
+    <Compile Include="GP Objects\TX\TXTaxScheduleKey.vb" />
+    <Compile Include="GP Objects\TX\TXTaxSheduleTaxDetailAssignment.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeAddressMaster.Designer.vb">
+      <DependentUpon>UPREmployeeAddressMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeAddressMaster.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeEducationInformation.Designer.vb">
+      <DependentUpon>UPREmployeeEducationInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeEducationInformation.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeMaster.Designer.vb">
+      <DependentUpon>UPREmployeeMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeMaster.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeStateTaxMaster.Designer.vb">
+      <DependentUpon>UPREmployeeStateTaxMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeStateTaxMaster.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeSupervisor.Designer.vb">
+      <DependentUpon>UPREmployeeSupervisor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeSupervisor.vb" />
+    <Compile Include="GP Objects\UPR\UPREmployeeTax.Designer.vb">
+      <DependentUpon>UPREmployeeTax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GP Objects\UPR\UPREmployeeTax.vb" />
+    <Compile Include="GP Objects\WO\Helpers\WOHelper.vb" />
+    <Compile Include="GP Objects\WO\ManufactureOrderCreateArguement.vb" />
+    <Compile Include="GP Objects\WO\WOManufacturingOrderHeader.vb" />
+    <Compile Include="Module.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.vb">
+      <DependentUpon>Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GP Objects\GL\ViewBasedObjects\" />
+    <Folder Include="GP Objects\WDC\Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MasterProvider.Module\MasterProvider.Module.vbproj">
+      <Project>{da8d3bcf-39f9-4643-8885-468b49f8a9f1}</Project>
+      <Name>MasterProvider.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

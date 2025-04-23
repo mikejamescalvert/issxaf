@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bc7e183e-bf12-4189-8b71-fbf98e297c48": {
+      "ProjectGuid": "bc7e183e-bf12-4189-8b71-fbf98e297c48",
+      "DisplayName": "ISS.Base.Win",
+      "ColorIndex": 0
+    },
+    "40fb5044-ae0a-414e-b4e5-5f65feb9b444": {
+      "ProjectGuid": "40fb5044-ae0a-414e-b4e5-5f65feb9b444",
+      "DisplayName": "ISS.Module",
+      "ColorIndex": 1
+    },
+    "f8f611d7-86da-4cc1-b4df-4364e811ec72": {
+      "ProjectGuid": "f8f611d7-86da-4cc1-b4df-4364e811ec72",
+      "DisplayName": "MSGP2018R3eConnectIntegration",
+      "ColorIndex": 2
+    },
+    "c0ebda88-9a0e-4fd3-8372-e6a5d99d6ae8": {
+      "ProjectGuid": "c0ebda88-9a0e-4fd3-8372-e6a5d99d6ae8",
+      "DisplayName": "ISS.Win",
+      "ColorIndex": 3
+    },
+    "59ba3479-3df0-4876-a6d3-3013a941474d": {
+      "ProjectGuid": "59ba3479-3df0-4876-a6d3-3013a941474d",
+      "DisplayName": "GP2010ObjectLibrary.Module",
+      "ColorIndex": 4
+    },
+    "39cc6f4d-cdf1-4d81-87e8-1a767f5fbf6e": {
+      "ProjectGuid": "39cc6f4d-cdf1-4d81-87e8-1a767f5fbf6e",
+      "DisplayName": "ISS.Workflow",
+      "ColorIndex": 5
+    },
+    "2e389de9-2328-4bfc-ae96-d93a2d682529": {
+      "ProjectGuid": "2e389de9-2328-4bfc-ae96-d93a2d682529",
+      "DisplayName": "ISS.SpellChecker.V2.Win",
+      "ColorIndex": 6
+    },
+    "aaedb994-2c0c-404e-af48-3364fd7137e8": {
+      "ProjectGuid": "aaedb994-2c0c-404e-af48-3364fd7137e8",
+      "DisplayName": "ISS.Workflow.Win",
+      "ColorIndex": 7
+    },
+    "ee45ec9a-c450-4621-bcc0-9e104478737c": {
+      "ProjectGuid": "ee45ec9a-c450-4621-bcc0-9e104478737c",
+      "DisplayName": "ISS.Base",
+      "ColorIndex": 8
+    },
+    "23592ede-80ab-4586-8ba5-5db7d79536b3": {
+      "ProjectGuid": "23592ede-80ab-4586-8ba5-5db7d79536b3",
+      "DisplayName": "ISS.Notifications",
+      "ColorIndex": 9
+    },
+    "4b1d0051-058b-4a3c-8e5e-f9305f5e25e0": {
+      "ProjectGuid": "4b1d0051-058b-4a3c-8e5e-f9305f5e25e0",
+      "DisplayName": "ISS.Base.Win.UIModifications",
+      "ColorIndex": 10
+    },
+    "65bed7bd-bcf7-40cb-94c8-adbd0a165ece": {
+      "ProjectGuid": "65bed7bd-bcf7-40cb-94c8-adbd0a165ece",
+      "DisplayName": "MSGPeConnect.Core",
+      "ColorIndex": 11
+    },
+    "386e7274-c03f-42c4-9daa-0603e1ef3068": {
+      "ProjectGuid": "386e7274-c03f-42c4-9daa-0603e1ef3068",
+      "DisplayName": "MasterProvider.CompanySelector.Module",
+      "ColorIndex": 12
+    },
+    "da8d3bcf-39f9-4643-8885-468b49f8a9f1": {
+      "ProjectGuid": "da8d3bcf-39f9-4643-8885-468b49f8a9f1",
+      "DisplayName": "MasterProvider.Module",
+      "ColorIndex": 13
+    }
+  },
+  "NextColorIndex": 14
+}

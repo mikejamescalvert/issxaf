@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1C9DA98-7EDD-4AC9-8295-3BB2B1575B07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSGP2015eConnectIntegration</RootNamespace>
+    <AssemblyName>MSGP2015eConnectIntegration</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MSGP2015eConnectIntegration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MSGP2015eConnectIntegration.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Dynamics.GP.eConnect, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External References\Microsoft.Dynamics.GP.eConnect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.GP.eConnect.Serialization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External References\Microsoft.Dynamics.GP.eConnect.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMP\CMPFactory.vb" />
+    <Compile Include="CMP\CMPInternetAddress.vb" />
+    <Compile Include="CM\CMBankDeposit.vb" />
+    <Compile Include="CM\CMBankDepositItem.vb" />
+    <Compile Include="CM\CMFactory.vb" />
+    <Compile Include="CM\CMTrx.vb" />
+    <Compile Include="CommonLogic.vb" />
+    <Compile Include="GL\GLFactory.vb" />
+    <Compile Include="GL\GLTrx.vb" />
+    <Compile Include="GL\GlTrxLine.vb" />
+    <Compile Include="GL\GLTrxLines.vb" />
+    <Compile Include="Helper.vb" />
+    <Compile Include="IV\IVAdjustment.vb" />
+    <Compile Include="IV\IVAdjustmentLine.vb" />
+    <Compile Include="IV\IVAdjustmentLines.vb" />
+    <Compile Include="IV\SerialLotTypes.vb" />
+    <Compile Include="IV\IVFactory.vb" />
+    <Compile Include="IV\IVSerialLotLine.vb" />
+    <Compile Include="IV\IVSerialLotLines.vb" />
+    <Compile Include="IV\IVTransfer.vb" />
+    <Compile Include="IV\IVTransferLine.vb" />
+    <Compile Include="IV\IVTransferLines.vb" />
+    <Compile Include="MSGPRequiredFieldValidationException.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PM\PMFactory.vb" />
+    <Compile Include="PM\PMTrx.vb" />
+    <Compile Include="PM\PMTrxDistributionLine.vb" />
+    <Compile Include="PM\PMTrxDistributionLines.vb" />
+    <Compile Include="PM\PMVendor.vb" />
+    <Compile Include="PM\PMVendorAddress.vb" />
+    <Compile Include="POP\POPEnums.vb" />
+    <Compile Include="POP\POPFactory.vb" />
+    <Compile Include="POP\POPReceipt.vb" />
+    <Compile Include="POP\POPReceiptLine.vb" />
+    <Compile Include="POP\POPReceiptLines.vb" />
+    <Compile Include="POP\POPSerialLotLine.vb" />
+    <Compile Include="POP\POPSerialLotLines.vb" />
+    <Compile Include="MSGPRequiredFieldAttribute.vb" />
+    <Compile Include="RM\RMApply.vb" />
+    <Compile Include="RM\RMCashReceipt.vb" />
+    <Compile Include="RM\RMCashReceiptApply.vb" />
+    <Compile Include="RM\RMCashReceiptDistribution.vb" />
+    <Compile Include="RM\RMCashReceiptDistributions.vb" />
+    <Compile Include="RM\RMCashRecieptsApplies.vb" />
+    <Compile Include="RM\RMCustomer.vb" />
+    <Compile Include="RM\RMCustomerAddress.vb" />
+    <Compile Include="RM\RMCustomerAddresses.vb" />
+    <Compile Include="RM\RMFactory.vb" />
+    <Compile Include="RM\RMTerritory.vb" />
+    <Compile Include="SOP\SOPDistribution.vb" />
+    <Compile Include="SOP\SOPEnums.vb" />
+    <Compile Include="SOP\SOPFactory.vb" />
+    <Compile Include="SOP\SOPOrder.vb" />
+    <Compile Include="SOP\SOPOrderLine.vb" />
+    <Compile Include="SOP\SOPPayment.vb" />
+    <Compile Include="SOP\SOPSerialLotLine.vb" />
+    <Compile Include="SOP\SOPSerialLotLines.vb" />
+    <Compile Include="SOP\SOPShipment.vb" />
+    <Compile Include="SOP\SOPShipmentLine.vb" />
+    <Compile Include="SOP\SOPShipmentLines.vb" />
+    <Compile Include="SOP\SOPTrackingInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="External References\Microsoft.Dynamics.GP.eConnect.dll" />
+    <Content Include="External References\Microsoft.Dynamics.GP.eConnect.Serialization.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GPObjectLibrary.Module\GPObjectLibrary.Module.vbproj">
+      <Project>{26ae8066-75a5-4465-9da7-799a4c6938dc}</Project>
+      <Name>GPObjectLibrary.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

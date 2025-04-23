@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ISSApplicationOptions Id="ISSApplicationOptions" UseStandardSplashScreenAfterLoad="True" UseStandardSplashScreenDuringLoad="True" />
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="Job_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="" Caption="Main" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22" ImageName="" Caption="SimpleEditors" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignMode="UseParentOptions" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Job_ListView" EditorTypeName="DevExpress.ExpressApp.Win.Editors.GridListEditor" AllowEdit="True" DataAccessMode="Server" NewItemRowPosition="Top" />
+    <DashboardView Id="CustomerWorkDashboard">
+      <Items Id="Items">
+        <DashboardViewItem Id="JobsView" ViewId="Job_ListView" />
+      </Items>
+    </DashboardView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="ISS.Module.Job" ImageName="BO_Opportunity" />
+  </BOModel>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="Job_ListView" Caption="Jobs" />
+        </Items>
+      </Item>
+      <Item Id="Administration">
+        <Items Id="Items">
+          <Item Id="SystemSettings_ListView" ViewId="SystemSettings_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

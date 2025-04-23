@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Subtitle="Powered by eXpressApp Framework" Company="Developer Express Inc">
+  <ActionDesign>
+    <Actions>
+      <Action Id="1dde362a-8b64-4f57-9aa4-1ad0373c381a" ImageName="Action_Deny" />
+      <Action Id="DragAndDropSort_EnableResequencing" ImageName="RemoveBlankLinePivotTable" />
+      <Action Id="DragAndDropSort_MoveRecordDown" ImageName="MoveDown" />
+      <Action Id="DragAndDropSort_MoveRecordUp" ImageName="MoveUp" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="ListView" Index="-1" />
+      <ActionContainer Id="Sequencing" Index="1000" />
+      <ActionContainer Id="Filters">
+        <ActionLink ActionId="1dde362a-8b64-4f57-9aa4-1ad0373c381a" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="Security">
+        <ActionLink ActionId="Logoff" Removed="True" />
+        <ActionLink ActionId="MyDetails" Removed="True" />
+      </ActionContainer>
+      <ActionContainer Id="Tools">
+        <ActionLink ActionId="Logoff" IsNewNode="True" />
+        <ActionLink ActionId="MyDetails" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="1dde362a-8b64-4f57-9aa4-1ad0373c381a" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <ISSEditorOptions ShowClearButton="True" ShowEllipsis="False" ShowNewButton="True" />
+  <Options>
+    <LayoutManagerOptions CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="20.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="CustomWizardParameters_DetailView">
+      <Items>
+        <StaticImage Id="ReportImage" SizeMode="AutoSize" ImageName="WizStart" IsNewNode="True" />
+        <StaticText Id="ReportText" Text="To create a new report, please enter a name in the field below and select the primary data type of the report from the list." IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="">
+            <LayoutGroup Id="@dd49adb8-4bdf-4122-bb65-9db00307890f" Direction="Horizontal" IsNewNode="True">
+              <LayoutItem Id="ReportImage" ViewItem="ReportImage" Index="0" RelativeSize="29" ShowCaption="False" IsNewNode="True" />
+              <LayoutGroup Id="NewXafReportWizardParameters" Index="1" RelativeSize="89" ShowCaption="False" IsNewNode="True">
+                <LayoutItem Id="ReportText" ViewItem="ReportText" Index="0" RelativeSize="54" IsNewNode="True" />
+                <LayoutItem Id="ReportName" Index="1" ViewItem="ReportName" RelativeSize="94" IsNewNode="True" />
+                <LayoutItem Id="DataType" ViewItem="DataType" Index="2" RelativeSize="45" IsNewNode="True" />
+                <LayoutItem Id="ReportType" Index="3" ViewItem="ReportType" RelativeSize="5" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="CustomWizardParameters" RelativeSize="10" Caption="Data Type" ImageName="" Removed="True">
+              <LayoutItem Id="ReportText" ViewItem="ReportText" Index="0" RelativeSize="54" IsNewNode="True" />
+              <LayoutItem Id="DataType" Index="1" RelativeSize="45" ViewItem="DataType" />
+            </LayoutGroup>
+            <LayoutGroup Id="NewXafReportWizardParameters" RelativeSize="89" ImageName="" Removed="True">
+              <LayoutItem Id="ReportName" RelativeSize="94" ViewItem="ReportName" />
+              <LayoutItem Id="ReportType" RelativeSize="5" ViewItem="ReportType" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ISSBaseAddress_ListView" ImageName="" />
+    <DetailView Id="NewXafReportWizardParameters_DetailView">
+      <Items>
+        <StaticImage Id="ReportImage" SizeMode="AutoSize" ImageName="WizStart" IsNewNode="True" />
+        <StaticText Id="ReportText" Text="To create a new report, please enter a name in the field below and select the primary data type of the report from the list." IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" ImageName="">
+            <LayoutGroup Id="NewXafReportWizardParameters" RelativeSize="100" ImageName="" Direction="Horizontal">
+              <LayoutItem Id="ReportImage" ViewItem="ReportImage" Index="0" RelativeSize="29" ShowCaption="False" IsNewNode="True" />
+              <LayoutItem Id="ReportName" ViewItem="ReportName" Index="0" RelativeSize="5" Removed="True" />
+              <LayoutGroup Id="664f8cba-9c81-4e66-acb5-d16c5dd2cb85" ShowCaption="False" Caption="" Index="1" RelativeSize="70" IsNewNode="True">
+                <LayoutItem Id="ReportText" ViewItem="ReportText" Index="0" RelativeSize="5" IsNewNode="True" />
+                <LayoutItem Id="ReportName" ViewItem="ReportName" Index="1" RelativeSize="4" IsNewNode="True" />
+                <LayoutItem Id="DataType" ViewItem="DataType" Index="2" RelativeSize="4" IsNewNode="True" />
+                <LayoutItem Id="ReportType" ViewItem="ReportType" Index="3" RelativeSize="85" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="DataType" ViewItem="DataType" Index="1" RelativeSize="4" Removed="True" />
+              <LayoutItem Id="ReportType" ViewItem="ReportType" Index="2" RelativeSize="90" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

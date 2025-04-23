@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="ISS.Workflow.ISSBaseBusinessRules" ImageName="BO_Security_Permission_Model">
+      <AppearanceRules>
+        <AppearanceRule Id="ImplementsWorkflow" TargetItems="WorkflowSteps;DefaultWorkflowStep;DefaultWorkflowStepGroup;WorkflowStepGroups" Criteria="[ImplementsWorkflow] = False" Enabled="False" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="CriteriaTemplates" Caption="Step Entry Criteria Templates" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Workflow.ISSBaseCriteriaTemplate" ImageName="Action_ShowScript" />
+    <Class Name="ISS.Workflow.ISSBaseCustomCaption" ImageName="BO_List" />
+    <Class Name="ISS.Workflow.ISSBaseEditorStateTemplate" ImageName="BO_Appearance" />
+    <Class Name="ISS.Workflow.ISSBaseLogEntry" ImageName="BO_List" />
+    <Class Name="ISS.Workflow.ISSBaseUserInterfaceTemplate" ImageName="BO_Appearance" Caption="Property Templates" />
+    <Class Name="ISS.Workflow.ISSBaseWorkflowStep" ImageName="Action_StateMachine">
+      <OwnMembers>
+        <Member Name="CriteriaTemplates" Caption="Entry Criteria" />
+        <Member Name="WorkflowStepGroups" Caption="Group Membership" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Workflow.ISSBaseWorkflowStepGroup" ImageName="BO_Category" />
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="ISSBaseBusinessRules_DetailView">
+      <Items>
+        <PropertyEditor Id="DefaultObjectTemplate" Caption="Default UI Template" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="39" ImageName="">
+            <LayoutItem Id="ObjectType" ViewItem="ObjectType" SizeConstraintsType="Default" Index="0" RelativeSize="21" IsNewNode="True" />
+            <LayoutGroup Id="ISSBaseBusinessRules" Caption="Type Options" RelativeSize="78" ImageName="" Index="1">
+              <LayoutGroup Id="ISSBaseBusinessRules_col1" RelativeSize="47" ImageName="">
+                <LayoutItem Id="DefaultObjectTemplate" SizeConstraintsType="Default" RelativeSize="36" Index="0" ViewItem="DefaultObjectTemplate" />
+                <LayoutItem Id="DefaultWorkflowStep" SizeConstraintsType="Default" RelativeSize="27" Index="1" ViewItem="DefaultWorkflowStep" />
+              </LayoutGroup>
+              <LayoutGroup Id="ISSBaseBusinessRules_col2" RelativeSize="47" ImageName="">
+                <LayoutItem Id="TrackChanges" SizeConstraintsType="Default" RelativeSize="36" Index="2" ViewItem="TrackChanges" />
+                <LayoutItem Id="ObjectType" SizeConstraintsType="Default" RelativeSize="21" ViewItem="ObjectType" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="60">
+            <LayoutGroup Id="CriteriaTemplates" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="CriteriaTemplates" SizeConstraintsType="Default" RelativeSize="100" ViewItem="CriteriaTemplates" />
+            </LayoutGroup>
+            <LayoutGroup Id="ObjectTemplates" RelativeSize="100" ImageName="BO_Unknown" Caption="UI Templates">
+              <LayoutItem Id="ObjectTemplates" SizeConstraintsType="Default" RelativeSize="100" ViewItem="ObjectTemplates" />
+            </LayoutGroup>
+            <LayoutGroup Id="SaveValidationCriteriaTemplates" RelativeSize="100" ImageName="BO_Unknown" Caption="Save Criteria">
+              <LayoutItem Id="SaveValidationCriteriaTemplates" SizeConstraintsType="Default" RelativeSize="100" ViewItem="SaveValidationCriteriaTemplates" />
+            </LayoutGroup>
+            <LayoutGroup Id="WorkflowStepGroups" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="WorkflowStepGroups" SizeConstraintsType="Default" RelativeSize="100" ViewItem="WorkflowStepGroups" />
+            </LayoutGroup>
+            <LayoutGroup Id="WorkflowSteps" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="WorkflowSteps" SizeConstraintsType="Default" RelativeSize="100" ViewItem="WorkflowSteps" />
+            </LayoutGroup>
+            <LayoutGroup Id="CustomCaptions" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="CustomCaptions" SizeConstraintsType="Default" RelativeSize="100" ViewItem="CustomCaptions" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ISSBaseWorkflowStep_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" ImageName="">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="39" ImageName="">
+            <LayoutGroup Id="ISSBaseWorkflowStep" RelativeSize="100" ImageName="" Index="0" Caption="Step Options">
+              <LayoutGroup Id="ISSBaseWorkflowStep_col1" RelativeSize="47" ImageName="" Caption="ISSBaseWorkflowStep_col1">
+                <LayoutItem Id="DisplayOrder" SizeConstraintsType="Default" RelativeSize="36" Index="0" ViewItem="DisplayOrder" Removed="True" />
+                <LayoutItem Id="StatusName" ViewItem="StatusName" SizeConstraintsType="Default" Index="0" RelativeSize="28" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="DoNotAllowSaveInStep" SizeConstraintsType="Default" RelativeSize="76" Index="1" ViewItem="DoNotAllowSaveInStep" Removed="True" />
+                <LayoutItem Id="StepObjectTemplate" ViewItem="StepObjectTemplate" SizeConstraintsType="Default" Index="1" RelativeSize="21" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ISSBaseWorkflowStep_col2" RelativeSize="47" ImageName="">
+                <LayoutItem Id="DisplayOrder" ViewItem="DisplayOrder" SizeConstraintsType="Default" Index="0" RelativeSize="28" IsNewNode="True" />
+                <LayoutItem Id="ShowNextStepsBeforeSave" SizeConstraintsType="Default" RelativeSize="21" Index="1" ViewItem="ShowNextStepsBeforeSave" />
+                <LayoutItem Id="DoNotAllowSaveInStep" ViewItem="DoNotAllowSaveInStep" SizeConstraintsType="Default" Index="2" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="StepObjectTemplate" SizeConstraintsType="Default" RelativeSize="15" Index="3" ViewItem="StepObjectTemplate" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="60" Index="1">
+            <LayoutGroup Id="WorkflowStepGroups" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="WorkflowStepGroups" SizeConstraintsType="Default" RelativeSize="100" ViewItem="WorkflowStepGroups" />
+            </LayoutGroup>
+            <LayoutGroup Id="CriteriaTemplates" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="CriteriaTemplates" SizeConstraintsType="Default" RelativeSize="100" ViewItem="CriteriaTemplates" />
+            </LayoutGroup>
+            <LayoutGroup Id="NextGroups" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="NextGroups" SizeConstraintsType="Default" RelativeSize="100" ViewItem="NextGroups" />
+            </LayoutGroup>
+            <LayoutGroup Id="NextSteps" RelativeSize="100" ImageName="BO_Unknown">
+              <LayoutItem Id="NextSteps" SizeConstraintsType="Default" RelativeSize="100" ViewItem="NextSteps" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Direction="Horizontal" RelativeSize="7" Caption="Description" ImageName="" Removed="True">
+            <LayoutItem Id="Description" ViewItem="Description" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ISSBaseWorkflowStep_LookupListView" AllowNew="False" AllowDelete="False">
+      <Columns>
+        <ColumnInfo Id="StatusName" SortIndex="-1" />
+        <ColumnInfo Id="DisplayOrder" PropertyName="DisplayOrder" SortIndex="0" IsNewNode="True" />
+      </Columns>
+      <Sorting>
+        <SortProperty Id="DisplayOrder" PropertyName="DisplayOrder" Direction="Descending" IsNewNode="True" />
+      </Sorting>
+    </ListView>
+  </Views>
+</Application>

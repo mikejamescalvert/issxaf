@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="PMVendor_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SummaryInfo" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="RMReceivableDocument_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DEX_ROW_ID" Index="-1" />
+        <ColumnInfo Id="DEX_ROW_TS" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

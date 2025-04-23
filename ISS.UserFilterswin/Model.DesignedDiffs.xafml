@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="ListViewController_ShowHideMasterDetail" ImageName="Action_HideItemFromDashboard" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="FullTextSearch">
+        <ActionLink ActionId="ListViewController_Filters" Index="1500" IsNewNode="True" />
+        <ActionLink ActionId="ListViewController_CreateFilter" Index="1510" IsNewNode="True" />
+        <ActionLink ActionId="ListViewController_DeleteFilter" Index="1520" IsNewNode="True" />
+        <ActionLink ActionId="ListViewController_ShowHideMasterDetail" Index="1525" IsNewNode="True" />
+        <ActionLink ActionId="ListViewController_ExportFilter" Index="1530" IsNewNode="True" />
+        <ActionLink ActionId="ListViewController_ImportFilter" Index="1540" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="ListViewController_Filters" Index="1500" Removed="True" />
+        <ActionLink ActionId="ListViewController_CreateFilter" Index="1510" Removed="True" />
+        <ActionLink ActionId="ListViewController_DeleteFilter" Index="1520" Removed="True" />
+        <ActionLink ActionId="ListViewController_ExportFilter" Index="1530" Removed="True" />
+        <ActionLink ActionId="ListViewController_ImportFilter" Index="1540" Removed="True" />
+        <ActionLink ActionId="ListViewController_ShowHideMasterDetail" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Editors.CriteriaProvider" ImageName="" />
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="17.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="UserFilter_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="20.775193798449614" />
+          <LayoutGroup Id="SizeableEditors" RelativeSize="79.2248062015504" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

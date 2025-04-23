@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="ISSBaseEndUserMessageDetail_DetailView">
+      <Layout Id="Layout" Width="700" Height="612">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" TextAlignMode="AlignLocal" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <ActionToContainerMapping Id="ActionToContainerMapping">
+      <ActionContainer Id="Tools">
+        <ActionLink ActionId="Window_Hit" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+</Application>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="ISS.Workflow.ISSBaseWorkflowStep">
+      <OwnMembers>
+        <Member Name="Description" PropertyEditorType="DevExpress.ExpressApp.HtmlPropertyEditor.Win.HtmlPropertyEditor" />
+        <Member Name="StepObjectTemplate" Caption="Step User Interface Template" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="DevExpress.ExpressApp.Win.SystemModule.ChooseSkinController" Version="9.3.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="16.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ContextValidationResult_ListView">
+      <Columns>
+        <ColumnInfo Id="Context" PropertyName="Context" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="ContextValidationResult_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Context" PropertyName="Context" Index="-1" />
+        <ColumnInfo Id="BrokenRules" PropertyName="BrokenRules" Index="0" />
+      </Columns>
+    </ListView>
+    <ListView Id="ISSBaseBusinessRules_CustomCaptions_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+    <DetailView Id="ISSBaseBusinessRules_DetailView">
+      <Items>
+        <PropertyEditor Id="DefaultObjectTemplate" PropertyName="DefaultObjectTemplate" Caption="Default Properties Template" />
+        <PropertyEditor Id="ObjectTemplates" Caption="Properties Templates" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutItem Id="ObjectType" Index="0" CaptionLocation="Default" ViewItem="ObjectType" RelativeSize="4.6989720998531572" IsNewNode="True" />
+          <TabbedGroup Id="Tabs" RelativeSize="95.301027900146849">
+            <LayoutGroup Id="Settings" Caption="Settings" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="SimpleEditors" Index="0" Direction="Vertical" ShowCaption="False" Caption="Simple Editors" TextSizingMode="Align" RelativeSize="18.0623973727422" IsNewNode="True">
+                <LayoutGroup Id="BusinessRules" Index="0" Direction="Horizontal" ShowCaption="False" Caption="Business Rules" TextSizingMode="Align" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="BusinessRules_col1" Index="0" Direction="Vertical" ShowCaption="False" Caption="BusinessRules_col1" TextSizingMode="Align" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="DefaultWorkflowStep" Index="0" CaptionLocation="Default" ViewItem="DefaultWorkflowStep" RelativeSize="29.09090909090909" IsNewNode="True" />
+                    <LayoutItem Id="DefaultWorkflowStepGroup" Index="1" CaptionLocation="Default" ViewItem="DefaultWorkflowStepGroup" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="DefaultObjectTemplate" Index="2" CaptionLocation="Default" ViewItem="DefaultObjectTemplate" RelativeSize="21.818181818181817" IsNewNode="True" />
+                    <LayoutItem Id="DefaultViewIdOverride" ViewItem="DefaultViewIdOverride" Index="3" RelativeSize="27.272727272727273" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="BusinessRules_col2" Index="1" Direction="Vertical" ShowCaption="False" Caption="BusinessRules_col2" TextSizingMode="Align" TextAlignMode="AlignWithChildren" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="TrackChanges" Index="0" CaptionLocation="Default" ViewItem="TrackChanges" RelativeSize="100" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <TabbedGroup Id="SettingsCollections" Index="1" RelativeSize="81.9376026272578" IsNewNode="True">
+                <LayoutGroup Id="WorkflowSteps" Index="0" ShowCaption="True" CaptionLocation="Default" TextSizingMode="Align" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="WorkflowSteps" Index="0" ShowCaption="False" CaptionLocation="Default" ViewItem="WorkflowSteps" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="SaveValidationCriteriaTemplates" Index="1" ShowCaption="True" CaptionLocation="Default" TextSizingMode="Align" Caption="Save Validation Criteria" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="SaveValidationCriteriaTemplates" Index="0" ShowCaption="False" CaptionLocation="Default" ViewItem="SaveValidationCriteriaTemplates" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="WorkflowStepGroups" Index="2" ShowCaption="True" CaptionLocation="Default" TextSizingMode="Align" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="WorkflowStepGroups" Index="0" ShowCaption="False" CaptionLocation="Default" ViewItem="WorkflowStepGroups" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Templates" Caption="Templates" ShowCaption="True" Index="1" RelativeSize="100" IsNewNode="True">
+              <TabbedGroup Id="TemplateSettings" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="ObjectTemplates" Index="0" ShowCaption="True" CaptionLocation="Default" TextSizingMode="Align" Caption="Properties Templates" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="ObjectTemplates" Index="0" ShowCaption="False" CaptionLocation="Default" ViewItem="ObjectTemplates" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="CriteriaTemplates" Index="1" ShowCaption="True" CaptionLocation="Default" TextSizingMode="Align" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="CriteriaTemplates" Index="0" ShowCaption="False" CaptionLocation="Default" ViewItem="CriteriaTemplates" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="ISSBaseConditionalViews" Index="2" ShowCaption="True" Caption="Conditional Views" ImageName="" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="ISSBaseConditionalViews" ViewItem="ISSBaseConditionalViews" ShowCaption="False" Index="0" TextAlignMode="AutoSize" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </TabbedGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="CustomCaptions" ImageName="" TextAlignMode="AlignWithChildren" Index="2">
+              <LayoutItem Id="CustomCaptions" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+            <LayoutGroup Id="CriteriaTemplates" Removed="True" />
+            <LayoutGroup Id="ISSBaseConditionalViews" Removed="True" />
+            <LayoutGroup Id="ObjectTemplates" Removed="True" />
+            <LayoutGroup Id="SaveValidationCriteriaTemplates" Removed="True" />
+            <LayoutGroup Id="WorkflowStepGroups" Removed="True" />
+            <LayoutGroup Id="WorkflowSteps" Removed="True" />
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ISSBaseBusinessRules_WorkflowSteps_ListView" AllowEdit="True" NewItemRowPosition="Top" AllowNew="True" AllowDelete="True" />
+    <DetailView Id="ISSBaseCriteriaTemplate_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <TabbedGroup Id="MainTab" Index="0" RelativeSize="100" IsNewNode="True">
+            <LayoutGroup Id="CriteriaSettings" Caption="Criteria Settings" Direction="Vertical" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="SimpleEditors" Index="0" Direction="Vertical" ShowCaption="False" Caption="Simple Editors" TextSizingMode="Align" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="CriteriaTemplate" Index="0" Direction="Vertical" ShowCaption="False" Caption="Criteria Template" TextSizingMode="Align" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="CriteriaName" Index="0" CaptionLocation="Default" ViewItem="CriteriaName" RelativeSize="4.5584045584045585" IsNewNode="True" />
+                  <LayoutItem Id="ExceptionMessage" Index="1" CaptionLocation="Default" ViewItem="ExceptionMessage" RelativeSize="3.4188034188034186" IsNewNode="True" />
+                  <LayoutItem Id="ShowFilterInExceptionMessage" Index="2" CaptionLocation="Default" ViewItem="ShowFilterInExceptionMessage" RelativeSize="2.9914529914529915" IsNewNode="True" />
+                  <LayoutItem Id="Criteria" Index="3" CaptionLocation="Default" ViewItem="Criteria" RelativeSize="89.03133903133903" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" Removed="True" />
+          <LayoutGroup Id="SizeableEditors" Removed="True" />
+          <LayoutGroup Id="WorkflowSteps_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ISSBaseUserInterfaceTemplate_PropertyTemplates_ListView" AllowEdit="True" NewItemRowPosition="Bottom" AllowNew="True" AllowDelete="True" ShowAutoFilterRow="True" />
+    <ListView Id="RuleSetValidationResultItem_ByTarget_ListView">
+      <Columns>
+        <ColumnInfo Id="TargetCaption" PropertyName="TargetCaption" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="ValidationResults_Results_ListView">
+      <Columns>
+        <ColumnInfo Id="Context" PropertyName="Context" Index="-1" />
+        <ColumnInfo Id="BrokenRules" PropertyName="BrokenRules" Index="0" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

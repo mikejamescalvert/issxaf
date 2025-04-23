@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="MPConnectionInformationActions">
+        <ActionLink ActionId="MPConnectionInformation_Test" Index="0" />
+        <ActionLink ActionId="MPConnectionInformation_Save" Index="1" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="MasterProvider.Module.ConnectionManager" ImageName="Action_CreateDashboard" />
+    <Class Name="MasterProvider.Module.MPConnectionInformation" ImageName="Action_Clear" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Admin" Caption="Admin" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ConnectionManager" ViewId="ConnectionManager_DetailView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="15.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ConnectionManager_Connections_ListView" AllowDelete="False" AllowNew="False" MasterDetailMode="ListViewAndDetailView">
+      <Columns>
+        <ColumnInfo Id="ConnectionType" Index="-1" Removed="True" />
+        <ColumnInfo Id="DatabaseLocation" Index="-1" Removed="True" />
+        <ColumnInfo Id="DatabaseName" Index="-1" Removed="True" />
+        <ColumnInfo Id="Password" Index="-1" Removed="True" />
+        <ColumnInfo Id="ServerName" Index="-1" Removed="True" />
+        <ColumnInfo Id="TrustedConnection" Index="-1" Removed="True" />
+        <ColumnInfo Id="URL" Index="-1" Removed="True" />
+        <ColumnInfo Id="UserName" Index="-1" Removed="True" />
+        <ColumnInfo Id="Accepted" Removed="True" />
+        <ColumnInfo Id="RegistryPath" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MPConnectionInformation_DetailView" Caption="Please Enter Your Connection Information">
+      <Items>
+        <ActionContainerViewItem Id="ConnectionActions" Caption="ConnectionActions" ActionContainer="MPConnectionInformationActions" IsNewNode="True" />
+        <PropertyEditor Id="ConnectionStringName" AllowEdit="False" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" Caption="Main" RelativeSize="100" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+          <LayoutGroup Id="SimpleEditors" Caption="SimpleEditors" RelativeSize="100" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+            <LayoutGroup Id="MPConnectionInformation" RelativeSize="100" Direction="Vertical" ShowCaption="False" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+              <LayoutGroup Id="MPConnectionInformation_col1" Caption="MPConnectionInformation_col1" RelativeSize="100" ImageName="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default">
+                <LayoutItem Id="ConnectionStringName" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" RelativeSize="5" ViewItem="ConnectionStringName" />
+                <LayoutItem Id="ConnectionType" RelativeSize="4" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="ConnectionType" />
+                <LayoutItem Id="URL" ShowCaption="True" Index="2" RelativeSize="4" ViewItem="URL" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" IsNewNode="True" />
+                <LayoutItem Id="DatabaseLocation" Index="3" RelativeSize="4" ViewItem="DatabaseLocation" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" IsNewNode="True" />
+                <LayoutItem Id="ServerName" RelativeSize="4" Index="4" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="ServerName" />
+                <LayoutItem Id="DatabaseName" RelativeSize="4" Index="5" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="DatabaseName" />
+                <LayoutItem Id="TrustedConnection" Index="6" RelativeSize="4" ViewItem="TrustedConnection" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" IsNewNode="True" />
+                <LayoutItem Id="UserName" RelativeSize="4" Index="7" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" ViewItem="UserName" />
+                <LayoutItem Id="Password" Index="8" RelativeSize="4" ViewItem="Password" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" IsNewNode="True" />
+                <LayoutGroup Id="e40c60f9-6044-4083-9214-21b7ce5dc928" ShowCaption="False" Caption="" Direction="Horizontal" Index="9" RelativeSize="58" IsNewNode="True">
+                  <LayoutItem Id="Item1" ShowCaption="False" ViewItem="" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="ConnectionActions" ShowCaption="False" ViewItem="ConnectionActions" CaptionLocation="Default" CaptionWordWrap="Default" CaptionHorizontalAlignment="Default" CaptionVerticalAlignment="Default" Index="1" RelativeSize="49" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="MPConnectionInformation_col2" Caption="MPConnectionInformation_col2" RelativeSize="48" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="DatabaseLocation" ViewItem="DatabaseLocation" Removed="True" />
+                <LayoutItem Id="Password" ViewItem="Password" />
+                <LayoutItem Id="TrustedConnection" ViewItem="TrustedConnection" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MPConnectionInformation_ListView">
+      <Columns>
+        <ColumnInfo Id="ConnectionType" Index="-1" Removed="True" />
+        <ColumnInfo Id="DatabaseLocation" Index="-1" Removed="True" />
+        <ColumnInfo Id="DatabaseName" Index="-1" Removed="True" />
+        <ColumnInfo Id="Password" Index="-1" Removed="True" />
+        <ColumnInfo Id="ServerName" Index="-1" Removed="True" />
+        <ColumnInfo Id="TrustedConnection" Index="-1" Removed="True" />
+        <ColumnInfo Id="URL" Index="-1" Removed="True" />
+        <ColumnInfo Id="UserName" Index="-1" Removed="True" />
+        <ColumnInfo Id="Accepted" Removed="True" />
+        <ColumnInfo Id="RegistryPath" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

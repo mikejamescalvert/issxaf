@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="MultiFactorAuthentication_DetailView">
+      <Items>
+        <PropertyEditor Id="AuthenticationCode" Caption="Enter your code here and press OK" />
+        <StaticText Id="Readme" Text="How to set up Microsoft Authenticator&#xD;&#xA;&#xD;&#xA;Download and install the Microsoft Authenticator app from the App Store or Google Play.&#xD;&#xA;&#xD;&#xA;Open the app, tap 'Add account', and scan the QR code displayed on this page.&#xD;&#xA;&#xD;&#xA;Enter the 6-digit code shown in the app into the provided field here to verify your account.&#xD;&#xA;&#xD;&#xA;Once entered, press OK.  You will be logged out and you will be able to log back in with your new code." Caption="Readme(8)" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="MultiFactorAuthentication" Caption="MultiFactorAuthentication" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto72e668e3-a6f2-46bf-98fd-8240273b59c4" ShowCaption="False" Caption="Auto72e668e3-a6f2-46bf-98fd-8240273b59c4(4)" Direction="Horizontal" Index="0" RelativeSize="26.5748031496063" IsNewNode="True">
+                <LayoutGroup Id="Auto104a505b-c357-4d57-93e7-68e52e8d3368" ShowCaption="False" Caption="Auto104a505b-c357-4d57-93e7-68e52e8d3368(4)" Index="0" RelativeSize="22.102425876010781" IsNewNode="True">
+                  <LayoutItem Id="QRCode" ShowCaption="False" ViewItem="QRCode" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Readme" ViewItem="Readme" Index="1" RelativeSize="77.897574123989216" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="AuthenticationCode" ViewItem="AuthenticationCode" Index="1" RelativeSize="73.4251968503937" IsNewNode="True" Removed="True" />
+              <LayoutItem Id="QRCode" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="ISS.Recurrence.RecurrenceDefinition">
+      <AppearanceRules>
+        <AppearanceRule Id="Hide_DailyRecurrence" Priority="0" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Daily#" Visibility="Hide" TargetItems="DailyRecurrence" IsNewNode="True" />
+        <AppearanceRule Id="Hide_HourlyRecurrence" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Hourly#" Visibility="Hide" TargetItems="HourlyRecurrence" IsNewNode="True" />
+        <AppearanceRule Id="Hide_MinuteRecurrence" Priority="0" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Minutes#" Visibility="Hide" TargetItems="MinutesRecurrence" IsNewNode="True" />
+        <AppearanceRule Id="Hide_MonthlyRecurrence" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Monthly#" Visibility="Hide" TargetItems="MonthlyRecurrence;MonthlyDayOfMonth" IsNewNode="True" />
+        <AppearanceRule Id="Hide_WeeklyRecurrence" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Weekly#" Visibility="Hide" TargetItems="WeeklyRecurrence" IsNewNode="True" />
+        <AppearanceRule Id="Hide_YearlyRecurrence" Priority="0" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Recurrence.RecurrenceDefinition+RecurrencePatternTypes,Yearly#" Visibility="Hide" TargetItems="YearlyRecurrence;YearlyDay;YearlyMonth" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="LastExecutionDateTime" DisplayFormat="{0:G}" EditMask="G" />
+        <Member Name="NextExecutionDateTime" DisplayFormat="{0:G}" EditMask="G" />
+        <Member Name="TimeToExecute" EditMask="G" DisplayFormat="{0:G}" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="23.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="RecurrenceDefinition_DetailView">
+      <Items>
+        <StaticText Id="Day Checkbox Info" Text="Select the days of the week when you want your event to recur. When you check a day, the event will execute on that day within the chosen recurrence interval. For example, if the mode is set to &quot;weekly&quot; and you select multiple days, the event will occur on each of those days every week. This feature helps you customize your schedule to ensure that recurring tasks, meetings, or reminders happen exactly when needed." Caption="Day Checkbox Info" IsNewNode="True" />
+        <StaticText Id="ExecutionTime_Info" Caption="ExecutionTime_Info(19)" Text="The time value specified here will be the execution time for all non-hourly recurrence patterns.  For weekly recurrence, choose the day of the week that you would like to run within the drop down." IsNewNode="True" />
+        <PropertyEditor Id="NextExecutionDateTime" ToolTip="The time value specified here will be the execution time for all non-hourly recurrence patterns.  For weekly recurrence, choose the day of the week that you would like to run within the drop down." />
+        <PropertyEditor Id="TimeToExecute" Caption="Next Execution Date Time" />
+        <PropertyEditor Id="WeeklyOnFriday" Caption="Friday" />
+        <PropertyEditor Id="WeeklyOnMonday" Caption="Monday" />
+        <PropertyEditor Id="WeeklyOnSaturday" Caption="Saturday" />
+        <PropertyEditor Id="WeeklyOnSunday" Caption="Sunday" />
+        <PropertyEditor Id="WeeklyOnThursday" Caption="Thursday" />
+        <PropertyEditor Id="WeeklyOnTuesday" Caption="Tuesday" />
+        <PropertyEditor Id="WeeklyOnWednesday" Caption="Wednesday" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100" Direction="Vertical" Caption="SimpleEditors">
+            <LayoutGroup Id="Autoecc20177-0110-4cd1-897c-2ea3f306b485" ShowCaption="False" Caption="Autoecc20177-0110-4cd1-897c-2ea3f306b485(3)" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="RecurrenceDefinition" ShowCaption="True" Caption="Recurrence Definition" Index="0" RelativeSize="52.559055118110237" IsNewNode="True">
+                <LayoutGroup Id="RecurrenceDefinition_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="RecurrencePattern" ViewItem="RecurrencePattern" Index="0" RelativeSize="5.5077452667814111" IsNewNode="True" />
+                  <LayoutItem Id="MinutesRecurrence" ViewItem="MinutesRecurrence" Index="1" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="HourlyRecurrence" ViewItem="HourlyRecurrence" Index="2" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="DailyRecurrence" ViewItem="DailyRecurrence" Index="3" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="WeeklyRecurrence" ViewItem="WeeklyRecurrence" Index="4" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="MonthlyRecurrence" ViewItem="MonthlyRecurrence" Index="5" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="YearlyRecurrence" ViewItem="YearlyRecurrence" Index="6" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="MonthlyDayOfMonth" ViewItem="MonthlyDayOfMonth" Index="7" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="YearlyMonth" ViewItem="YearlyMonth" Index="8" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="YearlyDay" ViewItem="YearlyDay" Index="9" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="StartTime" ViewItem="StartTime" Index="10" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="EndTime" ViewItem="EndTime" Index="11" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="LastExecutionDateTime" ViewItem="LastExecutionDateTime" Index="12" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                  <LayoutItem Id="TimeToExecute" ViewItem="TimeToExecute" Index="13" RelativeSize="44.922547332185886" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" ShowCaption="True" Caption="Days to Execute" CaptionLocation="Top" Index="1" RelativeSize="47.440944881889763" IsNewNode="True">
+                <LayoutItem Id="WeeklyOnMonday" ViewItem="WeeklyOnMonday" Index="0" RelativeSize="5.5077452667814111" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnTuesday" ViewItem="WeeklyOnTuesday" Index="1" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnWednesday" ViewItem="WeeklyOnWednesday" Index="2" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnThursday" ViewItem="WeeklyOnThursday" Index="3" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnFriday" ViewItem="WeeklyOnFriday" Index="4" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnSaturday" ViewItem="WeeklyOnSaturday" Index="5" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnSunday" ViewItem="WeeklyOnSunday" Index="6" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="Due" ViewItem="Due" Index="7" RelativeSize="4.1308089500860588" IsNewNode="True" />
+                <LayoutItem Id="Day Checkbox Info" ViewItem="Day Checkbox Info" Index="8" RelativeSize="65.576592082616173" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="RecurrenceDefinition" RelativeSize="70.782800441014331" Direction="Vertical" Removed="True">
+              <LayoutGroup Id="RecurrenceDefinition_col1" RelativeSize="100">
+                <LayoutItem Id="RecurrencePattern" RelativeSize="6.9565217391304346" Index="0" ViewItem="RecurrencePattern" />
+                <LayoutItem Id="MinutesRecurrence" RelativeSize="5.2173913043478262" Index="1" ViewItem="MinutesRecurrence" />
+                <LayoutItem Id="HourlyRecurrence" RelativeSize="5.2173913043478262" Index="2" ViewItem="HourlyRecurrence" />
+                <LayoutItem Id="DailyRecurrence" RelativeSize="5.2173913043478262" Index="3" ViewItem="DailyRecurrence" />
+                <LayoutItem Id="WeeklyRecurrence" RelativeSize="5.2173913043478262" Index="4" ViewItem="WeeklyRecurrence" />
+                <LayoutItem Id="MonthlyRecurrence" ViewItem="MonthlyRecurrence" Index="5" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="YearlyRecurrence" ViewItem="YearlyRecurrence" Index="6" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="MonthlyDayOfMonth" ViewItem="MonthlyDayOfMonth" Index="7" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="WeeklyOnFriday" Index="7" RelativeSize="62.7906976744186" ViewItem="WeeklyOnFriday" Removed="True" />
+                <LayoutItem Id="WeeklyOnThursday" Index="7" RelativeSize="5.07399577167019" ViewItem="WeeklyOnThursday" Removed="True" />
+                <LayoutItem Id="WeeklyOnTuesday" Index="7" RelativeSize="5.07399577167019" ViewItem="WeeklyOnTuesday" Removed="True" />
+                <LayoutItem Id="WeeklyOnWednesday" Index="7" RelativeSize="5.07399577167019" ViewItem="WeeklyOnWednesday" Removed="True" />
+                <LayoutItem Id="YearlyMonth" ViewItem="YearlyMonth" Index="8" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="YearlyDay" ViewItem="YearlyDay" Index="9" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="StartTime" ViewItem="StartTime" Index="10" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="EndTime" ViewItem="EndTime" Index="11" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="LastExecutionDateTime" ViewItem="LastExecutionDateTime" Index="12" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="TimeToExecute" ViewItem="TimeToExecute" Index="13" RelativeSize="5.2173913043478262" IsNewNode="True" />
+                <LayoutItem Id="ExecutionTime_Info" ViewItem="ExecutionTime_Info" Index="14" RelativeSize="25.217391304347824" IsNewNode="True" />
+                <LayoutItem Id="NextExecutionDateTime" ViewItem="NextExecutionDateTime" Index="14" RelativeSize="43.606557377049178" Removed="True" />
+                <LayoutItem Id="SummaryInfo" RelativeSize="5.07399577167019" ViewItem="SummaryInfo" Removed="True" />
+                <LayoutItem Id="WeeklyOnMonday" ViewItem="WeeklyOnMonday" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="RecurrenceDefinition_col2" RelativeSize="49.909584086799278" Caption="RecurrenceDefinition_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="Due" ViewItem="Due" Index="0" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="WeeklyOnSaturday" Index="5" RelativeSize="3.9344262295081966" ViewItem="WeeklyOnSaturday" Removed="True" />
+                <LayoutItem Id="WeeklyOnSunday" Index="6" RelativeSize="3.9344262295081966" ViewItem="WeeklyOnSunday" Removed="True" />
+                <LayoutItem Id="MonthlyDayOfMonth" Index="7" RelativeSize="5.07399577167019" ViewItem="MonthlyDayOfMonth" Removed="True" />
+                <LayoutItem Id="MonthlyRecurrence" Index="8" RelativeSize="5.07399577167019" ViewItem="MonthlyRecurrence" Removed="True" />
+                <LayoutItem Id="YearlyDay" Index="8" RelativeSize="5.07399577167019" ViewItem="YearlyDay" Removed="True" />
+                <LayoutItem Id="YearlyMonth" Index="8" RelativeSize="5.07399577167019" ViewItem="YearlyMonth" Removed="True" />
+                <LayoutItem Id="YearlyRecurrence" Index="8" RelativeSize="5.07399577167019" ViewItem="YearlyRecurrence" Removed="True" />
+                <LayoutItem Id="EndTime" Index="10" RelativeSize="5.07399577167019" ViewItem="EndTime" Removed="True" />
+                <LayoutItem Id="StartTime" Index="10" RelativeSize="5.07399577167019" ViewItem="StartTime" Removed="True" />
+                <LayoutItem Id="TimeToExecute" Index="10" RelativeSize="5.07399577167019" ViewItem="TimeToExecute" Removed="True" />
+                <LayoutItem Id="LastExecutionDateTime" ViewItem="LastExecutionDateTime" Index="11" RelativeSize="4.2780748663101607" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

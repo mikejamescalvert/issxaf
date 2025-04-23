@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ISSBaseBusinessRules_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ISSBaseBusinessRules">
+              <LayoutGroup Id="ISSBaseBusinessRules_col1">
+                <LayoutItem Id="DefaultWorkflowStepGroup" SizeConstraintsType="Default" RelativeSize="36" Index="2" ViewItem="DefaultWorkflowStepGroup" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

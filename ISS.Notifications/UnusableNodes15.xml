@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ISS.Notifications.NotificationOnDemandFromOption">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="NotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationOnDemandToOption">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="NotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.NotificationQueueItem">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="RelatedNotificationRule" GetDisplayFormatIsExecuted="True" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="NotificationException_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="StackTrace" ViewItem="StackTrace" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

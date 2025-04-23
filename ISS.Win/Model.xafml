@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Company="Integrated Systems Solutions">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="View">
+        <ActionLink ActionId="1dde362a-8b64-4f57-9aa4-1ad0373c381a" IsNewNode="True" />
+      </ActionContainer>
+      <ActionContainer Id="MikesGroup" Index="10000" IsNewNode="True">
+        <ActionLink ActionId="Test_PopulateCustomers" IsNewNode="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="ISS.Module.Customer" ImageName="BO_Customer" />
+    <Class Name="MasterProvider.CompanySelector.Module.CompanyDefinition" DefaultLookupListView="CompanyDefinition_LookupListView_Logon" />
+  </BOModel>
+  <ISSApplicationOptions UseStandardSplashScreenAfterLoad="True" UseStandardSplashScreenDuringLoad="True" HyperlinkHandlerPrefix="isswin" />
+  <ISSEditorOptions DisableSpinButtons="True" DisableNegativeNumberEntry="True" GridClickMode="SingleClick" />
+  <NavigationItems StartupNavigationItem="Customer_ListView">
+    <Items>
+      <Item Id="Default" Index="0">
+        <Items>
+          <Item Id="Customer Work Dashboard" ViewId="CustomerWorkDashboard" Caption="Customer Work Dashboard" IsNewNode="True" />
+          <Item Id="Customer_ListView" Caption="Customers" />
+          <Item Id="GP RM Customer" ViewId="RMCustomer_ListView" Caption="GP RM Customer" IsNewNode="True" />
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="SecuritySystemRole_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Admin" Removed="True">
+        <Items>
+          <Item Id="ConnectionManager" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Administration">
+        <Items>
+          <Item Id="Reports" ObjectKey="" Index="0" ViewId="ReportData_ListView" IsNewNode="True" />
+          <Item Id="@79ffebf7-d0eb-4e94-884d-0bc48b658a85" ViewId="ISSBaseBusinessRules_ListView" Caption="Business Rules" Index="1" IsNewNode="True" />
+          <Item Id="ISSSecurityUser_ListView" ObjectKey="" Caption="Users" ViewId="SecuritySystemUser_ListView" Index="2" IsNewNode="True" />
+          <Item Id="ISSSecurityRole_ListView" ObjectKey="" Caption="Roles" ViewId="SecuritySystemRole_ListView" Index="3" IsNewNode="True" />
+          <Item Id="UserFilter_ListView" Caption="User Filters" Index="4" />
+          <Item Id="ConnectionManager" ViewId="ConnectionManager_DetailView" Caption="Connection Settings" Index="5" IsNewNode="True" />
+          <Item Id="@956f3d5d-70e6-4f10-8ae9-4c61ff4dc9f4" ViewId="CompanyDefinition_ListView" ImageName="BO_Organization" IsNewNode="True" />
+          <Item Id="SystemSettings_ListView" ViewId="SystemSettings_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="Reports" IsNewNode="True" Removed="True">
+        <Items IsNewNode="True">
+          <Item Id="Report Data V2" ViewId="ReportDataV2_ListView" ImageName="BO_Report" IsNewNode="True" />
+          <Item Id="Reports" ViewId="ReportData_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options Skin="Office 2013" FormStyle="Standard" UIType="TabbedMDI" DataAccessMode="Server">
+    <LayoutManagerOptions HorizontalSpace="2" GroupVerticalPadding="2" GroupVerticalSpace="2" IgnoreSpacesInSimpleGroup="True" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.AutoFilterRowListViewController" Version="9.3.4.0" />
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.HideActionsViewController" Version="9.3.4.0" />
+    <SchemaModule Name="DevExpress.ExpressApp.SystemModule.ShowNavigationItemController" Version="9.3.4.0" />
+    <SchemaModule Name="DevExpress.ExpressApp.Win.SystemModule.ChooseSkinController" Version="9.3.4.0" />
+    <SchemaModule Name="PivotChartModuleBase" Version="20.2.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="20.2.7.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="20.2.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.2.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="20.2.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <UserFilterOptions ShowUserFiltersInNestedListView="True" />
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.String" EditorType="ISS.Base.Win.TextEditor" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <ListView Id="CompanyDefinition_ListView" DataAccessMode="Client" />
+    <ListView Id="CompanyDefinition_LookupListView_Logon" ClassName="MasterProvider.CompanySelector.Module.CompanyDefinition" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Name" PropertyName="Name" SortIndex="0" SortOrder="Ascending" Index="0" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="companySelectorLogonParameters_DetailView">
+      <Items>
+        <PropertyEditor Id="Companies" LinkView="CompanyDefinition_LookupListView_Logon" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Customer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="36.601307189542482">
+            <LayoutGroup Id="Customer" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Customer_ListView" AllowEdit="True" NewItemRowPosition="Top" />
+    <DashboardView Id="CustomerWorkDashboard" IsNewNode="True">
+      <Items IsNewNode="True">
+        <DashboardViewItem Id="CustomerView" ViewId="Customer_ListView" IsNewNode="True" />
+      </Items>
+      <Layout IsNewNode="True">
+        <LayoutGroup Id="Main" IsNewNode="True">
+          <LayoutItem Id="CustomerJobs" ViewItem="CustomerView" Index="0" IsNewNode="True" />
+          <LayoutItem Id="JobsView" ViewItem="JobsView" Index="1" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+    <ListView Id="Order_OrderAttachments_ListView" AllowEdit="False" />
+    <ListView Id="Order_OrderLines_ListView" AllowEdit="True" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="ProductCode" PropertyEditorType="ISS.Base.Win.StringValueWithObjectSourceEditor" />
+        <ColumnInfo Id="OrderedAmount" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <ListView Id="OrderLine_ListView" AllowEdit="False" NewItemRowPosition="None" />
+    <ListView Id="Product_ListView" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="ListPrice" AllowEdit="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="UserFilter_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" ToolTip="Awesome tooltip!" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

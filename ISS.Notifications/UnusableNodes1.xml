@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ISS.Notifications.Win.OnDemandNotificationParameters" ImageName="BO_Note" Caption="Send Notification">
+      <AppearanceRules Id="AppearanceRules">
+        <AppearanceRule Id="Disable_EmailAddressIfToOptionChecked" Enabled="False" TargetItems="EmailAddress" Criteria="[OnDemandNotificationToOption] Is Not Null" />
+        <AppearanceRule Id="Hide_OnDemandNotificationFromOption" TargetItems="OnDemandNotificationFromOption" Visibility="Hide" Context="DetailView" Criteria="[OnDemandNotificationFromOptions][].Count() = 0" />
+        <AppearanceRule Id="Hide_OnDemandNotificationToOption" TargetItems="OnDemandNotificationToOption" Visibility="Hide" Criteria="[OnDemandNotificationToOptions][].Count() = 0" />
+      </AppearanceRules>
+      <OwnMembers Id="OwnMembers">
+        <Member Name="OnDemandNotificationFromOption" Caption="From Address" LookupEditorMode="AllItems" />
+        <Member Name="OnDemandNotificationToOption" LookupEditorMode="AllItems" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ISS.Notifications.RecurrenceDefinition" ImageName="BO_Scheduler">
+      <AppearanceRules Id="AppearanceRules">
+        <AppearanceRule Id="Hide_DailyRecurrence" TargetItems="DailyRecurrence" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Daily#" />
+        <AppearanceRule Id="Hide_HourlyRecurrence" TargetItems="HourlyRecurrence" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Hourly#" />
+        <AppearanceRule Id="Hide_MinuteRecurrence" TargetItems="MinutesRecurrence" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Minutes#" />
+        <AppearanceRule Id="Hide_MonthlyRecurrence" TargetItems="MonthlyRecurrence;MonthlyDayOfMonth" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Monthly#" />
+        <AppearanceRule Id="Hide_StartEndTime" TargetItems="StartTime;EndTime" Criteria="Not [RecurrencePattern] In (##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Minutes#, ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Hourly#)" Visibility="Hide" />
+        <AppearanceRule Id="Hide_WeekdayOptionsForWeeklyYearly" TargetItems="Item1" Criteria="[RecurrencePattern] In (##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Weekly#, ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Monthly#, ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Yearly#)" AppearanceItemType="LayoutItem" Visibility="Hide" />
+        <AppearanceRule Id="Hide_WeeklyReccurence" TargetItems="WeeklyRecurrence" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Weekly#" />
+        <AppearanceRule Id="Hide_YearlyRecurrence" TargetItems="YearlyRecurrence;YearlyDay;YearlyMonth" Visibility="Hide" Criteria="[RecurrencePattern] &lt;&gt; ##Enum#ISS.Notifications.RecurrenceDefinition+RecurrencePatternTypes,Yearly#" />
+      </AppearanceRules>
+      <OwnMembers Id="OwnMembers">
+        <Member Name="LastExecutionDateTime" DisplayFormat="{0:g}" EditMask="g" />
+        <Member Name="NextExecutionDateTime" DisplayFormat="{0:g}" EditMask="g" />
+        <Member Name="TimeToExecute" EditMaskType="DateTime" EditMask="g" DisplayFormat="{0:g}" />
+        <Member Name="WeeklyOnFriday" Caption="Friday" />
+        <Member Name="WeeklyOnMonday" Caption="Monday" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="NotificationDiskAttachment_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NotificationDiskAttachment">
+              <LayoutItem Id="FileName" ViewItem="FileName" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationException_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <TabbedGroup Id="Item2">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="StackTrace" ViewItem="StackTrace" />
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NotificationQueueItem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Item2">
+              <LayoutItem Id="ErrorMessage" ViewItem="ErrorMessage" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="NotificationQueueItem_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Processed" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="NotificationRule_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NotificationRule">
+              <LayoutGroup Id="NotificationRule_col1">
+                <LayoutItem Id="TestCountLimit" SizeConstraintsType="Default" RelativeSize="23.529411764705884" Index="4" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

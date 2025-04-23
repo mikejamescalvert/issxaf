@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options Id="Options">
+    <LayoutManagerOptions Id="LayoutManagerOptions" TextAlignModeItem="UseParentOptions" TextAlignModeGroup="UseParentOptions" />
+  </Options>
+  <Views Id="Views">
+    <DetailView Id="ISSBaseMailServerSettings_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MailServerSettings_col1" TextSizingMode="Align" />
+            <LayoutGroup Id="MailServerSettings_col2" TextSizingMode="Align" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ISSExceptionMessage_DetailView">
+      <Layout Id="Layout" Width="570" Height="566">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ISSExceptionMessage">
+              <LayoutGroup Id="67a89b5c-e6a8-43cb-83b9-307d36bb0529" TextAlignMode="">
+                <LayoutItem Id="ExceptionOk" ViewItem="ExceptionOk" />
+                <LayoutItem Id="ExceptionClearLog" ViewItem="ExceptionClearLog" />
+                <LayoutItem Id="ExceptionSendToSupport" ViewItem="ExceptionSendToSupport" />
+                <LayoutItem Id="Item1" ViewItem="Item1" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

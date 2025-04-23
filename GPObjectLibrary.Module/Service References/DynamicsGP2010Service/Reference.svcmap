@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="501c7899-8295-464a-9450-e2c0723630ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://geller-v:48620/DynamicsGPWebServices" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DynamicsGPWebServices0.xsd" MetadataType="Schema" ID="c533aec1-33cd-49a4-9130-36823c77d25c" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices0.xsd" />
+    <MetadataFile FileName="DynamicsGPWebServices2.xsd" MetadataType="Schema" ID="a8485138-2303-4f6b-878b-bec9602acd0f" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices2.xsd" />
+    <MetadataFile FileName="DynamicsGPWebServices1.xsd" MetadataType="Schema" ID="fed41f26-630d-422c-89da-b7ed9af25d5d" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices1.xsd" />
+    <MetadataFile FileName="DynamicsGPWebServices.xsd" MetadataType="Schema" ID="1292c04b-10ef-46ee-8871-0e3ea83cf6fc" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices.xsd" />
+    <MetadataFile FileName="DynamicsGP.wsdl" MetadataType="Wsdl" ID="5b5fd385-ef84-45e3-ab95-bbac559ea65b" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGP.wsdl" />
+    <MetadataFile FileName="DynamicsGPWebServices.wsdl" MetadataType="Wsdl" ID="af242735-d4f6-4d97-bee9-9a78771b9008" SourceId="1" SourceUrl="http://issdemo-v:48620/Metadata/Legacy/Full/DynamicsGPWebServices.wsdl" />
+    <MetadataFile FileName="DynamicsGPWebServices.disco" MetadataType="Disco" ID="e6b23206-d479-4964-a9a2-19f1adf57a4a" SourceId="1" SourceUrl="http://issdemo-v:48620/DynamicsGPWebServices?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root Type="DevExpress.CodeRush.Foundation.Navigation.QuickNav.Filters.FilterOptions">
+  <Options Language="Neutral">
+    <Items>
+      <Item Id="{0e9eb363-d8c5-4ff3-90fb-477e11b67c12}">
+        <FilterName>M - Methods</FilterName>
+      </Item>
+      <Item Id="{0acb5ba8-a854-4348-9786-c969c590b12b}">
+        <FilterName>P - Properties</FilterName>
+      </Item>
+      <Item Id="{524c0b24-b1f3-4ddf-9682-faec1731a579}">
+        <FilterName>V - Events</FilterName>
+      </Item>
+      <Item Id="{e24a11e0-fd02-4024-bc55-580ef6deb56a}">
+        <FilterName>F - Fields</FilterName>
+      </Item>
+      <Item Id="{5b940f23-9ef9-4efb-9c0d-02b8140ab375}">
+        <FilterName>C - Class</FilterName>
+      </Item>
+      <Item Id="{c5b4dc24-fd05-457e-93dc-b7c3d55d2637}">
+        <FilterName>S - Struct</FilterName>
+      </Item>
+      <Item Id="{02ed5d0b-9c4f-40bd-aac1-50e0b308c177}">
+        <FilterName>I - Interface</FilterName>
+      </Item>
+      <Item Id="{2629555b-4067-4376-a0be-82b4310fe056}">
+        <FilterName>E - Enum</FilterName>
+      </Item>
+      <Item Id="{720e11c5-5f4b-442e-890c-5bef706c2d4f}">
+        <FilterName>D - Delegate</FilterName>
+      </Item>
+      <Item Id="{e742f49e-c679-4fbf-bf9c-7bdba280348e}">
+        <FilterName>W-Private</FilterName>
+      </Item>
+      <Item Id="{39b8dd5a-bc52-42c2-b650-574aa0e69d62}">
+        <FilterName>O-Protected</FilterName>
+      </Item>
+      <Item Id="{e6aa607e-cb70-4929-9dca-8ccf54cb4052}">
+        <FilterName>N-Internal/Friend</FilterName>
+      </Item>
+      <Item Id="{8af9c910-2980-4ed7-a2e1-a6d5582157e5}">
+        <FilterName>T-Protected Internal/Friend</FilterName>
+      </Item>
+      <Item Id="{1ccb9d6a-72b6-4c6a-9394-688f2671d141}">
+        <FilterName>B-Public</FilterName>
+      </Item>
+      <Item Id="{af079acb-89bc-4d7c-a7f4-4fd0c99aa476}">
+        <FilterName>2 - Project</FilterName>
+        <IsActive>False</IsActive>
+      </Item>
+      <Item Id="{0456a119-c0cf-444d-9ae9-4f90e8340dc2}">
+        <FilterName>3 - Namespace</FilterName>
+        <IsActive>False</IsActive>
+      </Item>
+      <Item Id="{05b2cbc6-0240-4340-81ac-7b91f1da3d48}">
+        <FilterName>4 - File</FilterName>
+        <IsActive>False</IsActive>
+      </Item>
+      <Item Id="{7c743bdb-60c8-447e-b38c-688c32a3e552}">
+        <FilterName>W - Private</FilterName>
+      </Item>
+      <Item Id="{394a15b1-dbed-4a2e-be90-1cc9ca5417e6}">
+        <FilterName>O - Protected</FilterName>
+      </Item>
+      <Item Id="{e5985c45-38a3-4bf1-b548-58061ff1894d}">
+        <FilterName>N - Internal/Friend</FilterName>
+      </Item>
+      <Item Id="{685000a8-1918-4d2c-85c2-2d39e3470825}">
+        <FilterName>T - Protected Internal/Friend</FilterName>
+      </Item>
+      <Item Id="{039563d7-afc5-4121-84c2-4ff898cc8c8e}">
+        <FilterName>B - Public</FilterName>
+      </Item>
+      <Item Id="{85c8297e-2f59-46e3-bb4e-e9116269d51c}">
+        <FilterName>L - Variables</FilterName>
+      </Item>
+    </Items>
+  </Options>
+</Root>

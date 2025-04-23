@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="UserFilter_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="UserFilter">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="b9f88827-210e-4f0e-90c6-2b3e7f063acf" Caption="b9f88827-210e-4f0e-90c6-2b3e7f063acf(5)" RelativeSize="71.580817051509769">
+                  <LayoutItem Id="Name" SizeConstraintsType="Default" RelativeSize="23.880597014925375" />
+                  <LayoutItem Id="Description" SizeConstraintsType="Default" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="ObjectType" SizeConstraintsType="Default" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="Criterion" SizeConstraintsType="Default" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="CreatedByUser" SizeConstraintsType="Default" RelativeSize="22.388059701492537" />
+                </LayoutGroup>
+                <LayoutGroup Id="0ddc21f8-37a7-4a64-b440-c30c22237bc5" Caption="0ddc21f8-37a7-4a64-b440-c30c22237bc5(11)" RelativeSize="28.419182948490231">
+                  <LayoutItem Id="IsPublic" SizeConstraintsType="Default" RelativeSize="23.880597014925375" />
+                  <LayoutItem Id="ShowGroupPanel" SizeConstraintsType="Default" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="SpecificToView" ViewItem="SpecificToView" SizeConstraintsType="Default" Index="2" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="Item2" ViewItem="" SizeConstraintsType="Default" Index="3" RelativeSize="40.298507462686565" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Item1">
+              <LayoutItem Id="UserFilterColumnInfos" SizeConstraintsType="Default" RelativeSize="92.954990215264189" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

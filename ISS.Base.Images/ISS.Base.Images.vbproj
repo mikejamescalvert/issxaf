@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A493E7D1-5FD1-4763-B26B-91FFA622CD85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ISS.Base.Images</RootNamespace>
+    <AssemblyName>ISS.Base.Images</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ISS.Base.Images.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ISS.Base.Images.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Office.v24.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v24.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v24.2.Export">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v24.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v24.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module.Designer.vb">
+      <DependentUpon>Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Updater.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.access.png" />
+    <EmbeddedResource Include="Images\Images.access_Large.png" />
+    <EmbeddedResource Include="Images\Images.agent.png" />
+    <EmbeddedResource Include="Images\Images.agent_Large.png" />
+    <EmbeddedResource Include="Images\Images.aim_protocol.png" />
+    <EmbeddedResource Include="Images\Images.aim_protocol_Large.png" />
+    <EmbeddedResource Include="Images\Images.Analysis.png" />
+    <EmbeddedResource Include="Images\Images.Analysis_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.Analysis_Large.png" />
+    <EmbeddedResource Include="Images\Images.attachment_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.attachment_ButtonNavHot.png" />
+    <EmbeddedResource Include="Images\Images.attachment_Large.png" />
+    <EmbeddedResource Include="Images\Images.background.png" />
+    <EmbeddedResource Include="Images\Images.background_Large.png" />
+    <EmbeddedResource Include="Images\Images.BO_Unknown.png" />
+    <EmbeddedResource Include="Images\Images.BO_Unknown_Large.png" />
+    <EmbeddedResource Include="Images\Images.broker.png" />
+    <EmbeddedResource Include="Images\Images.broker_Large.png" />
+    <EmbeddedResource Include="Images\Images.businessman.png" />
+    <EmbeddedResource Include="Images\Images.businessman_Large.png" />
+    <EmbeddedResource Include="Images\Images.calendar.png" />
+    <EmbeddedResource Include="Images\Images.calendar_Large.png" />
+    <EmbeddedResource Include="Images\Images.client.png" />
+    <EmbeddedResource Include="Images\Images.client_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.client_Large.png" />
+    <EmbeddedResource Include="Images\Images.cnrclient.png" />
+    <EmbeddedResource Include="Images\Images.cnrclient_Large.png" />
+    <EmbeddedResource Include="Images\Images.cnrgrey.png" />
+    <EmbeddedResource Include="Images\Images.cnrgrey_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.cnrgrey_Large.png" />
+    <EmbeddedResource Include="Images\Images.contact.png" />
+    <EmbeddedResource Include="Images\Images.contact_Large.png" />
+    <EmbeddedResource Include="Images\Images.database.png" />
+    <EmbeddedResource Include="Images\Images.database_Large.png" />
+    <EmbeddedResource Include="Images\Images.desktopshare.png" />
+    <EmbeddedResource Include="Images\Images.desktopshare_Large.png" />
+    <EmbeddedResource Include="Images\Images.edit.png" />
+    <EmbeddedResource Include="Images\Images.edit_Large.png" />
+    <EmbeddedResource Include="Images\Images.edit_user.png" />
+    <EmbeddedResource Include="Images\Images.edit_user_Large.png" />
+    <EmbeddedResource Include="Images\Images.expense.png" />
+    <EmbeddedResource Include="Images\Images.expense_Large.png" />
+    <EmbeddedResource Include="Images\Images.file-manager.png" />
+    <EmbeddedResource Include="Images\Images.file-manager_Large.png" />
+    <EmbeddedResource Include="Images\Images.fileimport.png" />
+    <EmbeddedResource Include="Images\Images.fileimport_Large.png" />
+    <EmbeddedResource Include="Images\Images.filetypes.png" />
+    <EmbeddedResource Include="Images\Images.filetypes_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.filetypes_Large.png" />
+    <EmbeddedResource Include="Images\Images.handshake.png" />
+    <EmbeddedResource Include="Images\Images.handshake_Large.png" />
+    <EmbeddedResource Include="Images\Images.improvement.png" />
+    <EmbeddedResource Include="Images\Images.improvement_Large.png" />
+    <EmbeddedResource Include="Images\Images.income.png" />
+    <EmbeddedResource Include="Images\Images.income_Large.png" />
+    <EmbeddedResource Include="Images\Images.insurance.png" />
+    <EmbeddedResource Include="Images\Images.insurance_Large.png" />
+    <EmbeddedResource Include="Images\Images.kaddressbook.png" />
+    <EmbeddedResource Include="Images\Images.kaddressbook_Large.png" />
+    <EmbeddedResource Include="Images\Images.kate.png" />
+    <EmbeddedResource Include="Images\Images.kate_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.kate_Large.png" />
+    <EmbeddedResource Include="Images\Images.kchart.png" />
+    <EmbeddedResource Include="Images\Images.kchart_Large.png" />
+    <EmbeddedResource Include="Images\Images.kcmpartitions.png" />
+    <EmbeddedResource Include="Images\Images.kcmpartitions_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.kcmpartitions_Large.png" />
+    <EmbeddedResource Include="Images\Images.kopeteaway.png" />
+    <EmbeddedResource Include="Images\Images.kopeteaway_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.kopeteaway_Large.png" />
+    <EmbeddedResource Include="Images\Images.ksysguard.png" />
+    <EmbeddedResource Include="Images\Images.ksysguard_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.ksysguard_Large.png" />
+    <EmbeddedResource Include="Images\Images.kuser.png" />
+    <EmbeddedResource Include="Images\Images.kuser_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.kuser_Large.png" />
+    <EmbeddedResource Include="Images\Images.lien.png" />
+    <EmbeddedResource Include="Images\Images.lien_Large.png" />
+    <EmbeddedResource Include="Images\Images.lockstart_session.png" />
+    <EmbeddedResource Include="Images\Images.lockstart_session_Large.png" />
+    <EmbeddedResource Include="Images\Images.MDWebb_Background.png" />
+    <EmbeddedResource Include="Images\Images.mp3player.png" />
+    <EmbeddedResource Include="Images\Images.mp3player_Large.png" />
+    <EmbeddedResource Include="Images\Images.note.png" />
+    <EmbeddedResource Include="Images\Images.note_Large.png" />
+    <EmbeddedResource Include="Images\Images.package_network.png" />
+    <EmbeddedResource Include="Images\Images.package_network_Large.png" />
+    <EmbeddedResource Include="Images\Images.parallels.png" />
+    <EmbeddedResource Include="Images\Images.parallels_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.parallels_Large.png" />
+    <EmbeddedResource Include="Images\Images.password.png" />
+    <EmbeddedResource Include="Images\Images.password_Large.png" />
+    <EmbeddedResource Include="Images\Images.pppoeconfig.png" />
+    <EmbeddedResource Include="Images\Images.pppoeconfig_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.pppoeconfig_Large.png" />
+    <EmbeddedResource Include="Images\Images.project.png" />
+    <EmbeddedResource Include="Images\Images.project_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.project_ButtonNavHot.png" />
+    <EmbeddedResource Include="Images\Images.project_Large.png" />
+    <EmbeddedResource Include="Images\Images.reminders.png" />
+    <EmbeddedResource Include="Images\Images.reminders_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.reminders_Large.png" />
+    <EmbeddedResource Include="Images\Images.Report.png" />
+    <EmbeddedResource Include="Images\Images.Report_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.Report_Large.png" />
+    <EmbeddedResource Include="Images\Images.signature.png" />
+    <EmbeddedResource Include="Images\Images.signature_Large.png" />
+    <EmbeddedResource Include="Images\Images.toggle_log.png" />
+    <EmbeddedResource Include="Images\Images.toggle_log_Large.png" />
+    <EmbeddedResource Include="Images\Images.tux.png" />
+    <EmbeddedResource Include="Images\Images.tux_Large.png" />
+    <EmbeddedResource Include="Images\Images.unit.png" />
+    <EmbeddedResource Include="Images\Images.unit_ButtonNav.png" />
+    <EmbeddedResource Include="Images\Images.unit_ButtonNavHot.png" />
+    <EmbeddedResource Include="Images\Images.unit_Large.png" />
+    <EmbeddedResource Include="Images\Images.vendor.png" />
+    <EmbeddedResource Include="Images\Images.vendor_Large.png" />
+    <EmbeddedResource Include="Images\Images.view_choose.png" />
+    <EmbeddedResource Include="Images\Images.view_choose_Large.png" />
+    <EmbeddedResource Include="Images\Images.xcalc.png" />
+    <EmbeddedResource Include="Images\Images.xcalc_Large.png" />
+    <EmbeddedResource Include="Images\Images.xpaint.png" />
+    <EmbeddedResource Include="Images\Images.xpaint_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.burnfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.refresh.png" />
+    <EmbeddedResource Include="Images\Images.refresh_Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Images.ISSLogo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
